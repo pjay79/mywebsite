@@ -1,3 +1,135 @@
 /* * {
 	outline: 1px dotted #FF0000;
 } */
+body {
+  font-size: 62.5%;
+}
+h1 {
+  font-family: 'Rubik One', sans-serif;
+}
+h2, a, p {
+  font-family: 'Varela Round', sans-serif;
+}
+.container {
+  width: 100%;
+}
+/* Main */
+.main {
+  @include cover-background('desk.jpg');
+  h1 {
+    font-size: 80px;
+    font-size: 8rem;
+    font-weight: bold;
+    text-align: center;
+    color: #FFF;
+    float: left;
+  }
+  h2 {
+    font-size: 60px;
+    font-size: 6rem;
+    font-weight: bold;
+    text-align: center;
+    color: #FFF;
+    margin-top: 200px;
+  }
+  p {
+    font-size: 20px;
+    font-size: 2rem;
+    font-weight: lighter;
+    text-align: center;
+    color: #FFF;
+  }
+}
+/* Menu 'Hamburger Icon' */
+.menu {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  margin: 20px 0 0 auto;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+}
+.menu span,
+.menu span:before,
+.menu span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 2px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  display: block;
+  content: '';
+  transition: all 0.5s ease-in-out;
+}
+.menu span:before {
+  left: 0;
+  top: -10px;
+}
+.menu span:after {
+  left: 0;
+  top: 10px;
+}
+.menu.active span {
+  background-color: transparent;
+}
+.menu.active span:before,
+.menu.active span:after {
+  top: 0;
+}
+.menu.active span:before {
+  transform: rotate(135deg);
+}
+.menu.active span:after {
+  transform: rotate(-135deg);
+}
+/* Menu Overlay */
+.menu__overlay {
+  opacity: 0;
+  visibility: hidden;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.menu__overlay nav {
+    text-align: center;
+    list-style: none;
+    position: relative;
+    top: 25%;
+    height: 50%;
+    ul {
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      li {
+        padding: 20px 0;
+        a {
+          text-decoration: none;
+          font-size: 40px;
+          font-size: 4rem;
+          color: #FFF;
+          transition: all 0.3s ease;
+          &:hover {
+            font-size: 50px;
+            font-size: 5rem;
+            color: #B68861;
+          }
+        }
+      }
+    }
+  }
+.menu__overlay--open {
+  opacity: 1;
+  visibility: visible;
+}
