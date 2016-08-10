@@ -5,7 +5,7 @@ body {
   font-size: 62.5%;
 }
 h1 {
-  font-family: 'Rubik One', sans-serif;
+  font-family: 'Bungee Shade', cursive;
 }
 h2, a, p {
   font-family: 'Varela Round', sans-serif;
@@ -17,12 +17,13 @@ h2, a, p {
 .main {
   @include cover-background('desk.jpg');
   h1 {
-    font-size: 80px;
-    font-size: 8rem;
+    font-size: 40px;
+    font-size: 4rem;
     font-weight: bold;
     text-align: center;
     color: #FFF;
     float: left;
+    display: none;
   }
   h2 {
     font-size: 60px;
@@ -31,6 +32,7 @@ h2, a, p {
     text-align: center;
     color: #FFF;
     margin-top: 200px;
+    opacity: 0;
   }
   p {
     font-size: 20px;
@@ -38,7 +40,12 @@ h2, a, p {
     font-weight: lighter;
     text-align: center;
     color: #FFF;
+    opacity: 0;
   }
+}
+.skills {
+  border-bottom: 1px solid #FFF;
+  padding-bottom: 10px;
 }
 /* Menu 'Hamburger Icon' */
 .menu {
@@ -132,4 +139,10 @@ h2, a, p {
 .menu__overlay--open {
   opacity: 1;
   visibility: visible;
+}
+/* Scroll Arrow */
+.arrow {
+  text-align: center;
+  position: relative;
+  margin-top: 150px;
 }
