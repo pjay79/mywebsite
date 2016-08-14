@@ -5,22 +5,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="Keywords" content="PJ">
-  <meta name="Description" content="Freelance UI Design and Front End Developer">
+  <meta name="Description" content="Freelance Front End Developer">
   <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <!-- Main -->
   <div class="main">
     <div class="container">
-      <!-- Site Logo -->
-      <h1>PJ</h1>
-      <!-- Menu -->
-      <div class="menu">
-        <span></span>
+      <!-- Header -->
+      <div class="header">
+        <!-- Site logo -->
+        <h1>pj</h1>
+        <!-- Menu icon -->
+        <div class="main__menu">
+          <span></span>
+        </div>
       </div>
-      <!-- Menu Overlay -->
-      <div class="menu__overlay">
+      <!-- Menu overlay -->
+      <div class="main__menu--overlay">
+        <!-- Menu overlay nav -->
         <nav role="navigation">
           <ul>
             <li ><a href="#">Home</a></li>
@@ -30,71 +35,97 @@
           </ul>
         </nav>
       </div>
-      <h2>Freelance Front End Developer</h2>
-      <p>Melbourne, Australia</p>
-      <p><span class="skills">HTML5  -  CSS3  - Javascript</span></p>
-      <!-- Scroll Arrow -->
-      <div class="arrow">
+      <!-- Menu content -->
+      <div class="main__content">
+        <h2>Freelance Front End Developer</h2>
+        <p>Melbourne, Australia</p>
+      </div>
+      <!-- Scroll arrow -->
+      <div class="main__arrow">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         width="67px" height="26px" viewBox="0 0 67 26" enable-background="new 0 0 67 26" xml:space="preserve">
         <line fill="none" class="left" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" 					x1="3" 	y1="3" 	x2="33" y2="23"/>
         <line fill="none" class="right" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" 										stroke-miterlimit="10" x1="64" y1="3" 	x2="34" y2="23"/>
         </svg>
       </div>
+
+    </div>
+  </div>
+<!-- Supporting -->
+<div class="supporting">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>About</h3>
+        <p>My name is Praveen Jayarajan, I build responsive, accessible, and search friendly websites using HTML, CSS, and JavaScript.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>Skills</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS/SASS</li>
+          <li>Javascript, JQuery, Velocity.js</li>
+        </ul>
+      </div>
+      <div class="col-sm-6">
+        <h3>Tools</h3>
+          <p>Codekit, Atom, Chrome, GitHub</p>
+      </div>
+    </div>
+    <div class="clearfix"></div>
   </div>
 </div>
-  <!-- Supporting -->
-  <div class="supporting">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-        <h2></h2>
-        <p></p>
-        </div>
-        <div class="col-md-4">
-        <h2></h2>
-        <p></p>
-        </div>
-        <div class="col-md-4">
-        <h2></h2>
-        <p></p>
-        </div>
+<!-- Feature -->
+<div class="feature">
+  <div class="container">
+    <h2></h2>
+  </div>
+</div>
+<!-- Feature 2 -->
+<div class="feature2">
+  <div class="container">
+    <h2></h2>
+  </div>
+</div>
+<!-- Footer -->
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h4></h4>
       </div>
-      <div class="clearfix"></div>
+      <div class="col-md-3">
+        <h4></h4>
+      </div>
+      <div class="col-md-3">
+        <h4></h4>
+      </div>
     </div>
   </div>
-  <!-- Feature -->
-  <div class="feature">
-    <div class="container">
-      <h2></h2>
+</div>
+<!-- Social -->
+<div class="social">
+  <div class="container">
+    <div class="social__icons">
+      <a href="#"><img src="images/facebook.svg" alt="facebook" /></a>
+      <a href="#"><img src="images/twitter.svg" alt="twitter" /></a>
+      <a href="#"><img src="images/instagram.svg" alt="instagram" /></a>
+      <a href="#"><img src="images/dribble.svg" alt="dribble" /></a>
+      <a href="#"><img src="images/behance.svg" alt="behance" /></a>
     </div>
   </div>
-  <!-- Supporting -->
-  <div class="supporting">
-    <div class="container">
-      <h2></h2>
-      <p></p>
-      <a href="#" class="btn"></a>
-    </div>
+</div>
+<!-- Copyright notice -->
+<div class="copy">
+  <div class="container">
+    <p>&copy; Praveen Jayarajan 2016</p>
   </div>
-  <!-- The footer div -->
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <h4></h4>
-        </div>
-        <div class="col-md-3">
-          <h4></h4>
-        </div>
-        <div class="col-md-3">
-          <h4></h4>
-        </div>
-    </div>
-  </div>
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/velocity/velocity.min.js"></script>
-<script src="bower_components/velocity/velocity.ui.min.js"></script>
-<script src="scripts/min/mywebsite_script-min.js"></script>
+</div>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/velocity/velocity.min.js"></script>
+  <script src="bower_components/velocity/velocity.ui.min.js"></script>
+  <script src="scripts/min/mywebsite_script-min.js"></script>
 </body>
 </html>
