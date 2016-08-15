@@ -1,13 +1,14 @@
 var main = function() {
+  // Initiate ScrollMagic
+  //var scene = new $.ScrollMagic.Scene({
+  //triggerElement: '.supporting', // starting scene, when reaching this element
+  //duration: 400 // pin the element for a total of 400px
+  //}).setPin('.supporting col-sm-12'); // the element we want to pin
+  // Add Scene to ScrollMagic Controller
+  //controller.addScene(scene);
   // Set 100% viewport width/height to div's
   var fullscreen = function(){
     $('.main').css({width: $(window).width(), height: $(window).height()});
-    $('.supporting').css({width: $(window).width(), height: $(window).height()});
-    $('.feature').css({width: $(window).width(), height: $(window).height()});
-    $('.feature2').css({width: $(window).width(), height: $(window).height()});
-    $('.footer').css({width: $(window).width(), height: $(window).height()});
-    $('.social').css({width: $(window).width(), height: $(window).height()/3});
-    $('.copy').css({width: $(window).width(), height: $(window).height()/5});
   };
   fullscreen();
   // Run the function again in case of window resize
@@ -18,7 +19,7 @@ var main = function() {
   $('.main__menu').click(function(){
     $(this).toggleClass('active');
     $('.main__menu--overlay').toggleClass('main__menu--overlay-open');
-    $('nav li').velocity("transition.slideDownIn", { stagger: 250, drag:true });
+    $('nav li').velocity("transition.slideDownIn", { stagger: 250, drag : true });
 	});
   // Menu Overlay toggle with 'esc' key
   $(document).keyup(function(e) {
@@ -26,11 +27,11 @@ var main = function() {
         $('main__menu--overlay').toggleClass('main__menu--overlay-open');
     }
   });
-  // Site logo
-  $('.header h1').velocity("transition.slideLeftBigIn", { duration: 800, delay : 400 });
-  // Main content
   var loadingSequence = [
-    {e: $('.main__content') , p: { opacity: 1, translateY: 200 }, o: { duration : 800, delay : 400, easing: "spring" }}
+    // Site logo
+    {e: $('.header h1') , p: "transition.slideLeftBigIn", o: { duration : 800, delay : 400 }},
+    // Main content
+    {e: $('.main__content') , p: { opacity: 1, translateY: 200 }, o: { duration : 800, delay : 400, easing: "ease-in-out", sequenceQueue : false }}
   ];
   $.Velocity.RunSequence(loadingSequence);
   // Scroll arrow
@@ -46,9 +47,9 @@ var main = function() {
   });
   // Social icons
   $('.social__icons img').mouseover(function(){
-    $(this).velocity( { scale : [ 1.4, [250, 25] ], rotateZ : "360deg" }, { duration : 400, easing: "ease-in-out" });
+    $(this).velocity( { scale : 1.4, rotateZ : "360deg" }, { duration : 400, easing: "ease-in-out" });
     $(this).mouseleave(function(){
-      $(this).velocity( { scale : [ 1.0, [250, 25] ], rotateZ : "-360deg" }, { duration : 400, easing: "ease-in-out" });
+      $(this).velocity( { scale : 1.0, rotateZ : "-360deg" }, { duration : 300, easing: "ease-in-out" });
     });
   });
 };
