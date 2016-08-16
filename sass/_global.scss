@@ -1,6 +1,6 @@
-* {
-  outline: 1px dotted #999999;
-}
+/* * {
+  outline: 2px dotted #ff0000;
+} */
 body {
   font-size: 62.5%;
 }
@@ -89,8 +89,8 @@ p, h2, h3 {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
+  background-color: #333D46;
+  background-color: rgba(#333D46, 0.9);
   overflow: hidden;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -166,7 +166,7 @@ p, h2, h3 {
 .supporting {
   background-color: #FFF;
   text-align: center;
-  padding: 75px 0;
+  padding: 50px 0;
   border-top: 5px solid #333D46;
   h3 {
     display: inline-block;
@@ -192,6 +192,9 @@ p, h2, h3 {
       border-bottom: 5px solid #B68861;
     }
   }
+}
+#animate_1, #animate_2, #animate_3, #animate_4 {
+  opacity: 0;
 }
 /* Feature */
 .feature {

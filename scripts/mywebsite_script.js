@@ -1,11 +1,4 @@
 var main = function() {
-  // Initiate ScrollMagic
-  //var scene = new $.ScrollMagic.Scene({
-  //triggerElement: '.supporting', // starting scene, when reaching this element
-  //duration: 400 // pin the element for a total of 400px
-  //}).setPin('.supporting col-sm-12'); // the element we want to pin
-  // Add Scene to ScrollMagic Controller
-  //controller.addScene(scene);
   // Set 100% viewport width/height to div's
   var fullscreen = function(){
     $('.main').css({width: $(window).width(), height: $(window).height()});
@@ -39,12 +32,28 @@ var main = function() {
   $('.main__arrow').click(function() {
     $('.supporting').velocity("scroll", 800);
   });
-  // Fade div's in on scroll
-  $('.supporting').scroll(function() {
-    if ($(this).scrollTop() > 50) {
-        $('.supporting col-sm-12').velocity("fadeIn", { duration: 800, delay : 400 });
-    }
-  });
+  // Initiate ScrollMagic
+  var controller = new $.ScrollMagic.Controller();
+  var scene1 = new $.ScrollMagic.Scene({triggerElement: "#trigger_1"});
+  // trigger a velocity opacity animation
+  scene1.setVelocity("#animate_1", { opacity : 1 }, { duration : 1000, delay : 200, easing : "ease-in-out" } );
+  scene1.addIndicators(); // add indicators (requires plugin)
+  scene1.addTo(controller);
+  var scene2 = new $.ScrollMagic.Scene({triggerElement: "#trigger_2"});
+  // trigger a velocity opacity animation
+  scene2.setVelocity("#animate_2", { opacity : 1 }, { duration : 1000, delay : 200, easing : "ease-in-out" } );
+  scene2.addIndicators(); // add indicators (requires plugin)
+  scene2.addTo(controller);
+  var scene3 = new $.ScrollMagic.Scene({triggerElement: "#trigger_3"});
+  // trigger a velocity opacity animation
+  scene3.setVelocity("#animate_3", { opacity : 1 }, { duration : 1000, delay : 200, easing : "ease-in-out" } );
+  scene3.addIndicators(); // add indicators (requires plugin)
+  scene3.addTo(controller);
+  var scene4 = new $.ScrollMagic.Scene({triggerElement: "#trigger_4", offset: -100});
+  // trigger a velocity opacity animation
+  scene4.setVelocity("#animate_4", "transition.bounceIn", { duration : 1000, delay : 200, easing : "ease-in-out" } );
+  scene4.addIndicators(); // add indicators (requires plugin)
+  scene4.addTo(controller);
   // Social icons
   $('.social__icons img').mouseover(function(){
     $(this).velocity( { scale : 1.4, rotateZ : "360deg" }, { duration : 400, easing: "ease-in-out" });
