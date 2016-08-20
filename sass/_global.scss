@@ -20,7 +20,7 @@ p, h2, h3 {
 .main {
   @include cover-background('desk_1x.jpg');
 }
-/* Site logo */
+/* Header */
 .header {
   position: fixed;
   width: 100%;
@@ -31,7 +31,8 @@ p, h2, h3 {
 }
 .sticky {
   background-color: rgba(#333D46, 0.9);
-  border-bottom: 2px solid #DEE2E3;
+  border-bottom: 2px solid #FFF;
+  color: #DEE2E3;
   z-index: 2;
 }
 .header h1 {
@@ -42,7 +43,6 @@ p, h2, h3 {
   text-align: left;
   float: left;
   display: inline-block;
-  color: #FFF;
   margin-top: 20px;
   margin-left: 15px;
 }
@@ -103,6 +103,7 @@ p, h2, h3 {
   left: 0;
   background-color: #333D46;
   background-color: rgba(#333D46, 0.9);
+  border: 5px solid #FFF;
   overflow: hidden;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -112,15 +113,14 @@ p, h2, h3 {
   text-align: center;
   list-style: none;
   position: relative;
-  top: 25%;
-  height: 50%;
+  top: 20%;
   ul {
     list-style: none;
     margin: 0 auto;
     padding: 0;
     li {
       padding: 20px 0;
-      background-color: rgba(#CCC, 0.8);
+      margin: 20px 0;
       &:hover {
         background-color: #B68861;
       }
@@ -137,7 +137,7 @@ p, h2, h3 {
     }
   }
 }
-.main__menu--overlay-open {
+.open {
   opacity: 1;
   visibility: visible;
 }
