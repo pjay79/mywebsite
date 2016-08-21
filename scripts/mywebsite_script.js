@@ -13,30 +13,24 @@ var main = function() {
     if (!$(this).hasClass('active')) {
         $(this).addClass('active');
         $('.main__menu--overlay').addClass('open');
-        $('nav ul li').velocity('stop')
-                      .velocity('transition.slideLeftBigIn', { duration: 600, stagger : 150, drag : true })
-                      .velocity({ scale : 1.3 }, { duration : 600, stagger : 150, drag : true, queue : false });
+        $('nav li').velocity('stop')
+                   .velocity('transition.slideLeftBigIn', { duration: 600, stagger : 150, drag : true })
+                   .velocity({ scale : 1.3 }, { duration : 600, stagger : 150, drag : true, queue : false });
     } else {
         $(this).removeClass('active');
-        $('nav ul li').velocity('stop')
-                      .velocity({ scale : 0.5 }, { duration : 600, stagger : 150, drag : true, queue : false })
-                      .velocity('transition.slideRightBigOut', { duration : 600, stagger : 150, drag : true });
+        $('nav li').velocity('stop')
+                   .velocity({ scale : 0.5 }, { duration : 600, stagger : 150, drag : true, queue : false })
+                   .velocity('transition.slideRightBigOut', { duration : 600, stagger : 150, drag : true });
         $('.main__menu--overlay').removeClass('open');
-    }
-  });
-   //Menu Overlay toggle with 'esc' key
-  $(document).keyup(function(e) {
-    if (e.keyCode === 27) {
-      $('main__menu--overlay').toggleClass('open');
     }
   });
   var loadingSequence = [
     // Site logo
-    {e: $('.header h1') , p: 'transition.slideLeftBigIn', o: { duration : 600, delay : 300 }},
+    {e: $('.header h1') , p: 'transition.slideLeftBigIn', o: { duration : 400, delay : 300 }},
     {e: $('.header h1') , p: {scale : 1.3}, o: { duration : 200 }},
     {e: $('.header h1') , p: {scale : 1}, o: { duration : 200 }},
     // Main content
-    {e: $('.main__content') , p: { opacity: 1, translateY: 200 }, o: { duration : 800, delay : 400, easing: 'ease-in-out', sequenceQueue : false }}
+    {e: $('.main__content') , p: { opacity: 1, translateY: 200 }, o: { duration : 400, delay : 400, easing: 'ease-in-out', sequenceQueue : false }}
   ];
   $.Velocity.RunSequence(loadingSequence);
   // Scroll arrow

@@ -5932,7 +5932,8 @@ p, h2, h3 {
     padding: 0; }
     .main__menu--overlay nav ul li {
       padding: 20px 0;
-      margin: 20px 0; }
+      margin: 20px 0;
+      transition: all 0.4s ease; }
       .main__menu--overlay nav ul li:hover {
         background-color: #B68861; }
       .main__menu--overlay nav ul li a {
@@ -5947,6 +5948,25 @@ p, h2, h3 {
 .open {
   opacity: 1;
   visibility: visible; }
+
+/* Middle out border bottom */
+.sliding-middle-out {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px; }
+
+.sliding-middle-out:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 5px;
+  width: 0px;
+  background: transparent;
+  transition: width .6s ease, background-color .6s ease; }
+
+.sliding-middle-out:hover:after {
+  width: 100%;
+  background: #333D46; }
 
 /* Main context */
 .main__content {
