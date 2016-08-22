@@ -6,109 +6,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="Keywords" content="PJ">
   <meta name="Description" content="Freelance Front End Developer">
-  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee+Shade%7CVarela+Round">
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <!-- Main -->
-  <div class="main">
-    <div class="container">
-      <!-- Header -->
-      <div class="header">
-        <!-- Site logo -->
-        <h1>pj</h1>
-        <!-- Menu icon -->
-        <div class="main__menu">
-          <span></span>
-        </div>
+  <main>
+    <!-- Header -->
+    <header>
+      <!-- Site logo -->
+      <h1>PJ</h1>
+      <!-- Main menu -->
+      <div class="main__menu">
+        <span></span>
       </div>
-      <!-- Menu overlay -->
-      <div class="main__menu--overlay">
-        <!-- Menu overlay nav -->
-        <nav role="navigation">
-          <ul>
-            <li><a href="#" class="sliding-middle-out">Home</a></li>
-            <li><a href="#" class="sliding-middle-out">About</a></li>
-            <li><a href="#" class="sliding-middle-out">Portfolio</a></li>
-            <li><a href="#" class="sliding-middle-out">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <!-- Menu content -->
-      <div class="main__content">
-        <h2>Freelance Front End Developer</h2>
-        <p>Melbourne, Australia</p>
-      </div>
-      <!-- Scroll arrow -->
-      <div class="main__arrow">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        width="67px" height="26px" viewBox="0 0 67 26" enable-background="new 0 0 67 26" xml:space="preserve">
-        <line fill="none" class="left" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" 					x1="3" 	y1="3" 	x2="33" y2="23"/>
-        <line fill="none" class="right" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" 										stroke-miterlimit="10" x1="64" y1="3" 	x2="34" y2="23"/>
+    </header>
+    <!-- Main menu menu overlay -->
+    <div class="main__menu--overlay">
+      <!-- Main menu overlay nav -->
+      <nav>
+        <ul>
+          <li><a href="#" class="sliding-middle-out">Home</a></li>
+          <li><a href="#" class="sliding-middle-out">About</a></li>
+          <li><a href="#" class="sliding-middle-out">Portfolio</a></li>
+          <li><a href="#" class="sliding-middle-out">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Main content -->
+    <div class="main__content" role="banner">
+      <h2>Freelance Front End Developer</h2>
+      <p>Melbourne, Australia</p>
+    </div>
+    <!-- Scroll arrow -->
+    <div class="main__arrow">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      width="67px" height="26px" viewBox="0 0 67 26" enable-background="new 0 0 67 26" xml:space="preserve">
+      <line fill="none" class="left" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" 					x1="3" 	y1="3" 	x2="33" y2="23"/>
+      <line fill="none" class="right" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" 										stroke-miterlimit="10" x1="64" y1="3" 	x2="34" y2="23"/>
       </svg>
     </div>
-  </div>
-</div>
-<!-- Supporting -->
-<div class="supporting" id="trigger_1">
-  <div class="container" id="animate_1">
+  </main>
+  <!-- Supporting -->
+  <section>
     <h3>About</h3>
-    <p>Hi, my name is Praveen.</p>
-    <p>I build <span>responsive</span>, <span>mobile first</span>, <span>accessible</span>, and <span>search friendly</span> websites.</p>
-    <p>I have expertise in <span>HTML5</span>, <span>CSS3/Sass</span>, and <span>Bootstrap</span>.</p>
-    <p>I also create interactive website animations using <span>Javascript</span>, <span>jQuery</span> and <span>Velocity.js</span></p>
-  </div>
-</div>
-<!-- Feature -->
-<div class="feature" id="trigger_2">
-  <div class="container" id="animate_2">
-    <h3>Tools</h3>
-    <p>Codekit, Atom, Chrome, GitHub</p>
-  </div>
-</div>
-<!-- Footer -->
-<div class="footer" id="trigger_3" >
-  <div class="container" id="animate_3">
+    <article>
+      <h4>What i do...</h4>
+      <p>Hi, my name is Praveen.</p>
+      <p>I build <span>responsive</span>, <span>mobile first</span>, <span>accessible</span>, and <span>search friendly</span> websites.</p>
+      <p>I have expertise in <span>HTML5</span>, <span>CSS3/Sass</span>, and <span>Bootstrap</span>.</p>
+      <p>I also create interactive website animations using <span>Javascript</span>, <span>jQuery</span> and <span>Velocity.js</span></p>
+    </article>
+  </section>
+  <!-- Footer -->
+  <footer>
     <h3>Contact</h3>
     <p><span>Address:</span><br>26-36 High Street Northcote Victoria 3070</p>
     <p><span>Email:</span><br><a href="mailto:praveen.jayarajan@gmail.com">praveen.jayarajan@gmail.com</a><p>
     <p><span>Phone:</span><br><a href="tel:+61413382221">0413 382 221</a></p>
-
-<!--
-
-    <form class="form-inline" role="form">
-      <div class="form-group">
-        <input type="text" class="form-control" id="name" placeholder="Name">
-      </div>
-      <div class="form-group">
-        <input type="email" class="form-control" id="email" placeholder="Email">
-      </div>
-      <div class="form-group">
-        <textarea class="form-control" id="message" rows="3"></textarea>
-      </div>
-      <button type="submit" class="btn btn-default active">Send</button>
-    </form>
-
--->
-
-  </div>
-</div>
-  <!-- Social -->
-  <div class="social" id="trigger_4">
-    <div class="container">
-      <div class="social__icons" id="animate_4">
-        <a href="#"><img src="images/facebook.svg" alt="facebook" /></a>
-        <a href="#"><img src="images/twitter.svg" alt="twitter" /></a>
-        <a href="#"><img src="images/instagram.svg" alt="instagram" /></a>
-      </div>
+    <!-- Social -->
+    <div class="social">
+        <div class="social__icons">
+          <a href="#"><img src="images/facebook.svg" alt="facebook" /></a>
+          <a href="#"><img src="images/twitter.svg" alt="twitter" /></a>
+          <a href="#"><img src="images/instagram.svg" alt="instagram" /></a>
+        </div>
     </div>
-  </div>
-  <!-- Copyright notice -->
-  <div class="copy">
-    <div class="container">
+    <!-- Copyright notice -->
+    <div class="copyright">
       <p><span>&copy; Praveen Jayarajan 2016</span></p>
     </div>
-  </div>
+  </footer>
+  <!-- Javascript -->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/velocity/velocity.min.js"></script>
   <script src="bower_components/velocity/velocity.ui.min.js"></script>
