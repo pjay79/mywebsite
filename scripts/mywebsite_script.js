@@ -34,8 +34,8 @@ var main = function() {
     }
   });
   // Scroll arrow
-  $('.main__arrow').velocity({ translateY: '10px' },{ duration: 800, loop: true });
-  $('.main__arrow').click(function() {
+  $('main img').velocity({ translateY: '10px' },{ duration: 800, loop: true });
+  $('main img').click(function() {
     $('section').velocity('scroll', { duration : 800 });
   });
   // Sticky header

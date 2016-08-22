@@ -138,6 +138,14 @@ header h1 {
   opacity: 1;
   visibility: visible;
 }
+/* Object - scrolldown svg */
+main img {
+  position: relative;
+  top: 40%;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
 /* Middle out border bottom */
 .sliding-middle-out {
 	display: inline-block;
@@ -177,16 +185,6 @@ header h1 {
       padding-bottom: 10px;
     }
   }
-}
-/* Main scroll down arrow */
-.main__arrow {
-  text-align: center;
-  position: relative;
-  cursor: pointer;
-}
-.main__arrow svg {
-  position: relative;
-  top: 300px;
 }
 /* Section  */
 section {
