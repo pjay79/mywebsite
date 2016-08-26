@@ -2,7 +2,6 @@ var main = function() {
   // Set 100% viewport width/height to div's
   var fullscreen = function(){
     $('main').css({width: $(window).width(), height: $(window).height()});
-    $('section').css({width: $(window).width(), height: $(window).height()});
   };
   fullscreen();
   // Run the function again in case of window resize
@@ -24,19 +23,23 @@ var main = function() {
     if (!$(this).hasClass('active')) {
       $(this).addClass('active');
       $('.main__menu--overlay').addClass('open');
-      $('nav li').velocity('stop')
-      .velocity('transition.slideLeftBigIn', { duration : 300, easing : "ease" });
+      $('nav').velocity({opacity: 1, translateY: "100%"}, { duration : 400, easing : "ease" });
     } else {
       $(this).removeClass('active');
-      $('nav li').velocity('stop')
-      .velocity('transition.slideRightBigOut', { duration : 600, easing: "ease" });
+      $('nav').velocity({opacity: 0, translateY: "-100%"}, { duration : 400, easing: "ease" });
       $('.main__menu--overlay').removeClass('open');
     }
+  });
+  // Main menu overlay - close on clicking link
+  $('nav li a').click(function() {
+    $('.main__menu').removeClass('active');
+    $('nav li').velocity('transition.slideRightBigOut', { duration : 600, easing: "ease" });
+    $('.main__menu--overlay').removeClass('open');
   });
   // Scroll arrow
   $('main img').velocity({ translateY: '10px' },{ duration: 800, loop: true });
   $('main img').click(function() {
-    $('section').velocity('scroll', { duration : 800 });
+    $('#about').velocity('scroll', { duration : 800 });
   });
   // Sticky header
   $(window).scroll(function() {
@@ -49,10 +52,16 @@ var main = function() {
   });
   // ScrollMagic scenes
   var controller = new $.ScrollMagic.Controller();
-  var scene1 = new $.ScrollMagic.Scene({triggerElement: 'section'});
-  scene1.setVelocity('article', { opacity : 1 }, { duration : 1000, easing : 'ease-in-out' } );
+  var scene1 = new $.ScrollMagic.Scene({triggerElement: '#about'});
+  scene1.setVelocity('article', {opacity: 1, translateY: -50}, { delay: 100, duration : 600, easing : 'ease-in-out' } );
   scene1.addTo(controller);
-  //scene1.addIndicators(); // add indicators (requires plugin)
+  var scene2 = new $.ScrollMagic.Scene({triggerElement: '#quote'});
+  scene2.setVelocity('#quote blockquote', {opacity: 1, translateY: -50}, { duration : 600, easing : 'ease' } );
+  scene2.addTo(controller);
+  var scene3 = new $.ScrollMagic.Scene({triggerElement: '#quote'});
+  scene3.setVelocity('#quote p', {opacity: 1, translateY: -50}, { duration : 600, easing : 'ease' } );
+  scene3.addTo(controller);
+  //scene.addIndicators(); // add indicators (requires plugin)
   // Social icons
   $('.social__icons img').mouseover(function(){
     $(this).velocity( { scale : 1.4, rotateZ : '360deg' }, { duration : 400, easing: 'ease-in-out' });

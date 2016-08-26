@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="Keywords" content="PJ">
   <meta name="Description" content="Freelance Front End Developer">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee+Shade%7CVarela+Round">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee+Shade%7CVarela+Round%7CNorican">
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <!-- Main -->
-  <main>
+  <main id="home">
     <!-- Header -->
     <header>
       <!-- Site logo -->
@@ -26,10 +26,10 @@
       <!-- Main menu overlay nav -->
       <nav>
         <ul>
-          <li><a href="#" class="sliding-middle-out">Home</a></li>
-          <li><a href="#" class="sliding-middle-out">About</a></li>
-          <li><a href="#" class="sliding-middle-out">Portfolio</a></li>
-          <li><a href="#" class="sliding-middle-out">Contact</a></li>
+          <li><a href="#home" class="sliding-middle-out">Home</a></li>
+          <li><a href="#about" class="sliding-middle-out">About</a></li>
+          <li><a href="#portfolio" class="sliding-middle-out">Portfolio</a></li>
+          <li><a href="#contact" class="sliding-middle-out">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -42,23 +42,169 @@
     <img src="images/scrolldown.svg" alt="Scroll Down" />
   </main>
   <!-- Supporting -->
-  <section>
+  <section id="about">
     <h3>About</h3>
     <article>
-      <h4>What i do...</h4>
-      <p>Hi, my name is Praveen.</p>
-      <p>I build <span>responsive</span>, <span>mobile first</span>, <span>accessible</span>, and <span>search friendly</span> websites.</p>
-      <p>I have expertise in <span>HTML5</span>, <span>CSS3/Sass</span>, and <span>Bootstrap</span>.</p>
-      <p>I also create interactive website animations using <span>Javascript</span>, <span>jQuery</span> and <span>Velocity.js</span></p>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <h4>HTML5</h4>
+            <img src="images/html5.svg" alt="html5" />
+            <p>
+              I write semantic, accessible, and search friendly HTML.
+              With a strong focus on responsive mobile first websites, and the use of the Twitter Bootstrap framework.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <h4>CSS3</h4>
+            <img src="images/css3.svg" alt="css3" />
+            <p>
+              I also use simple, modular, well structured and reusable CSS,
+              utilising BEM syntax and SASS/SCSS with Compass for pre-processing.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <h4>Javascript</h4>
+            <img src="images/javascript.svg" alt="javascript" />
+            <p>
+              I have a good grasp of Javascript basics and jQuery.
+              And I use the Velocity.js animation engine to create high performance interactive motion within a website.
+            </p>
+          </div>
+        </div>
+      </div>
     </article>
   </section>
+  <!-- Portfolio
+  <section id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <figure>
+            <img src="images/sample1.jpg" alt="sample1" />
+            <figcaption>
+              <h4>Junction</h4>
+              <a href="#">View</a>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-sm-4">
+          <figure>
+            <img src="images/sample2.jpg" alt="sample2" />
+            <figcaption>
+              <h4>Move</h4>
+              <p><a href="#">View</a></p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-sm-4">
+          <figure>
+            <img src="images/sample3.jpg" alt="sample3" />
+            <figcaption>
+              <h4>Bolt Network</h4>
+              <p><a href="#">View</a></p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <figure>
+            <img src="images/sample4.jpg" alt="sample4" />
+            <figcaption>
+              <h4>Broadway</h4>
+              <p><a href="#">View</a></p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-sm-4">
+          <figure>
+            <img src="images/sample5.jpg" alt="sample5" />
+            <figcaption>
+              <h4>Armando Perez</h4>
+              <p><a href="#">View</a></p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-sm-4">
+          <figure>
+            <img src="images/sample6.jpg" alt="sample6" />
+            <figcaption>
+              <h4>Shutterbug</h4>
+              <p><a href="#">View</a></p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+  </section>
+  -->
+  <!-- Quote -->
+  <section id="quote">
+    <blockquote>
+      <p>
+        <img src="images/left-quote.svg" alt="left-quote-mark" />
+        Design is not just what it looks like and feels like.<br> Design is how it works.
+        <img src="images/right-quote.svg" alt="right-quote-mark" />
+      </p>
+    </blockquote>
+    <p>- Steve Jobs.</p>
+  </section>
   <!-- Footer -->
-  <footer>
-    <h3>Contact</h3>
+  <footer id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <h3>Contact</h3>
+          <p><img src="images/location-pin.svg" alt="location" /><a href="http://maps.google.com/?q=26 High Street Northote" target="_blank">26 High Street Northcote 3070</a></p>
+          <p><img src="images/e-mail-envelope.svg" alt="email" /><a href="mailto:praveen.jayarajan@gmail.com">praveen.jayarajan@gmail.com</a><p>
+          <p><img src="images/phone-call.svg" alt="phone" /><a href="tel:+61413382221">0413 382 221</a></p>
+        </div>
+        <div class="col-sm-4">
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <h3>Follow</h3>
+          <div class="social__icons">
+            <a href="#"><img src="images/facebook.svg" alt="facebook" /></a>
+            <a href="#"><img src="images/twitter.svg" alt="twitter" /></a>
+            <a href="#"><img src="images/instagram.svg" alt="instagram" /></a>
+            <a href="#"><img src="images/github.svg" alt="github" /></a>
+            <a href="#"><img src="images/codepen.svg" alt="codepen" /></a>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <h3>Enquiries</h3>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="copyright">
+            <p id="copyright__notice">Hand crafted and coded by Praveen Jayarajan &copy; 2016</p>
+          </div>
+        </div>
+      </div>
+  </footer>
+    <!--
     <p><span>Address:</span><br>26-36 High Street Northcote Victoria 3070</p>
     <p><span>Email:</span><br><a href="mailto:praveen.jayarajan@gmail.com">praveen.jayarajan@gmail.com</a><p>
     <p><span>Phone:</span><br><a href="tel:+61413382221">0413 382 221</a></p>
-    <!-- Social -->
+
     <div class="social">
         <div class="social__icons">
           <a href="#"><img src="images/facebook.svg" alt="facebook" /></a>
@@ -66,11 +212,9 @@
           <a href="#"><img src="images/instagram.svg" alt="instagram" /></a>
         </div>
     </div>
-    <!-- Copyright notice -->
     <div class="copyright">
       <p><span>&copy; Praveen Jayarajan 2016</span></p>
-    </div>
-  </footer>
+    </div> -->
   <!-- Javascript -->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/velocity/velocity.min.js"></script>
