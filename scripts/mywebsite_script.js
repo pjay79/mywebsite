@@ -33,13 +33,17 @@ var main = function() {
   // Main menu overlay - close on clicking link
   $('nav li a').click(function() {
     $('.main__menu').removeClass('active');
-    $('nav li').velocity('transition.slideRightBigOut', { duration : 600, easing: "ease" });
+    $('nav').velocity({opacity: 0, translateY: "-100%"}, { duration : 400, easing: "ease" });
     $('.main__menu--overlay').removeClass('open');
   });
   // Scroll arrow
-  $('main img').velocity({ translateY: '10px' },{ duration: 800, loop: true });
-  $('main img').click(function() {
+  $('#scrolldown').velocity({ translateY: '10px' },{ duration: 800, loop: true });
+  $('#scrolldown').click(function() {
     $('#about').velocity('scroll', { duration : 800 });
+  });
+  $('#scrollup').velocity({ translateY: '10px' },{ duration: 800, loop: true });
+  $('#scrollup').click(function() {
+    $('#home').velocity('scroll', { duration : 800 });
   });
   // Sticky header
   $(window).scroll(function() {
@@ -53,14 +57,17 @@ var main = function() {
   // ScrollMagic scenes
   var controller = new $.ScrollMagic.Controller();
   var scene1 = new $.ScrollMagic.Scene({triggerElement: '#about'});
-  scene1.setVelocity('article', {opacity: 1, translateY: -50}, { delay: 100, duration : 600, easing : 'ease-in-out' } );
+  scene1.setVelocity('article', {opacity: 1, translateY: -50}, { delay: 100, duration : 600, easing : 'ease' } );
   scene1.addTo(controller);
-  var scene2 = new $.ScrollMagic.Scene({triggerElement: '#quote'});
-  scene2.setVelocity('#quote blockquote', {opacity: 1, translateY: -50}, { duration : 600, easing : 'ease' } );
+  var scene2 = new $.ScrollMagic.Scene({triggerElement: '#portfolio'});
+  scene2.setVelocity('figure', {opacity: 1, translateY: -50}, { delay: 100, duration : 600, easing : 'ease'} );
   scene2.addTo(controller);
   var scene3 = new $.ScrollMagic.Scene({triggerElement: '#quote'});
-  scene3.setVelocity('#quote p', {opacity: 1, translateY: -50}, { duration : 600, easing : 'ease' } );
+  scene3.setVelocity('#quote blockquote', {opacity: 1, translateY: -50}, { duration : 600, easing : 'ease' } );
   scene3.addTo(controller);
+  var scene4 = new $.ScrollMagic.Scene({triggerElement: '#quote'});
+  scene4.setVelocity('#quote p', {opacity: 1, translateY: -50}, { duration : 600, easing : 'ease' } );
+  scene4.addTo(controller);
   //scene.addIndicators(); // add indicators (requires plugin)
   // Social icons
   $('.social__icons img').mouseover(function(){
