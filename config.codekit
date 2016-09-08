@@ -3000,6 +3000,72 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/images\/adventure.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.27005e+06,
+		"inputAbbreviatedPath": "\/images\/adventure.jpeg",
+		"outputAbbreviatedPath": "\/images\/adventure.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/brick.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6.79672e+06,
+		"inputAbbreviatedPath": "\/images\/brick.jpg",
+		"outputAbbreviatedPath": "\/images\/brick.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/brick_1440.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 624506,
+		"inputAbbreviatedPath": "\/images\/brick_1440.jpg",
+		"outputAbbreviatedPath": "\/images\/brick_1440.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/brickwall.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 533251,
+		"inputAbbreviatedPath": "\/images\/brickwall.jpg",
+		"outputAbbreviatedPath": "\/images\/brickwall.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/clouds.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.61404e+06,
+		"inputAbbreviatedPath": "\/images\/clouds.jpg",
+		"outputAbbreviatedPath": "\/images\/clouds.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/comet.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 887919,
+		"inputAbbreviatedPath": "\/images\/comet.jpeg",
+		"outputAbbreviatedPath": "\/images\/comet.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/desk.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -3010,6 +3076,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 1
+		},
+	"\/images\/desk2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 383790,
+		"inputAbbreviatedPath": "\/images\/desk2.jpg",
+		"outputAbbreviatedPath": "\/images\/desk2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/images\/desk_1x.jpg": {
 		"fileType": 16384,
@@ -3029,6 +3106,39 @@
 		"initialSize": 588178,
 		"inputAbbreviatedPath": "\/images\/desk_2x.jpg",
 		"outputAbbreviatedPath": "\/images\/desk_2x.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/desk_birdsview.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.95844e+06,
+		"inputAbbreviatedPath": "\/images\/desk_birdsview.jpeg",
+		"outputAbbreviatedPath": "\/images\/desk_birdsview.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/desk_birdsview2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4.74511e+06,
+		"inputAbbreviatedPath": "\/images\/desk_birdsview2.jpg",
+		"outputAbbreviatedPath": "\/images\/desk_birdsview2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/lego.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.53229e+07,
+		"inputAbbreviatedPath": "\/images\/lego.jpeg",
+		"outputAbbreviatedPath": "\/images\/lego.jpeg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -3106,6 +3216,72 @@
 		"initialSize": 165505,
 		"inputAbbreviatedPath": "\/images\/sample7.jpg",
 		"outputAbbreviatedPath": "\/images\/sample7.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/screen.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 164083,
+		"inputAbbreviatedPath": "\/images\/screen.jpg",
+		"outputAbbreviatedPath": "\/images\/screen.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/sky.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.92698e+06,
+		"inputAbbreviatedPath": "\/images\/sky.jpeg",
+		"outputAbbreviatedPath": "\/images\/sky.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/sky2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4.81453e+06,
+		"inputAbbreviatedPath": "\/images\/sky2.jpg",
+		"outputAbbreviatedPath": "\/images\/sky2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/sos.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 113,
+		"inputAbbreviatedPath": "\/images\/sos.png",
+		"outputAbbreviatedPath": "\/images\/sos.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/squairy_light.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24023,
+		"inputAbbreviatedPath": "\/images\/squairy_light.png",
+		"outputAbbreviatedPath": "\/images\/squairy_light.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/texture_blue.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 567149,
+		"inputAbbreviatedPath": "\/images\/texture_blue.jpg",
+		"outputAbbreviatedPath": "\/images\/texture_blue.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

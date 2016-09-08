@@ -56,9 +56,9 @@ var main = function() {
   });
   // ScrollMagic scenes
   var controller = new $.ScrollMagic.Controller();
-  var scene1 = new $.ScrollMagic.Scene({triggerElement: '#about'});
-  scene1.setVelocity('article', {opacity: 1, translateY: -50}, { delay: 100, duration : 600, easing : 'ease' } );
-  scene1.addTo(controller);
+  //var scene1 = new $.ScrollMagic.Scene({triggerElement: '#about'});
+  //scene1.setVelocity('article', {opacity: 1, translateY: -30}, { delay: 100, duration : 600, easing : 'ease' } );
+  //scene1.addTo(controller);
   var scene2 = new $.ScrollMagic.Scene({triggerElement: '#portfolio'});
   scene2.setVelocity('figure', {opacity: 1, translateY: -50}, { delay: 100, duration : 600, easing : 'ease'} );
   scene2.addTo(controller);
@@ -70,10 +70,16 @@ var main = function() {
   scene4.addTo(controller);
   //scene.addIndicators(); // add indicators (requires plugin)
   // Social icons
-  $('.social__icons img').mouseover(function(){
+  $('.main__social img').mouseover(function(){
     $(this).velocity( { scale : 1.4, rotateZ : '360deg' }, { duration : 400, easing: 'ease-in-out' });
     $(this).mouseleave(function(){
-      $(this).velocity( { scale : 1.0, rotateZ : '-360deg' }, { duration : 300, easing: 'ease-in-out' });
+      $(this).velocity( { scale : 1.0, rotateZ : '-360deg' }, { duration : 200, easing: 'ease-in-out' });
+    });
+  });
+  $('.footer__social img').mouseover(function(){
+    $(this).velocity( { scale : 1.4, rotateZ : '360deg' }, { duration : 400, easing: 'ease-in-out' });
+    $(this).mouseleave(function(){
+      $(this).velocity( { scale : 1.0, rotateZ : '-360deg' }, { duration : 200, easing: 'ease-in-out' });
     });
   });
 };
