@@ -6,3 +6,13 @@
   -o-background-size: cover;
   background-size: cover;
 }
+// Section h3 headers
+@mixin section__header($border__color, $font__color) {
+  display: inline-block;
+  padding-bottom: 5px;
+  border-bottom: 10px solid $border__color;
+  color: $font__color;
+  @extend %font-x-large;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
