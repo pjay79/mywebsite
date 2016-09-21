@@ -2178,30 +2178,6 @@ input[type="button"].btn-block {
 @media print {
   .hidden-print {
     display: none !important; } }
-body, .copyright a {
-  font-size: 1.4rem;
-  font-size: 14px; }
-
-.main__contact p, .main__contact a, #portfolio figcaption a, footer p, footer a, input[type=email], input[type=text], .btn, .copyright p {
-  font-size: 2rem;
-  font-size: 20px; }
-
-.main__content p, #about p {
-  font-size: 2.5rem;
-  font-size: 25px; }
-
-header h1, .main__menu--overlay nav ul li a, #portfolio figcaption h4, #quote p {
-  font-size: 4rem;
-  font-size: 40px; }
-
-#aboutme h3, #aboutskills h3, #portfolio h3, #quote blockquote p, #contact__info h3, #contact__form h3 {
-  font-size: 8rem;
-  font-size: 80px; }
-
-.main__content h2 {
-  font-size: 12rem;
-  font-size: 120px; }
-
 /* {
 outline: 1px dotted #ff0000;
 } */
@@ -2210,16 +2186,23 @@ outline: 1px dotted #ff0000;
   src: url("fonts/Wasted.eot");
   src: url("fonts/Wasted.eot") format("embedded-opentype"), url("fonts/Wasted.woff2") format("woff2"), url("fonts/Wasted.woff") format("woff"), url("fonts/Wasted.ttf") format("truetype"), url("fonts/Wasted.svg#Wasted") format("svg"); }
 body {
-  font-size: 62.5%;
+  font-size: 100%;
   width: 100%;
-  background-color: #333D46;
-  margin-top: -20px; }
+  background-color: #333D46; }
 
-h1 {
-  font-family: 'Bungee Shade', cursive; }
+p {
+  font-size: 2.5em;
+  /* 1.4em relative to a 16px baseline on the body will result in a 20px font size */
+  line-height: 1.4em; }
+  @media (max-width: 33.99em) {
+    p {
+      font-size: 2em; } }
 
-h2, h3, h4, p {
-  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif; }
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em; }
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
 
 .container {
   width: 100%; }
@@ -2230,7 +2213,16 @@ main {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  margin-top: -20px; }
+
+.logo {
+  opacity: 0;
+  position: relative;
+  left: 15px;
+  top: 25px;
+  height: 50px;
+  width: 50px; }
 
 /* Header */
 header {
@@ -2247,15 +2239,6 @@ header {
   z-index: 2;
   margin-top: -15px;
   background-color: rgba(51, 61, 70, 0.6); }
-
-header h1 {
-  opacity: 0;
-  position: relative;
-  float: left;
-  display: inline-block;
-  margin-left: 20px;
-  color: #FFF;
-  font-weight: bold; }
 
 /* Main menu icon */
 .main__menu {
@@ -2322,22 +2305,25 @@ header h1 {
 
 /* Main menu overlay nav */
 .main__menu--overlay nav {
-  opacity: 0;
+  opacity: 1;
   position: relative;
-  top: -40%; }
+  top: -50vh;
+  padding: 0;
+  margin: 0; }
   .main__menu--overlay nav ul {
     list-style: none;
     padding: 0;
     margin: 0 auto;
     text-align: center; }
     .main__menu--overlay nav ul li {
-      padding: 20px 0;
+      padding: 2vh 0;
       -webkit-transition: all 0.35s ease;
       transition: all 0.35s ease; }
       .main__menu--overlay nav ul li:hover {
         background-color: #B68861; }
       .main__menu--overlay nav ul li a {
         color: #FFF;
+        font-size: 4em;
         text-decoration: none;
         -webkit-transition: all 0.35s ease;
         transition: all 0.35s ease; }
@@ -2347,20 +2333,33 @@ header h1 {
   visibility: visible; }
 
 .main__contact {
-  position: fixed;
-  bottom: 2vh;
-  left: 2vw; }
-  .main__contact a {
-    color: #FFF; }
-  .main__contact img {
-    margin-right: 1vw; }
+  visibility: hidden; }
+  @media (min-width: 48em) {
+    .main__contact {
+      position: fixed;
+      visibility: visible;
+      bottom: 2vh;
+      left: 2vw; }
+      .main__contact p {
+        font-size: 1.4em; }
+      .main__contact a {
+        color: #FFF;
+        font-size: 2.5em;
+        position: absolute;
+        bottom: 2.5vh; }
+      .main__contact img {
+        margin-right: 1vw; } }
 
 .main__social {
-  position: fixed;
-  bottom: 2vh;
-  right: 2vw; }
-  .main__social img {
-    margin-left: 1vw; }
+  visibility: hidden; }
+  @media (min-width: 48em) {
+    .main__social {
+      position: fixed;
+      visibility: visible;
+      bottom: 2vh;
+      right: 2vw; }
+      .main__social img {
+        margin: 0 1vh; } }
 
 /* Object - scrolldown svg */
 #scrolldown {
@@ -2429,54 +2428,103 @@ header h1 {
 .main__content {
   opacity: 0;
   text-align: center; }
-  .main__content h2 {
+  .main__content h1 {
     margin-bottom: 2%;
     color: #FFF;
     font-family: 'Wasted', sans-serif;
     font-weight: bold;
+    font-size: 6em;
     text-shadow: -2px 2px 5px black; }
-    .main__content h2 #and {
+@media (min-width: 34em) and (max-width: 47.99em) {
+  .main__content h1 {
+    font-size: 8em; } }
+
+@media (min-width: 48em) and (max-width: 61.99em) {
+  .main__content h1 {
+    font-size: 10em; } }
+
+    @media (min-width: 62em) {
+      .main__content h1 {
+        font-size: 12em; } }
+    .main__content h1 #and {
       color: #D0D8E0; }
   .main__content p {
     color: #FFF;
+    font-size: 1.5em;
     font-weight: lighter;
     letter-spacing: 2px;
     text-shadow: -2px 2px 5px black; }
+    @media (min-width: 48em) {
+      .main__content p {
+        font-size: 2.5em; } }
   .main__content #slogan {
     display: inline-block;
     padding: 3px 0;
     border-top: 3px solid #B68861;
     border-bottom: 4px solid #B68861;
+    margin: 0 10px 10px 10px;
     font-weight: bold;
     text-transform: uppercase; }
 
-/* Section  */
+/* Section: About */
+@media (min-width: 62em) {
+  .is-table-row {
+    display: table; }
+
+  .is-table-row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top; } }
 #about {
   position: relative;
   background-color: #FFF;
   background: url(images/squairy_light.png) repeat;
   text-align: center; }
   #about p {
-    padding-top: 20px;
-    font-weight: lighter;
-    text-align: center; }
+    padding-top: 25px;
+    font-weight: lighter; }
 
 #aboutme {
-  padding: 50px 25px;
-  margin: auto 0; }
+  padding: 50px 25px 75px 25px; }
+  @media (min-width: 34em) {
+    #aboutme {
+      padding: 75px 50px 100px 50px; } }
   #aboutme h3 {
     display: inline-block;
     padding-bottom: 5px;
     border-bottom: 10px solid #B68861;
     color: #333D46;
+    font-size: 6em;
     font-weight: bold;
-    letter-spacing: 3px; }
+    letter-spacing: 3px;
+    margin-bottom: 4%; }
+@media (min-width: 20em) and (max-width: 34em) {
+  #aboutme h3 {
+    font-size: 5em; } }
+
+  #aboutme p {
+    text-align: left; }
+    @media (min-width: 34em) {
+      #aboutme p {
+        text-align: justify; } }
+  #aboutme .aboutme__first-paragraph {
+    font-weight: bold;
+    text-align: left; }
+    @media (min-width: 34em) {
+      #aboutme .aboutme__first-paragraph {
+        letter-spacing: 3px; } }
+  #aboutme .aboutme__word-style {
+    font-style: italic;
+    font-weight: bold;
+    border-bottom: 3px solid #FFF; }
 
 #aboutskills {
-  padding: 50px 25px;
-  margin: auto 0;
+  padding: 50px 10px 75px 10px;
   background-color: #B68861;
   color: #FFF; }
+  @media (min-width: 34em) {
+    #aboutskills {
+      padding: 75px 10px 100px 10px; } }
   #aboutskills img {
     display: inline-block;
     text-align: center;
@@ -2487,16 +2535,24 @@ header h1 {
     padding-bottom: 5px;
     border-bottom: 10px solid #333D46;
     color: #FFF;
+    font-size: 6em;
     font-weight: bold;
     letter-spacing: 3px; }
+@media (min-width: 20em) and (max-width: 34em) {
+  #aboutskills h3 {
+    font-size: 5em; } }
+
   #aboutskills p {
-    margin-bottom: 2%; }
+    text-align: center; }
 
 /* Portfolio */
 #portfolio {
   padding-top: 25px;
   background-color: #333D46;
   text-align: center; }
+  @media (min-width: 34em) {
+    #portfolio {
+      padding-top: 50px; } }
   #portfolio h3 {
     padding-top: 20px;
     margin-bottom: 50px;
@@ -2504,8 +2560,12 @@ header h1 {
     padding-bottom: 5px;
     border-bottom: 10px solid #B68861;
     color: #FFF;
+    font-size: 6em;
     font-weight: bold;
     letter-spacing: 3px; }
+@media (min-width: 20em) and (max-width: 34em) {
+  #portfolio h3 {
+    font-size: 5em; } }
 
 #portfolio .col-md-6 {
   padding: 0; }
@@ -2556,8 +2616,8 @@ header h1 {
   top: 15%;
   padding: 50px 0;
   color: #FFF;
+  font-size: 4em;
   font-weight: bold;
-  letter-spacing: 5px;
   text-transform: uppercase;
   text-align: center;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -2575,6 +2635,7 @@ header h1 {
   margin-top: 30px;
   background-color: #B68861;
   color: #FFF;
+  font-size: 2em;
   font-weight: lighter;
   letter-spacing: 3px;
   text-decoration: none;
@@ -2592,9 +2653,12 @@ header h1 {
   transform: translate3d(0, 0, 0); }
 
 #quote {
-  padding: 150px 0;
+  padding: 75px 0;
   background-color: #B68861;
   text-align: center; }
+  @media (min-width: 34em) {
+    #quote {
+      padding: 150px 0; } }
   #quote blockquote {
     opacity: 0;
     position: relative;
@@ -2605,7 +2669,19 @@ header h1 {
     text-align: center; }
     #quote blockquote p {
       color: #FFF;
+      font-size: 2em;
       font-weight: lighter; }
+@media (min-width: 20em) and (max-width: 33.99em) {
+  #quote blockquote p {
+    font-size: 2em; } }
+
+@media (min-width: 34em) and (max-width: 47.99em) {
+  #quote blockquote p {
+    font-size: 2.5em; } }
+
+      @media (min-width: 48em) {
+        #quote blockquote p {
+          font-size: 3em; } }
       #quote blockquote p img {
         margin-top: -40px; }
   #quote p {
@@ -2613,34 +2689,54 @@ header h1 {
     position: relative;
     top: 50px;
     color: #333D46;
+    font-size: 2em;
     font-weight: bold; }
+@media (min-width: 20em) and (max-width: 33.99em) {
+  #quote p {
+    font-size: 2em; } }
+
+@media (min-width: 34em) and (max-width: 47.99em) {
+  #quote p {
+    font-size: 2.5em; } }
+
+    @media (min-width: 48em) {
+      #quote p {
+        font-size: 3em; } }
 
 /* Footer */
 footer {
+  background-color: #333D46;
   color: #FFF;
   text-align: center; }
   footer div > .row {
     background-color: #333D46; }
+  footer p {
+    font-size: 2em; }
   footer a {
-    color: #333D46; }
+    color: #333D46;
+    font-size: 2em; }
 
 #contact__info {
-  padding-top: 50px;
-  padding-bottom: 50px; }
+  padding: 50px 0 50px; }
   #contact__info h3 {
     margin-bottom: 50px;
     display: inline-block;
     padding-bottom: 5px;
     border-bottom: 10px solid #B68861;
     color: #FFF;
+    font-size: 6em;
     font-weight: bold;
     letter-spacing: 3px; }
+@media (min-width: 20em) and (max-width: 34em) {
+  #contact__info h3 {
+    font-size: 5em; } }
+
   #contact__info a:link, #contact__info a:hover, #contact__info a:visited {
+    font-size: 1.8em;
     color: #FFF; }
 
 #contact__form {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 0 50px;
   background-color: #D0D8E0; }
   #contact__form h3 {
     margin-bottom: 25px;
@@ -2648,14 +2744,22 @@ footer {
     padding-bottom: 5px;
     border-bottom: 10px solid #333D46;
     color: #FFF;
+    font-size: 6em;
     font-weight: bold;
     letter-spacing: 3px; }
+@media (min-width: 20em) and (max-width: 34em) {
+  #contact__form h3 {
+    font-size: 5em; } }
 
 footer img {
+  margin-top: -10px;
   margin-right: 4%; }
 
 .footer__social {
-  margin-top: 5%; }
+  margin-top: 1%; }
+  .footer__social img {
+    margin-right: 4%;
+    margin-left: 4%; }
 
 a[href^="http:"]:hover, a[href^="mailto:"]:hover, a[href^="tel:"]:hover {
   color: #FFF;
@@ -2674,6 +2778,7 @@ input[type=email], input[type=text] {
   border-bottom: 3px solid #333D46;
   margin: 25px auto;
   background: transparent;
+  font-size: 2em;
   font-weight: bold;
   letter-spacing: 2px; }
   input[type=email]:-moz-placeholder, input[type=text]:-moz-placeholder {
@@ -2695,18 +2800,25 @@ input[type=email], input[type=text] {
 
 input[type=email]:hover, input[type=text]:hover {
   box-shadow: none;
-  border-bottom: 3px solid #FFF; }
+  border-bottom: 3px solid #FFF;
+  background-color: #D0D8E0 !important;
+  color: #333D46; }
 
 input[type=email]:focus, input[type=text]:focus {
   box-shadow: none;
   border-bottom: 3px solid #FFF;
+  background-color: #D0D8E0 !important;
   color: #333D46; }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #D0D8E0 inset; }
 
 #message {
   width: 75%;
   border: 3px solid #333D46;
   border-radius: 0;
   margin: 50px auto;
+  background: url(images/squairy_light.png) repeat;
   background-color: #D0D8E0; }
   #message:-moz-placeholder {
     color: #333D46;
@@ -2739,6 +2851,7 @@ input[type=email]:focus, input[type=text]:focus {
   margin: 0 auto;
   background-color: #333D46;
   color: #FFF;
+  font-size: 2em;
   text-align: center;
   font-weight: bold;
   letter-spacing: 3px;
@@ -2756,6 +2869,13 @@ input[type=email]:focus, input[type=text]:focus {
   box-shadow: inset 0 50px 0 0 #D0D8E0;
   color: #FFF; }
 
+#confirmation {
+  opacity: 0;
+  margin-top: 10px; }
+  #confirmation p {
+    font-weight: bold;
+    letter-spacing: 3px; }
+
 .copyright {
   background-color: #333D46;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQIW2NkYGD4z8DAwMgABXAGNgGwSgwVAFbmAgXxvZSoAAAAAElFTkSuQmCC) repeat;
@@ -2767,12 +2887,18 @@ input[type=email]:focus, input[type=text]:focus {
     margin: 0; }
   .copyright p {
     color: #FFF;
+    font-size: 2em;
     font-weight: lighter;
     letter-spacing: 2px; }
+@media (min-width: 20em) and (max-width: 34em) {
+  .copyright p {
+    font-size: 1.4em; } }
+
   .copyright a {
     color: #FFF;
     margin-top: 10px;
     margin-right: 20px;
+    font-size: 1.4em;
     font-weight: bold;
     letter-spacing: 4px;
     text-decoration: none;

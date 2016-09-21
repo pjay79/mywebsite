@@ -11,9 +11,9 @@ var main = function() {
   // Header
   var loadingSequence = [
     // Site logo
-    {e: $('main header h1') , p: 'transition.slideLeftBigIn', o: { duration : 400, delay : 300 }},
-    {e: $('main header h1') , p: {scale : 1.3}, o: { duration : 200 }},
-    {e: $('main header h1') , p: {scale : 1}, o: { duration : 200 }},
+    {e: $('.logo') , p: {opacity : 1}, o: { duration : 200 }},
+    {e: $('.logo') , p: {scale : 1.3}, o: { duration : 200 }},
+    {e: $('.logo') , p: {scale : 1}, o: { duration : 200 }},
     // Main content
     {e: $('.main__content') , p: { opacity: 1, translateY: 200 }, o: { duration : 400, delay : 400, easing: 'ease-in-out', sequenceQueue : false }}
   ];
@@ -23,17 +23,17 @@ var main = function() {
     if (!$(this).hasClass('active')) {
       $(this).addClass('active');
       $('.main__menu--overlay').addClass('open');
-      $('nav').velocity({opacity: 1, translateY: "100%"}, { duration : 400, easing : "ease" });
+      $('nav').velocity({opacity: 1, translateY: "75vh"}, { duration : 400, easing : "ease" });
     } else {
       $(this).removeClass('active');
-      $('nav').velocity({opacity: 0, translateY: "-100%"}, { duration : 400, easing: "ease" });
+      $('nav').velocity({opacity: 0, translateY: "-75vh"}, { duration : 400, easing: "ease" });
       $('.main__menu--overlay').removeClass('open');
     }
   });
   // Main menu overlay - close on clicking link
   $('nav li a').click(function() {
     $('.main__menu').removeClass('active');
-    $('nav').velocity({opacity: 0, translateY: "-100%"}, { duration : 400, easing: "ease" });
+    $('nav').velocity({opacity: 0, translateY: "-75vh"}, { duration : 400, easing: "ease" });
     $('.main__menu--overlay').removeClass('open');
   });
   // Scroll arrow
@@ -82,5 +82,21 @@ var main = function() {
       $(this).velocity( { scale : 1.0, rotateZ : '-360deg' }, { duration : 200, easing: 'ease-in-out' });
     });
   });
+  // Form submission
+  $('form').submit(function() {
+        $('#confirmation').css("opacity", 1);
+        $('#confirmation').velocity({opacity: 0}, { delay : 800, duration : 400, easing: "ease" });
+        event.preventDefault();
+        var formData = $('form').serialize();
+        $.ajax({
+          type: 'POST',
+          url: $('form').attr('action'),
+          data: formData
+        });
+        $('#name').val('');
+        $('#email').val('');
+        $('#message').val('');
+        return false;
+    });
 };
 $(document).ready(main);

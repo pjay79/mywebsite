@@ -2,26 +2,31 @@
 outline: 1px dotted #ff0000;
 } */
 @font-face {
-    font-family: 'Wasted';
-    src: url('fonts/Wasted.eot');
-    src: url('fonts/Wasted.eot') format('embedded-opentype'),
-         url('fonts/Wasted.woff2') format('woff2'),
-         url('fonts/Wasted.woff') format('woff'),
-         url('fonts/Wasted.ttf') format('truetype'),
-         url('fonts/Wasted.svg#Wasted') format('svg');
+  font-family: 'Wasted';
+  src: url('fonts/Wasted.eot');
+  src: url('fonts/Wasted.eot') format('embedded-opentype'),
+  url('fonts/Wasted.woff2') format('woff2'),
+  url('fonts/Wasted.woff') format('woff'),
+  url('fonts/Wasted.ttf') format('truetype'),
+  url('fonts/Wasted.svg#Wasted') format('svg');
 }
 body {
-  font-size: 62.5%;
-  @extend %font-x-small;
+  font-size: 100%;
   width: 100%;
   background-color: $color1;
-  margin-top: -20px;
 }
-h1 {
-  font-family: 'Bungee Shade', cursive;
+p {
+  font-size: 2.5em; /* 1.4em relative to a 16px baseline on the body will result in a 20px font size */
+  @include media('<phone') {
+    font-size: 2em;
+  }
+  line-height: 1.4em;
 }
-h2, h3, h4, p {
-  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
+}
+h1, h2, h3, h4, h5, h6, p {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .container {
   width: 100%;
@@ -29,6 +34,15 @@ h2, h3, h4, p {
 /* Main */
 main {
   @include cover-background('desk_1x.jpg');
+  margin-top: -20px;
+}
+.logo {
+  opacity: 0;
+  position: relative;
+  left: 15px;
+  top: 25px;
+  height: 50px;
+  width: 50px;
 }
 /* Header */
 header {
@@ -45,16 +59,6 @@ header {
   z-index: 2;
   margin-top: -15px;
   background-color: rgba($color1, 0.6);
-}
-header h1 {
-  opacity: 0;
-  position: relative;
-  float: left;
-  display: inline-block;
-  margin-left: 20px;
-  color: $white;
-  @extend %font-large;
-  font-weight: bold;
 }
 /* Main menu icon */
 .main__menu {
@@ -121,16 +125,18 @@ header h1 {
 }
 /* Main menu overlay nav */
 .main__menu--overlay nav {
-  opacity: 0;
+  opacity: 1;
   position: relative;
-  top: -40%;
+  top: -50vh;
+  padding: 0;
+  margin: 0;
   ul {
     list-style: none;
     padding: 0;
     margin: 0 auto;
     text-align: center;
     li {
-      padding: 20px 0;
+      padding: 2vh 0;
       -webkit-transition: all 0.35s ease;
       transition: all 0.35s ease;
       &:hover {
@@ -138,7 +144,7 @@ header h1 {
       }
       a {
         color: $white;
-        @extend %font-large;
+        font-size: 4em;
         text-decoration: none;
         -webkit-transition: all 0.35s ease;
         transition: all 0.35s ease;
@@ -151,26 +157,36 @@ header h1 {
   visibility: visible;
 }
 .main__contact {
-  position: fixed;
-  bottom: 2vh;
-  left: 2vw;
-  p {
-    @extend %font-small;
-  }
-  a {
-    color: $white;
-    @extend %font-small;
-  }
-  img {
-    margin-right: 1vw;
+  visibility: hidden;
+  @include media('>=tablet') {
+    position: fixed;
+    visibility: visible;
+    bottom: 2vh;
+    left: 2vw;
+    p {
+      font-size: 1.4em;
+    }
+    a {
+      color: $white;
+      font-size: 2.5em;
+      position: absolute;
+      bottom: 2.5vh;
+    }
+    img {
+      margin-right: 1vw;
+    }
   }
 }
 .main__social {
-  position: fixed;
-  bottom: 2vh;
-  right: 2vw;
-  img {
-    margin-left: 1vw;
+  visibility: hidden;
+  @include media('>=tablet') {
+    position: fixed;
+    visibility: visible;
+    bottom: 2vh;
+    right: 2vw;
+    img {
+      margin: 0 1vh;
+    }
   }
 }
 /* Object - scrolldown svg */
@@ -240,12 +256,21 @@ header h1 {
 .main__content {
   opacity: 0;
   text-align: center;
-  h2 {
+  h1 {
     margin-bottom: 2%;
     color: $white;
     font-family: 'Wasted', sans-serif;
     font-weight: bold;
-    @extend %font-xx-large;
+    font-size: 6em;
+    @include media('>=phone', '<tablet') {
+      font-size: 8em;
+    }
+    @include media('>=tablet', '<desktop') {
+      font-size: 10em;
+    }
+    @include media('>=desktop') {
+      font-size: 12em;
+    }
     text-shadow: -2px 2px 5px rgba(0, 0, 0, 1);
     #and {
       color: $color2;
@@ -253,7 +278,10 @@ header h1 {
   }
   p {
     color: $white;
-    @extend %font-medium;
+    font-size: 1.5em;
+    @include media('>=tablet') {
+      font-size: 2.5em;
+    }
     font-weight: lighter;
     letter-spacing: 2px;
     text-shadow: -2px 2px 5px rgba(0, 0, 0, 1);
@@ -263,33 +291,65 @@ header h1 {
     padding: 3px 0;
     border-top: 3px solid $color3;
     border-bottom: 4px solid $color3;
+    margin: 0 10px 10px 10px;
     font-weight: bold;
     text-transform: uppercase;
   }
 }
-/* Section  */
+/* Section: About */
+@include media('>=desktop') {
+  .is-table-row {
+      display: table;
+  }
+  .is-table-row [class*="col-"] {
+      float: none;
+      display: table-cell;
+      vertical-align: top;
+  }
+}
 #about {
   position: relative;
   background-color: $white;
   background: url(images/squairy_light.png) repeat;
   text-align: center;
   p {
-    padding-top: 20px;
-    @extend %font-medium;
+    padding-top: 25px;
     font-weight: lighter;
-    text-align: center;
   }
 }
 #aboutme {
-  padding: 50px 25px;
-  margin: auto 0;
+  padding: 50px 25px 75px 25px;
+  @include media('>=phone') {
+    padding: 75px 50px 100px 50px;
+  }
   h3 {
     @include section__header($color3, $color1);
+    margin-bottom: 4%;
+  }
+  p {
+    text-align: left;
+    @include media('>=phone') {
+      text-align: justify;
+    }
+  }
+  .aboutme__first-paragraph {
+    @include media('>=phone') {
+      letter-spacing: 3px;
+    }
+    font-weight: bold;
+    text-align: left;
+  }
+  .aboutme__word-style {
+    font-style: italic;
+    font-weight: bold;
+    border-bottom: 3px solid $white;
   }
 }
 #aboutskills {
-  padding: 50px 25px;
-  margin: auto 0;
+  padding: 50px 10px 75px 10px;
+  @include media('>=phone') {
+    padding: 75px 10px 100px 10px;
+  }
   background-color: $color3;
   color: $white;
   img {
@@ -302,12 +362,15 @@ header h1 {
     @include section__header($color1, $white);
   }
   p {
-    margin-bottom: 2%;
+    text-align: center;
   }
 }
 /* Portfolio */
 #portfolio {
   padding-top: 25px;
+  @include media('>=phone') {
+    padding-top: 50px;
+  }
   background-color: $color1;
   text-align: center;
   h3 {
@@ -351,8 +414,8 @@ header h1 {
   width: 100%;
   height: 100%;
   background-color: rgba($black, 0.7);
-  -webkit-transition: opacity 0.35s; //-webkit-transform 0.35s;
-  transition: opacity 0.35s; //transform 0.35s;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
 }
 #portfolio figure:hover figcaption {
   opacity: 1;
@@ -365,9 +428,9 @@ header h1 {
   top: 15%;
   padding: 50px 0;
   color: $white;
-  @extend %font-large;
+  font-size: 4em;
   font-weight: bold;
-  letter-spacing: 5px;
+  //letter-spacing: 5px;
   text-transform: uppercase;
   text-align: center;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -385,7 +448,7 @@ header h1 {
   margin-top: 30px;
   background-color: $color3;
   color: $white;
-  @extend %font-small;
+  font-size: 2em;
   font-weight: lighter;
   letter-spacing: 3px;
   text-decoration: none;
@@ -403,7 +466,10 @@ header h1 {
   transform: translate3d(0,0,0);
 }
 #quote {
-  padding: 150px 0;
+  padding: 75px 0;
+  @include media('>=phone') {
+    padding: 150px 0;
+  }
   background-color: $color3;
   text-align: center;
   blockquote {
@@ -416,7 +482,16 @@ header h1 {
     text-align: center;
     p {
       color: $white;
-      @extend %font-x-large;
+      font-size: 2em;
+      @include media('>=small-phone', '<phone') {
+        font-size: 2em;
+      }
+      @include media('>=phone', '<tablet') {
+        font-size: 2.5em;
+      }
+      @include media('>=tablet') {
+        font-size: 3em;
+      }
       font-weight: lighter;
       img {
         margin-top: -40px;
@@ -428,41 +503,50 @@ header h1 {
     position: relative;
     top: 50px;
     color: $color1;
-    @extend %font-large;
+    font-size: 2em;
+    @include media('>=small-phone', '<phone') {
+      font-size: 2em;
+    }
+    @include media('>=phone', '<tablet') {
+      font-size: 2.5em;
+    }
+    @include media('>=tablet') {
+      font-size: 3em;
+    }
     font-weight: bold;
   }
 }
 /* Footer */
 footer {
   //padding-top: 50px;
+  background-color: $color1;
   color: $white;
   text-align: center;
   div > .row {
     background-color: $color1;
   }
   p {
-    @extend %font-small;
+    font-size: 2em;
   }
   a {
     color: $color1;
-    @extend %font-small;
+    font-size: 2em;
   }
 }
 // Footer contact info
 #contact__info {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 0 50px;
   h3 {
     margin-bottom: 50px;
     @include section__header($color3, $white);
   }
   a:link, a:hover, a:visited {
+    font-size: 1.8em;
     color: $white;
   }
 }
 #contact__form {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 0 50px;
   background-color: $color2;
   h3 {
     margin-bottom: 25px;
@@ -470,10 +554,15 @@ footer {
   }
 }
 footer img {
+  margin-top: -10px;
   margin-right: 4%;
 }
 .footer__social {
-  margin-top: 5%;
+  margin-top: 1%;
+  img {
+    margin-right: 4%;
+    margin-left: 4%;
+  }
 }
 a[href^="http:"]:hover, a[href^="mailto:"]:hover, a[href^="tel:"]:hover {
   color: $white;
@@ -493,7 +582,7 @@ input[type=email], input[type=text] {
   border-bottom: 3px solid $color1;
   margin: 25px auto;
   background: transparent;
-  @extend %font-small;
+  font-size: 2em;
   font-weight: bold;
   letter-spacing: 2px;
   @include input-placeholder {
@@ -505,17 +594,24 @@ input[type=email], input[type=text] {
 input[type=email]:hover, input[type=text]:hover {
   box-shadow: none;
   border-bottom: 3px solid $white;
+  background-color: $color2 !important;
+  color: $color1;
 }
 input[type=email]:focus, input[type=text]:focus {
   box-shadow: none;
   border-bottom: 3px solid $white;
+  background-color: $color2 !important;
   color: $color1;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $color2 inset;
 }
 #message {
   width: 75%;
   border: 3px solid $color1;
   border-radius: 0;
   margin: 50px auto;
+  background: url(images/squairy_light.png) repeat;
   background-color: $color2;
   @include input-placeholder {
     color: $color1;
@@ -539,7 +635,7 @@ input[type=email]:focus, input[type=text]:focus {
   margin: 0 auto;
   background-color: $color1;
   color: $white;
-  @extend %font-small;
+  font-size: 2em;
   text-align: center;
   font-weight: bold;
   letter-spacing: 3px;
@@ -557,20 +653,31 @@ input[type=email]:focus, input[type=text]:focus {
   box-shadow: inset 0 50px 0 0 $color2;
   color: $white;
 }
+#confirmation {
+  opacity: 0;
+  margin-top: 10px;
+  p {
+    font-weight: bold;
+    letter-spacing: 3px;
+  }
+}
+// copyright
 .copyright {
   background-color: $color1;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQIW2NkYGD4z8DAwMgABXAGNgGwSgwVAFbmAgXxvZSoAAAAAElFTkSuQmCC) repeat;
   padding-top: 80px;
   padding-bottom: 80px;
   border-top: 1px solid $color2;
-  //margin-top: 60px;
   text-align: center;
   img {
     margin: 0;
   }
   p {
     color: $white;
-    @extend %font-small;
+    font-size: 2em;
+    @include media('>=small-phone', '<=phone') {
+      font-size: 1.4em;
+    }
     font-weight: lighter;
     letter-spacing: 2px;
   }
@@ -578,7 +685,7 @@ input[type=email]:focus, input[type=text]:focus {
     color: $white;
     margin-top: 10px;
     margin-right: 20px;
-    @extend %font-x-small;
+    font-size: 1.4em;
     font-weight: bold;
     letter-spacing: 4px;
     text-decoration: none;
