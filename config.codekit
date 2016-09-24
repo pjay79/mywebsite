@@ -2,6 +2,98 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "19127",
 "files": {
+	"\/bower_components\/Arctext.js\/bower.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/Arctext.js\/bower.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/bower_components\/Arctext.js\/bower-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/bower_components\/Arctext.js\/css\/demo.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/Arctext.js\/css\/demo.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/Arctext.js\/css\/style.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/Arctext.js\/css\/style.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/Arctext.js\/images\/noise.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 65304,
+		"inputAbbreviatedPath": "\/bower_components\/Arctext.js\/images\/noise.png",
+		"outputAbbreviatedPath": "\/bower_components\/Arctext.js\/images\/noise.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/bower_components\/Arctext.js\/images\/texture.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 25028,
+		"inputAbbreviatedPath": "\/bower_components\/Arctext.js\/images\/texture.png",
+		"outputAbbreviatedPath": "\/bower_components\/Arctext.js\/images\/texture.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/bower_components\/Arctext.js\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/Arctext.js\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/bower_components\/Arctext.js\/js\/jquery.arctext.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/Arctext.js\/js\/jquery.arctext.js",
+		"outputAbbreviatedPath": "\/bower_components\/Arctext.js\/js\/min\/jquery.arctext-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/bower_components\/Arctext.js\/README.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/Arctext.js\/README.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/bower_components\/Arctext.js\/README.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
 	"\/bower_components\/bootstrap-sass\/assets\/javascripts\/bootstrap-sprockets.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -3302,6 +3394,39 @@
 		"initialSize": 588178,
 		"inputAbbreviatedPath": "\/images\/desk_2x.jpg",
 		"outputAbbreviatedPath": "\/images\/desk_2x.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/hero@1x.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 269080,
+		"inputAbbreviatedPath": "\/images\/hero@1x.jpg",
+		"outputAbbreviatedPath": "\/images\/hero@1x.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/hero@2x.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 955042,
+		"inputAbbreviatedPath": "\/images\/hero@2x.jpg",
+		"outputAbbreviatedPath": "\/images\/hero@2x.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/hero@3x.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.26547e+06,
+		"inputAbbreviatedPath": "\/images\/hero@3x.jpg",
+		"outputAbbreviatedPath": "\/images\/hero@3x.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

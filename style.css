@@ -2182,9 +2182,25 @@ input[type="button"].btn-block {
 outline: 1px dotted #ff0000;
 } */
 @font-face {
-  font-family: 'Wasted';
-  src: url("fonts/Wasted.eot");
-  src: url("fonts/Wasted.eot") format("embedded-opentype"), url("fonts/Wasted.woff2") format("woff2"), url("fonts/Wasted.woff") format("woff"), url("fonts/Wasted.ttf") format("truetype"), url("fonts/Wasted.svg#Wasted") format("svg"); }
+  font-family: 'Aerokids';
+  src: url("fonts/Aerokids.eot");
+  src: url("fonts/Aerokids.eot") format("embedded-opentype"), url("fonts/Aerokids.woff2") format("woff2"), url("fonts/Aerokids.woff") format("woff"), url("fonts/Aerokids.ttf") format("truetype"), url("fonts/Aerokids.svg#Aerokids") format("svg"); }
+@font-face {
+  font-family: 'AerokidsSwash';
+  src: url("fonts/AerokidsSwash.eot");
+  src: url("fonts/AerokidsSwash.eot") format("embedded-opentype"), url("fonts/AerokidsSwash.woff2") format("woff2"), url("fonts/AerokidsSwash.woff") format("woff"), url("fonts/AerokidsSwash.ttf") format("truetype"), url("fonts/AerokidsSwash.svg#AerokidsSwash") format("svg"); }
+@font-face {
+  font-family: 'GreycliffCF-Light';
+  src: url("fonts/GreycliffCF-Light.eot");
+  src: url("fonts/GreycliffCF-Light.eot") format("embedded-opentype"), url("fonts/GreycliffCF-Light.woff2") format("woff2"), url("fonts/GreycliffCF-Light.woff") format("woff"), url("fonts/GreycliffCF-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: 'GreycliffCF-DemiBold';
+  src: url("fonts/GreycliffCF-DemiBold.eot");
+  src: url("fonts/GreycliffCF-DemiBold.eot") format("embedded-opentype"), url("fonts/GreycliffCF-DemiBold.woff2") format("woff2"), url("fonts/GreycliffCF-DemiBold.woff") format("woff"), url("fonts/GreycliffCF-DemiBold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'GreycliffCF-ExtraBold';
+  src: url("fonts/GreycliffCF-ExtraBold.eot");
+  src: url("fonts/GreycliffCF-ExtraBold.eot") format("embedded-opentype"), url("fonts/GreycliffCF-ExtraBold.woff2") format("woff2"), url("fonts/GreycliffCF-ExtraBold.woff") format("woff"), url("fonts/GreycliffCF-ExtraBold.ttf") format("truetype"); }
 body {
   font-size: 100%;
   width: 100%;
@@ -2201,15 +2217,21 @@ p {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2em; }
 
-h1, h2, h3, h4, h5, h6, p {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+h1 {
+  font-family: Aerokids, "Brush Script MT", cursive; }
+
+h2, h3, h4, h5, h6 {
+  font-family: "GreycliffCF-DemiBold", "Helvetica Neue", Helvetica, sans-serif; }
+
+p {
+  font-family: "GreycliffCF-Light", "Helvetica Neue", Helvetica, sans-serif; }
 
 .container {
   width: 100%; }
 
 /* Main */
 main {
-  background: url('images/desk_1x.jpg?1470998212') no-repeat center center;
+  background: url('images/hero@1x.jpg?1474689169') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -2309,7 +2331,8 @@ header {
   position: relative;
   top: -50vh;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: "GreycliffCF-ExtraBold", "Helvetica Neue", Helvetica, sans-serif; }
   .main__menu--overlay nav ul {
     list-style: none;
     padding: 0;
@@ -2340,13 +2363,12 @@ header {
       visibility: visible;
       bottom: 2vh;
       left: 2vw; }
-      .main__contact p {
-        font-size: 1.4em; }
       .main__contact a {
+        font-family: "GreycliffCF-ExtraBold", "Helvetica Neue", Helvetica, sans-serif;
         color: #FFF;
-        font-size: 2.5em;
+        font-size: 1.5em;
         position: absolute;
-        bottom: 2.5vh; }
+        bottom: 1.6vh; }
       .main__contact img {
         margin-right: 1vw; } }
 
@@ -2423,16 +2445,13 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.6); }
 
 .main__content {
   opacity: 0;
   text-align: center; }
   .main__content h1 {
-    margin-bottom: 2%;
     color: #FFF;
-    font-family: 'Wasted', sans-serif;
-    font-weight: bold;
     font-size: 6em;
     text-shadow: -2px 2px 5px black; }
 @media (min-width: 34em) and (max-width: 47.99em) {
@@ -2446,25 +2465,43 @@ header {
     @media (min-width: 62em) {
       .main__content h1 {
         font-size: 12em; } }
-    .main__content h1 #and {
-      color: #D0D8E0; }
+  .main__content h2 {
+    margin-bottom: -10px;
+    color: #FFF;
+    font-size: 1.2em; }
+@media (min-width: 34em) and (max-width: 47.99em) {
+  .main__content h2 {
+    font-size: 1.6em; } }
+
+@media (min-width: 48em) and (max-width: 61.99em) {
+  .main__content h2 {
+    font-size: 2em; } }
+
+    @media (min-width: 62em) {
+      .main__content h2 {
+        font-size: 2.2em; } }
   .main__content p {
     color: #FFF;
+    font-family: "GreycliffCF-DemiBold", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1.5em;
-    font-weight: lighter;
     letter-spacing: 2px;
     text-shadow: -2px 2px 5px black; }
     @media (min-width: 48em) {
       .main__content p {
         font-size: 2.5em; } }
   .main__content #slogan {
+    font-family: "GreycliffCF-ExtraBold", "Helvetica Neue", Helvetica, sans-serif;
     display: inline-block;
     padding: 3px 0;
-    border-top: 3px solid #B68861;
+    border-top: 4px solid #B68861;
     border-bottom: 4px solid #B68861;
     margin: 0 10px 10px 10px;
-    font-weight: bold;
     text-transform: uppercase; }
+    .main__content #slogan #and {
+      color: #D0D8E0; }
+  .main__content p:last-child {
+    font-size: 1.3em;
+    font-family: "GreycliffCF-Light", "Helvetica Neue", Helvetica, sans-serif; }
 
 /* Section: About */
 @media (min-width: 62em) {
@@ -2481,8 +2518,7 @@ header {
   background: url(images/squairy_light.png) repeat;
   text-align: center; }
   #about p {
-    padding-top: 25px;
-    font-weight: lighter; }
+    padding-top: 25px; }
 
 #aboutme {
   padding: 50px 25px 75px 25px; }
@@ -2508,14 +2544,14 @@ header {
       #aboutme p {
         text-align: justify; } }
   #aboutme .aboutme__first-paragraph {
-    font-weight: bold;
+    font-family: "GreycliffCF-ExtraBold", "Helvetica Neue", Helvetica, sans-serif;
     text-align: left; }
     @media (min-width: 34em) {
       #aboutme .aboutme__first-paragraph {
         letter-spacing: 3px; } }
   #aboutme .aboutme__word-style {
+    font-family: "GreycliffCF-ExtraBold", "Helvetica Neue", Helvetica, sans-serif;
     font-style: italic;
-    font-weight: bold;
     border-bottom: 3px solid #FFF; }
 
 #aboutskills {
@@ -2635,6 +2671,7 @@ header {
   margin-top: 30px;
   background-color: #B68861;
   color: #FFF;
+  font-family: "GreycliffCF-Light", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 2em;
   font-weight: lighter;
   letter-spacing: 3px;
@@ -2669,12 +2706,11 @@ header {
     text-align: center; }
     #quote blockquote p {
       color: #FFF;
-      font-size: 2em;
+      font-family: "GreycliffCF-DemiBold", "Helvetica Neue", Helvetica, sans-serif;
       font-weight: lighter; }
-@media (min-width: 20em) and (max-width: 33.99em) {
-  #quote blockquote p {
-    font-size: 2em; } }
-
+      @media (max-width: 33.99em) {
+        #quote blockquote p {
+          font-size: 2em; } }
 @media (min-width: 34em) and (max-width: 47.99em) {
   #quote blockquote p {
     font-size: 2.5em; } }
@@ -2689,19 +2725,17 @@ header {
     position: relative;
     top: 50px;
     color: #333D46;
-    font-size: 2em;
-    font-weight: bold; }
-@media (min-width: 20em) and (max-width: 33.99em) {
-  #quote p {
-    font-size: 2em; } }
-
+    font-family: Aerokids, "Brush Script MT", cursive; }
+    @media (max-width: 33.99em) {
+      #quote p {
+        font-size: 3.5em; } }
 @media (min-width: 34em) and (max-width: 47.99em) {
   #quote p {
-    font-size: 2.5em; } }
+    font-size: 4em; } }
 
     @media (min-width: 48em) {
       #quote p {
-        font-size: 3em; } }
+        font-size: 4.5em; } }
 
 /* Footer */
 footer {
@@ -2732,7 +2766,8 @@ footer {
     font-size: 5em; } }
 
   #contact__info a:link, #contact__info a:hover, #contact__info a:visited {
-    font-size: 1.8em;
+    font-family: "GreycliffCF-ExtraBold", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.5em;
     color: #FFF; }
 
 #contact__form {
