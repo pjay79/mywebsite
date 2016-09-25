@@ -15,10 +15,6 @@ var main = function() {
   //$('.main__content p:last-child').arctext({radius: 400, rotate: false, dir: -1});
   // Header
   var loadingSequence = [
-    // Site logo
-    //{e: $('.logo') , p: {opacity : 1}, o: { duration : 200 }},
-    //{e: $('.logo') , p: {scale : 1.3}, o: { duration : 200 }},
-    //{e: $('.logo') , p: {scale : 1}, o: { duration : 200 }},
     // Main content
     {e: $('.main__content') , p: { opacity: 1, translateY: 200 }, o: { duration : 400, delay : 400, easing: 'ease-in-out', sequenceQueue : false }}
   ];

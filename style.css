@@ -2237,6 +2237,21 @@ main {
   -o-background-size: cover;
   background-size: cover;
   margin-top: -20px; }
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 75em), (min-resolution: 192dpi) and (min-width: 75em), (min-resolution: 2dppx) and (min-width: 75em) {
+  main {
+    background: url('images/hero@2x.jpg?1474689405') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; } }
+
+@media (-webkit-min-device-pixel-ratio: 3) and (min-width: 75em), (min-resolution: 350dpi) and (min-width: 75em), (min-resolution: 3dppx) and (min-width: 75em) {
+  main {
+    background: url('images/hero@3x.jpg?1474689433') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; } }
 
 .logo {
   opacity: 0;
@@ -2350,6 +2365,9 @@ header {
         text-decoration: none;
         -webkit-transition: all 0.35s ease;
         transition: all 0.35s ease; }
+@media (max-width: 47.99em) and (orientation: landscape) {
+  .main__menu--overlay nav ul li a {
+    font-size: 2em; } }
 
 .open {
   opacity: 1;
@@ -2390,6 +2408,9 @@ header {
   display: block;
   margin: 0 auto;
   cursor: pointer; }
+@media (max-width: 47.99em) and (orientation: landscape) {
+  #scrolldown {
+    top: 20%; } }
 
 #scrollup {
   position: relative;
@@ -2450,6 +2471,11 @@ header {
 .main__content {
   opacity: 0;
   text-align: center; }
+@media (max-width: 47.99em) and (orientation: landscape) {
+  .main__content {
+    position: relative;
+    top: -135px; } }
+
   .main__content h1 {
     color: #FFF;
     font-size: 6em;
@@ -2621,8 +2647,8 @@ header {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  -webkit-transition: -webkit-transform 0.35s;
-  transition: all 0.35s; }
+  -webkit-transition: -webkit-transform 0.30s;
+  transition: all 0.30s; }
 
 #portfolio figure:hover img {
   -webkit-transform: scale(1.2);
@@ -2638,8 +2664,8 @@ header {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  -webkit-transition: opacity 0.35s;
-  transition: opacity 0.35s; }
+  -webkit-transition: opacity 0.30s;
+  transition: opacity 0.30s; }
 
 #portfolio figure:hover figcaption {
   opacity: 1;
@@ -2656,8 +2682,8 @@ header {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transition: opacity 0.30s, -webkit-transform 0.30s;
+  transition: opacity 0.30s, transform 0.30s;
   -webkit-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0); }
 
@@ -2678,10 +2704,13 @@ header {
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transition: opacity 0.30s, -webkit-transform 0.30s;
+  transition: opacity 0.30s, transform 0.30s;
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0); }
+
+#portfolio figcaption a:hover {
+  background-color: #D0D8E0; }
 
 #portfolio figure:hover a, #portfolio figure:hover h4 {
   opacity: 1;
