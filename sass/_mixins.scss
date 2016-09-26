@@ -12,9 +12,9 @@
   padding-bottom: 5px;
   border-bottom: 10px solid $border__color;
   color: $font__color;
-  font-size: 6em;
-  @include media('>=small-phone', '<=phone') {
-    font-size: 5em;
+  font-size: 4em;
+  @include media('>=phone') {
+    font-size: 6em;
   }
   font-weight: bold;
   letter-spacing: 3px;

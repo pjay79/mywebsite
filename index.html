@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>PJ | Web Designer & Developer | UI/UX + Front-End</title>
+  <title>PJ | Web Designer & Developer | User Experience and Interface Design | Front End Development</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="Keywords" content="PJ, freelance, designer, front-end, developer">
+  <meta name="Keywords" content="PJ, freelance, website, designer, front-end, developer">
   <meta name="Description" content="Freelance Web Designer and Developer">
   <link rel="stylesheet" href="style.css"/>
 </head>
@@ -13,8 +13,6 @@
   <main id="home">
     <!-- Header -->
     <header>
-      <!-- Site logo
-      <img src="images/logo.png" alt="logo" class="logo" /> -->
       <!-- Main menu -->
       <div class="main__menu">
         <span></span>
@@ -31,9 +29,11 @@
           <li><a href="#contact" class="sliding-middle-out">Contact</a></li>
         </ul>
       </nav>
+      <!-- Main menu overlay contact -->
       <div class="main__contact">
       <p><img src="images/phone-call.svg" alt="phone" /><a href="tel:+61413382221">0413382221</a></p>
       </div>
+      <!-- Main menu overlay social icons -->
       <div class="main__social">
         <a href="https://www.facebook.com/praveen.jayarajan" target="_blank"><img src="images/facebook.svg" alt="facebook" /></a>
         <a href="https://twitter.com/praveenj1979" target="_blank"><img src="images/twitter.svg" alt="twitter" /></a>
@@ -46,7 +46,7 @@
     <div class="main__content" role="banner">
       <h2>This website was . . .</h2>
       <h1>Made by PJ</h1>
-      <p id="slogan">&#9734; Designer <span id="and">&</span> Developer &#9734;</p>
+      <p id="main__content--tagline">&#9734; Designer <span id="main__content--word">&</span> Developer &#9734;</p>
       <p>Melbourne, Australia<br>Est. 2016</p>
     </div>
     <!-- Scroll down arrow -->
@@ -57,18 +57,18 @@
     <article>
       <div class="container">
         <div class="row is-table-row">
-          <div class="col-md-6" id="aboutme">
+          <div class="col-md-6 about-me">
             <h3>Hello.</h3>
-              <p class="aboutme__first-paragraph">My name is Praveen.</p>
+              <p id="about-me__first-paragraph">My name is Praveen.</p>
               <p>I am a freelance web designer and developer.</p>
               <p>
-                I create <span class="aboutme__word-style">minimal</span>, <span class="aboutme__word-style">modern</span>, and <span class="aboutme__word-style">interactive</span> websites. I am available for <span class="aboutme__word-style">freelance</span> work with <span class="aboutme__word-style">small businesses</span> looking to develop an online presence, or needing a revamp of an existing website.
+                I create <span class="about-me__word-style">minimal</span>, <span class="about-me__word-style">modern</span>, and <span class="about-me__word-style">interactive</span> websites. I am available for <span class="about-me__word-style">freelance</span> work with <span class="about-me__word-style">small businesses</span> looking to develop an online presence, or needing a revamp of an existing website.
               </p>
               <p>
-                I can also assist with <span class="aboutme__word-style">domain name registration</span>, <span class="aboutme__word-style">website hosting</span> and <span class="aboutme__word-style">maintenance</span>, as well as business <span class="aboutme__word-style">email</span> and <span class="aboutme__word-style">newsletter</span> setup.
+                I can also assist with <span class="about-me__word-style">domain name registration</span>, <span class="about-me__word-style">website hosting</span> and <span class="about-me__word-style">maintenance</span>, as well as business <span class="about-me__word-style">email</span> and <span class="about-me__word-style">newsletter</span> setup.
               </p>
             </div>
-            <div class="col-md-6" id="aboutskills">
+            <div class="col-md-6 about-skills">
               <h3>Skills.</h3>
               <p>
               <!-- <img src="images/browser.svg" alt="wireframing" /> -->
@@ -147,23 +147,23 @@
       <footer id="contact">
         <div class="container">
           <div class="row">
-            <div class="col-md-6" id="contact__info">
-              <!-- Contact address / email / phone -->
+            <div class="col-md-6 contact__info">
+              <!-- Contact info -->
               <h3>Contact.</h3>
-              <!--<p><img src="images/location-pin.svg" alt="location" /><a href="http://maps.google.com/?q=26 High Street Northote" target="_blank">26 High Street Northcote 3070</a></p>
-              <p><img src="images/e-mail-envelope.svg" alt="email" /><a href="mailto:info@pj.com">praveen.jayarajan@gmail.com</a><p>-->
+              <!-- <p><img src="images/location-pin.svg" alt="location" /><a href="http://maps.google.com/?q=26 High Street Northote" target="_blank">26 High Street Northcote 3070</a></p>-->
+              <p><img src="images/e-mail-envelope.svg" alt="email" /><a href="mailto:info@madebypj.com">info@madebypj.com</a><p>
               <p><img src="images/phone-call.svg" alt="phone" /><a href="tel:+61413382221">0413382221</a></p>
-              <!-- Social icons -->
+              <!-- Contact social icons -->
               <h3>Follow.</h3>
-              <div class="footer__social">
+              <div class="contact__social">
                 <a href="https://www.facebook.com/praveen.jayarajan" target="_blank"><img src="images/facebook.svg" alt="facebook" /></a>
                 <a href="https://twitter.com/praveenj1979" target="_blank"><img src="images/twitter.svg" alt="twitter" /></a>
                 <a href="https://www.instagram.com/pjayarajan" target="_blank"><img src="images/instagram.svg" alt="instagram" /></a>
                 <a href="https://github.com/pjay79" target="_blank"><img src="images/github.svg" alt="github" /></a>
               </div>
             </div>
-            <div class="col-md-6" id="contact__form">
-              <!-- Enquiries form -->
+            <!-- Contact form -->
+            <div class="col-md-6 contact__form">
               <h3>Message.</h3>
               <form action="mail.php" method="post" autocomplete="off">
                 <div class="form-group">
@@ -184,10 +184,8 @@
         <div class="copyright">
           <!-- Scroll up arrow -->
           <img id="scrollup" src="images/scrollup.svg" alt="Scroll Up" />
-          <!-- Copyright notice etc...-->
+          <!-- Copyright notice -->
           <p>Made with  <img src="images/like.svg" alt="love" />  by Praveen Jayarajan<br>&copy; 2016 All Rights Reserved</p>
-          <!-- Extra bits <a href="#privacy" class="sliding-middle-out__footer">Privacy Policy</a><a href="#termsofuse" class="sliding-middle-out__footer">Terms of Use</a><a href="#contributions" class="sliding-middle-out__footer">Contributions</a> -->
-        </div>
       </footer>
 <!-- Javascript -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>

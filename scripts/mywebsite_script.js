@@ -10,9 +10,6 @@ var main = function() {
   });
   // Hover touch
   $('body').bind('touchstart', function(){});
-  // Arctext
-  //$('.main__content h2').arctext({radius: 400});
-  //$('.main__content p:last-child').arctext({radius: 400, rotate: false, dir: -1});
   // Header
   var loadingSequence = [
     // Main content
@@ -57,18 +54,15 @@ var main = function() {
   });
   // ScrollMagic scenes
   var controller = new $.ScrollMagic.Controller();
-  //var scene1 = new $.ScrollMagic.Scene({triggerElement: '#about'});
-  //scene1.setVelocity('article', {opacity: 1, translateY: -30}, { delay: 100, duration : 600, easing : 'ease' } );
-  //scene1.addTo(controller);
-  var scene2 = new $.ScrollMagic.Scene({triggerElement: '#portfolio'});
-  scene2.setVelocity('figure', {opacity: 1, translateY: -50}, { delay: 100, duration : 600, easing : 'ease'} );
+  var scene1 = new $.ScrollMagic.Scene({triggerElement: '#portfolio'});
+  scene1.setVelocity('figure', {opacity: 1, translateY: -50}, { delay: 100, duration : 600, easing : 'ease'} );
+  scene1.addTo(controller);
+  var scene2 = new $.ScrollMagic.Scene({triggerElement: '#quote'});
+  scene2.setVelocity('#quote blockquote', {opacity: 1, translateY: -50}, { duration : 600, easing : 'ease' } );
   scene2.addTo(controller);
   var scene3 = new $.ScrollMagic.Scene({triggerElement: '#quote'});
-  scene3.setVelocity('#quote blockquote', {opacity: 1, translateY: -50}, { duration : 600, easing : 'ease' } );
+  scene3.setVelocity('#quote p', {opacity: 1, translateY: -50}, { duration : 600, easing : 'ease' } );
   scene3.addTo(controller);
-  var scene4 = new $.ScrollMagic.Scene({triggerElement: '#quote'});
-  scene4.setVelocity('#quote p', {opacity: 1, translateY: -50}, { duration : 600, easing : 'ease' } );
-  scene4.addTo(controller);
   //scene.addIndicators(); // add indicators (requires plugin)
   // Social icons
   $('.main__social img').mouseover(function(){

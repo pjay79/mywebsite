@@ -28,6 +28,14 @@ outline: 1px dotted #ff0000;
   url('fonts/GreycliffCF-Light.ttf') format('truetype');
 }
 @font-face {
+  font-family: 'GreycliffCF-Medium';
+  src: url('fonts/GreycliffCF-Medium.eot');
+  src: url('fonts/GreycliffCF-Medium.eot') format('embedded-opentype'),
+  url('fonts/GreycliffCF-Medium.woff2') format('woff2'),
+  url('fonts/GreycliffCF-Medium.woff') format('woff'),
+  url('fonts/GreycliffCF-Medium.ttf') format('truetype');
+}
+@font-face {
   font-family: 'GreycliffCF-DemiBold';
   src: url('fonts/GreycliffCF-DemiBold.eot');
   src: url('fonts/GreycliffCF-DemiBold.eot') format('embedded-opentype'),
@@ -45,27 +53,24 @@ outline: 1px dotted #ff0000;
 }
 body {
   font-size: 100%;
-  width: 100%;
   background-color: $color1;
-}
-p {
-  font-size: 2.5em; /* 1.4em relative to a 16px baseline on the body will result in a 20px font size */
-  @include media('<phone') {
-    font-size: 2em;
-  }
-  line-height: 1.4em;
-}
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.2em;
 }
 h1 {
   font-family: Aerokids, "Brush Script MT", cursive;
 }
-h2, h3, h4, h5, h6 {
+h2, h3, h4 {
   font-family: "GreycliffCF-DemiBold", "Helvetica Neue", Helvetica, sans-serif;
+}
+h1, h2, h3, h4 {
+  line-height: 1.2em;
 }
 p {
   font-family: "GreycliffCF-Light", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 2em;
+  @include media('>=phone') {
+    font-size: 2.5em;
+  }
+  line-height: 1.4em;
 }
 .container {
   width: 100%;
@@ -80,14 +85,6 @@ main {
     @include cover-background('hero@3x.jpg');
   }
   margin-top: -20px;
-}
-.logo {
-  opacity: 0;
-  position: relative;
-  left: 15px;
-  top: 25px;
-  height: 50px;
-  width: 50px;
 }
 /* Header */
 header {
@@ -183,6 +180,9 @@ header {
     text-align: center;
     li {
       padding: 2vh 0;
+      @include media('<tablet', 'landscape') {
+        padding: 1vh 0;
+      }
       -webkit-transition: all 0.35s ease;
       transition: all 0.35s ease;
       &:hover {
@@ -192,7 +192,7 @@ header {
         color: $white;
         font-size: 4em;
         @include media('<tablet', 'landscape') {
-          font-size: 2em;
+          font-size: 2.5em;
         }
         text-decoration: none;
         -webkit-transition: all 0.35s ease;
@@ -319,8 +319,11 @@ header {
     @include media('>=tablet', '<desktop') {
       font-size: 10em;
     }
-    @include media('>=desktop') {
+    @include media('>=desktop', '<big-desktop') {
       font-size: 12em;
+    }
+    @include media('>=big-desktop') {
+      font-size: 14em;
     }
     text-shadow: -2px 2px 5px rgba(0, 0, 0, 1);
   }
@@ -335,8 +338,11 @@ header {
     @include media('>=tablet', '<desktop') {
       font-size: 2em;
     }
-    @include media('>=desktop') {
-      font-size: 2.2em;
+    @include media('>=desktop', '<big-desktop') {
+      font-size: 2.4em;
+    }
+    @include media('>=big-desktop') {
+      font-size: 2.8em;
     }
   }
   p {
@@ -349,7 +355,7 @@ header {
     letter-spacing: 2px;
     text-shadow: -2px 2px 5px rgba(0, 0, 0, 1);
   }
-  #slogan {
+  #main__content--tagline {
     font-family: "GreycliffCF-ExtraBold", "Helvetica Neue", Helvetica, sans-serif;
     display: inline-block;
     padding: 3px 0;
@@ -357,7 +363,7 @@ header {
     border-bottom: 4px solid $color3;
     margin: 0 10px 10px 10px;
     text-transform: uppercase;
-    #and {
+    #main__content--word {
       color: $color2;
     }
   }
@@ -386,7 +392,7 @@ header {
     padding-top: 25px;
   }
 }
-#aboutme {
+.about-me {
   padding: 50px 25px 75px 25px;
   @include media('>=phone') {
     padding: 75px 50px 100px 50px;
@@ -401,20 +407,20 @@ header {
       text-align: justify;
     }
   }
-  .aboutme__first-paragraph {
+  #about-me__first-paragraph {
     font-family: "GreycliffCF-ExtraBold", "Helvetica Neue", Helvetica, sans-serif;
     text-align: left;
     @include media('>=phone') {
       letter-spacing: 3px;
     }
   }
-  .aboutme__word-style {
+  .about-me__word-style {
     font-family: "GreycliffCF-ExtraBold", "Helvetica Neue", Helvetica, sans-serif;
     font-style: italic;
     border-bottom: 3px solid $white;
   }
 }
-#aboutskills {
+.about-skills {
   padding: 50px 10px 75px 10px;
   @include media('>=phone') {
     padding: 75px 10px 100px 10px;
@@ -590,7 +596,6 @@ header {
 }
 /* Footer */
 footer {
-  //padding-top: 50px;
   background-color: $color1;
   color: $white;
   text-align: center;
@@ -605,20 +610,34 @@ footer {
     font-size: 2em;
   }
 }
+footer img {
+  margin-top: -10px;
+  margin-right: 4%;
+}
 // Footer contact info
-#contact__info {
+.contact__info {
   padding: 50px 0 50px;
   h3 {
     margin-bottom: 50px;
     @include section__header($color3, $white);
   }
   a:link, a:hover, a:visited {
-    font-family: "GreycliffCF-ExtraBold", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: "GreycliffCF-Medium", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1.5em;
     color: $white;
+    text-decoration: none;
   }
 }
-#contact__form {
+// Footer contact social
+.contact__social {
+  margin-top: 1%;
+  img {
+    margin-right: 4%;
+    margin-left: 4%;
+  }
+}
+// Footer contact
+.contact__form {
   padding: 50px 0 50px;
   background-color: $color2;
   h3 {
@@ -626,26 +645,7 @@ footer {
     @include section__header($color1, $white);
   }
 }
-footer img {
-  margin-top: -10px;
-  margin-right: 4%;
-}
-.footer__social {
-  margin-top: 1%;
-  img {
-    margin-right: 4%;
-    margin-left: 4%;
-  }
-}
-a[href^="http:"]:hover, a[href^="mailto:"]:hover, a[href^="tel:"]:hover {
-  color: $white;
-  text-decoration: none;
-}
-a[href^="http:"]:visited, a[href^="mailto:"]:visited, a[href^="tel:"]:visited {
-  color: $white;
-  text-decoration: none;
-}
-// Footer contact form
+// Footer form
 input[type=email], input[type=text] {
   box-shadow: none;
   width: 75%;
