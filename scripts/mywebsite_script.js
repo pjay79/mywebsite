@@ -1,4 +1,4 @@
-var main = function() {
+$(document).ready(function(){
   // Set 100% viewport width/height to div's
   var fullscreen = function(){
     $('main').css({width: $(window).width(), height: $(window).height()});
@@ -13,7 +13,7 @@ var main = function() {
   // Header
   var loadingSequence = [
     // Main content
-    {e: $('.main__content') , p: { opacity: 1, translateY: 200 }, o: { duration : 400, delay : 400, easing: 'ease-in-out', sequenceQueue : false }}
+    {e: $('.main__content') , p: { opacity: 1, translateY: "25vh" }, o: { duration : 400, delay : 400, easing: 'ease-in-out', sequenceQueue : false }}
   ];
   $.Velocity.RunSequence(loadingSequence);
   // Main menu overlay
@@ -71,7 +71,7 @@ var main = function() {
       $(this).velocity( { scale : 1.0, rotateZ : '-360deg' }, { duration : 200, easing: 'ease-in-out' });
     });
   });
-  $('.footer__social img').mouseover(function(){
+  $('.contact__social img').mouseover(function(){
     $(this).velocity( { scale : 1.4, rotateZ : '360deg' }, { duration : 400, easing: 'ease-in-out' });
     $(this).mouseleave(function(){
       $(this).velocity( { scale : 1.0, rotateZ : '-360deg' }, { duration : 200, easing: 'ease-in-out' });
@@ -93,5 +93,5 @@ var main = function() {
         $('#message').val('');
         return false;
     });
-};
-$(document).ready(main);
+});
+//$(document).ready(main);

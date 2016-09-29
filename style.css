@@ -2229,6 +2229,7 @@ p {
 .container {
   width: 100%; }
 
+/* Loader */
 /* Main */
 main {
   background: url('images/hero@1x.jpg?1474689169') no-repeat center center;
@@ -2339,7 +2340,7 @@ header {
   top: -50vh;
   padding: 0;
   margin: 0;
-  font-family: "GreycliffCF-ExtraBold", "Helvetica Neue", Helvetica, sans-serif; }
+  font-family: "GreycliffCF-DemiBold", "Helvetica Neue", Helvetica, sans-serif; }
   .main__menu--overlay nav ul {
     list-style: none;
     padding: 0;
@@ -2378,11 +2379,13 @@ header {
       bottom: 2vh;
       left: 2vw; }
       .main__contact a {
-        font-family: "GreycliffCF-ExtraBold", "Helvetica Neue", Helvetica, sans-serif;
+        font-family: "GreycliffCF-DemiBold", "Helvetica Neue", Helvetica, sans-serif;
         color: #FFF;
         font-size: 1.5em;
         position: absolute;
         bottom: 1.6vh; }
+        .main__contact a:hover {
+          text-decoration: none; }
       .main__contact img {
         margin-right: 1vw; } }
 
@@ -2406,7 +2409,7 @@ header {
   cursor: pointer; }
 @media (max-width: 47.99em) and (orientation: landscape) {
   #scrolldown {
-    top: 20%; } }
+    top: 30%; } }
 
 #scrollup {
   position: relative;
@@ -2467,15 +2470,14 @@ header {
 .main__content {
   opacity: 0;
   text-align: center; }
-@media (max-width: 47.99em) and (orientation: landscape) {
-  .main__content {
-    position: relative;
-    top: -135px; } }
-
   .main__content h1 {
     color: #FFF;
-    font-size: 6em;
+    font-size: 4em;
     text-shadow: -2px 2px 5px black; }
+@media (min-width: 20em) and (max-width: 33.99em) {
+  .main__content h1 {
+    font-size: 6em; } }
+
 @media (min-width: 34em) and (max-width: 47.99em) {
   .main__content h1 {
     font-size: 8em; } }
@@ -2560,13 +2562,10 @@ header {
     padding-bottom: 5px;
     border-bottom: 10px solid #B68861;
     color: #333D46;
-    font-size: 4em;
+    font-size: 6.5em;
     font-weight: bold;
     letter-spacing: 3px;
     margin-bottom: 4%; }
-    @media (min-width: 34em) {
-      .about-me h3 {
-        font-size: 6em; } }
   .about-me p {
     text-align: left; }
     @media (min-width: 34em) {
@@ -2600,12 +2599,9 @@ header {
     padding-bottom: 5px;
     border-bottom: 10px solid #333D46;
     color: #FFF;
-    font-size: 4em;
+    font-size: 6.5em;
     font-weight: bold;
     letter-spacing: 3px; }
-    @media (min-width: 34em) {
-      .about-skills h3 {
-        font-size: 6em; } }
   .about-skills p {
     text-align: center; }
 
@@ -2624,12 +2620,9 @@ header {
     padding-bottom: 5px;
     border-bottom: 10px solid #B68861;
     color: #FFF;
-    font-size: 4em;
+    font-size: 6.5em;
     font-weight: bold;
     letter-spacing: 3px; }
-    @media (min-width: 34em) {
-      #portfolio h3 {
-        font-size: 6em; } }
 
 #portfolio .col-md-6 {
   padding: 0; }
@@ -2793,16 +2786,13 @@ footer img {
     padding-bottom: 5px;
     border-bottom: 10px solid #B68861;
     color: #FFF;
-    font-size: 4em;
+    font-size: 6.5em;
     font-weight: bold;
     letter-spacing: 3px; }
-    @media (min-width: 34em) {
-      .contact__info h3 {
-        font-size: 6em; } }
   .contact__info a:link, .contact__info a:hover, .contact__info a:visited {
-    font-family: "GreycliffCF-Medium", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1.5em;
     color: #FFF;
+    font-family: "GreycliffCF-Medium", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.8em;
     text-decoration: none; }
 
 .contact__social {
@@ -2820,12 +2810,9 @@ footer img {
     padding-bottom: 5px;
     border-bottom: 10px solid #333D46;
     color: #FFF;
-    font-size: 4em;
+    font-size: 6.5em;
     font-weight: bold;
     letter-spacing: 3px; }
-    @media (min-width: 34em) {
-      .contact__form h3 {
-        font-size: 6em; } }
 
 input[type=email], input[type=text] {
   box-shadow: none;

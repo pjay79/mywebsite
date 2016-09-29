@@ -75,6 +75,7 @@ p {
 .container {
   width: 100%;
 }
+/* Loader */
 /* Main */
 main {
   @include cover-background('hero@1x.jpg');
@@ -172,7 +173,7 @@ header {
   top: -50vh;
   padding: 0;
   margin: 0;
-  font-family: "GreycliffCF-ExtraBold", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "GreycliffCF-DemiBold", "Helvetica Neue", Helvetica, sans-serif;
   ul {
     list-style: none;
     padding: 0;
@@ -213,11 +214,14 @@ header {
     bottom: 2vh;
     left: 2vw;
     a {
-      font-family: "GreycliffCF-ExtraBold", "Helvetica Neue", Helvetica, sans-serif;
+      font-family: "GreycliffCF-DemiBold", "Helvetica Neue", Helvetica, sans-serif;
       color: $white;
       font-size: 1.5em;
       position: absolute;
       bottom: 1.6vh;
+      &:hover {
+        text-decoration: none;
+      }
     }
     img {
       margin-right: 1vw;
@@ -241,7 +245,7 @@ header {
   position: relative;
   top: 40%;
   @include media('<tablet', 'landscape') {
-    top: 20%;
+    top: 30%;
   }
   display: block;
   margin: 0 auto;
@@ -306,13 +310,12 @@ header {
 .main__content {
   opacity: 0;
   text-align: center;
-  @include media('<tablet', 'landscape') {
-    position: relative;
-    top: -135px;
-  }
   h1 {
     color: $white;
-    font-size: 6em;
+    font-size: 4em;
+    @include media('>=small-phone', '<phone') {
+      font-size: 6em;
+    }
     @include media('>=phone', '<tablet') {
       font-size: 8em;
     }
@@ -622,9 +625,9 @@ footer img {
     @include section__header($color3, $white);
   }
   a:link, a:hover, a:visited {
-    font-family: "GreycliffCF-Medium", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1.5em;
     color: $white;
+    font-family: "GreycliffCF-Medium", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.8em;
     text-decoration: none;
   }
 }
