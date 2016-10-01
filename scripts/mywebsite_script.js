@@ -35,11 +35,11 @@ $(document).ready(function(){
     $('.main__menu--overlay').removeClass('open');
   });
   // Scroll arrow
-  $('#scrolldown').velocity({ translateY: '10px' },{ duration: 800, loop: true });
+  $('#scrolldown').velocity({ translateY: '5px' },{ duration: 800, loop: true });
   $('#scrolldown').click(function() {
     $('#about').velocity('scroll', { duration : 800 });
   });
-  $('#scrollup').velocity({ translateY: '10px' },{ duration: 800, loop: true });
+  $('#scrollup').velocity({ translateY: '5px' },{ duration: 800, loop: true });
   $('#scrollup').click(function() {
     $('#home').velocity('scroll', { duration : 800 });
   });

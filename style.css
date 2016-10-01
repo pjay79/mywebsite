@@ -2229,7 +2229,6 @@ p {
 .container {
   width: 100%; }
 
-/* Loader */
 /* Main */
 main {
   background: url('images/hero@1x.jpg?1474689169') no-repeat center center;
@@ -2237,7 +2236,7 @@ main {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  margin-top: -20px; }
+  overflow: hidden; }
 @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 75em), (min-resolution: 192dpi) and (min-width: 75em), (min-resolution: 2dppx) and (min-width: 75em) {
   main {
     background: url('images/hero@2x.jpg?1474689405') no-repeat center center;
@@ -2264,11 +2263,18 @@ header {
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease;
   z-index: 2; }
+  header img {
+    float: left;
+    width: 60px;
+    padding: 30px 0 20px 20px; }
 
 .sticky {
   z-index: 2;
   margin-top: -15px;
-  background-color: rgba(51, 61, 70, 0.6); }
+  background-color: rgba(51, 61, 70, 0.6);
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.6); }
 
 /* Main menu icon */
 .main__menu {
@@ -2476,19 +2482,19 @@ header {
     text-shadow: -2px 2px 5px black; }
 @media (min-width: 20em) and (max-width: 33.99em) {
   .main__content h1 {
-    font-size: 6em; } }
+    font-size: 4em; } }
 
 @media (min-width: 34em) and (max-width: 47.99em) {
   .main__content h1 {
-    font-size: 8em; } }
+    font-size: 6em; } }
 
 @media (min-width: 48em) and (max-width: 61.99em) {
   .main__content h1 {
-    font-size: 10em; } }
+    font-size: 8em; } }
 
 @media (min-width: 62em) and (max-width: 74.99em) {
   .main__content h1 {
-    font-size: 12em; } }
+    font-size: 10em; } }
 
     @media (min-width: 75em) {
       .main__content h1 {
@@ -2779,7 +2785,7 @@ footer img {
   margin-right: 4%; }
 
 .contact__info {
-  padding: 50px 0 50px; }
+  padding: 50px 0 100px; }
   .contact__info h3 {
     margin-bottom: 50px;
     display: inline-block;
@@ -2792,7 +2798,7 @@ footer img {
   .contact__info a:link, .contact__info a:hover, .contact__info a:visited {
     color: #FFF;
     font-family: "GreycliffCF-Medium", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1.8em;
+    font-size: 1.4em;
     text-decoration: none; }
 
 .contact__social {
