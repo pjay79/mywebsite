@@ -4099,35 +4099,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/logo@1x.png": {
+	"\/images\/logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 4377,
-		"inputAbbreviatedPath": "\/images\/logo@1x.png",
-		"outputAbbreviatedPath": "\/images\/logo@1x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/logo@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 8732,
-		"inputAbbreviatedPath": "\/images\/logo@2x.png",
-		"outputAbbreviatedPath": "\/images\/logo@2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/logo@3x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 13214,
-		"inputAbbreviatedPath": "\/images\/logo@3x.png",
-		"outputAbbreviatedPath": "\/images\/logo@3x.png",
+		"initialSize": 34872,
+		"inputAbbreviatedPath": "\/images\/logo.png",
+		"outputAbbreviatedPath": "\/images\/logo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

@@ -2220,16 +2220,15 @@ h1, h2, h3, h4 {
 
 p {
   font-family: "GreycliffCF-Light", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 2em;
+  font-size: 2.0736em;
   line-height: 1.4em; }
   @media (min-width: 34em) {
     p {
-      font-size: 2.5em; } }
+      font-size: 2.48832em; } }
 
 .container {
   width: 100%; }
 
-/* Main */
 main {
   background: url('images/hero@1x.jpg?1474689169') no-repeat center center;
   -webkit-background-size: cover;
@@ -2253,7 +2252,6 @@ main {
     -o-background-size: cover;
     background-size: cover; } }
 
-/* Header */
 header {
   position: fixed;
   top: 0;
@@ -2271,12 +2269,8 @@ header {
 .sticky {
   z-index: 2;
   margin-top: -15px;
-  background-color: rgba(51, 61, 70, 0.6);
-  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.6); }
+  background-color: rgba(51, 61, 70, 0.6); }
 
-/* Main menu icon */
 .main__menu {
   position: relative;
   float: right;
@@ -2324,7 +2318,6 @@ header {
 .main__menu.active span:after {
   transform: rotate(-135deg); }
 
-/* Main menu overlay */
 .main__menu--overlay {
   opacity: 0;
   position: fixed;
@@ -2339,7 +2332,6 @@ header {
   -webkit-transition: all 0.35s ease;
   transition: all 0.35s ease; }
 
-/* Main menu overlay nav */
 .main__menu--overlay nav {
   opacity: 1;
   position: relative;
@@ -2364,13 +2356,13 @@ header {
         background-color: #B68861; }
       .main__menu--overlay nav ul li a {
         color: #FFF;
-        font-size: 4em;
+        font-size: 4.29982em;
         text-decoration: none;
         -webkit-transition: all 0.35s ease;
         transition: all 0.35s ease; }
-@media (max-width: 47.99em) and (orientation: landscape) {
-  .main__menu--overlay nav ul li a {
-    font-size: 2.5em; } }
+        @media (max-width: 47.99em) {
+          .main__menu--overlay nav ul li a {
+            font-size: 2.48832em; } }
 
 .open {
   opacity: 1;
@@ -2387,12 +2379,13 @@ header {
       .main__contact a {
         font-family: "GreycliffCF-DemiBold", "Helvetica Neue", Helvetica, sans-serif;
         color: #FFF;
-        font-size: 1.5em;
+        font-size: 1.44em;
         position: absolute;
-        bottom: 1.6vh; }
+        bottom: 0.5vh; }
         .main__contact a:hover {
           text-decoration: none; }
       .main__contact img {
+        margin-bottom: -1.0vh;
         margin-right: 1vw; } }
 
 .main__social {
@@ -2406,7 +2399,6 @@ header {
       .main__social img {
         margin: 0 1vh; } }
 
-/* Object - scrolldown svg */
 #scrolldown {
   position: relative;
   top: 40%;
@@ -2415,7 +2407,7 @@ header {
   cursor: pointer; }
 @media (max-width: 47.99em) and (orientation: landscape) {
   #scrolldown {
-    top: 30%; } }
+    top: 25%; } }
 
 #scrollup {
   position: relative;
@@ -2424,7 +2416,6 @@ header {
   margin: 0 auto;
   cursor: pointer; }
 
-/* Middle out border bottom */
 .sliding-middle-out {
   position: relative;
   display: inline-block;
@@ -2444,7 +2435,6 @@ header {
   width: 100%;
   background: #333D46; }
 
-/* Middle out border bottom */
 .sliding-middle-out__footer {
   position: relative;
   display: inline-block; }
@@ -2464,7 +2454,6 @@ header {
   width: 100%;
   background: #B68861; }
 
-/* Main content */
 .main__gradient {
   position: absolute;
   top: 0;
@@ -2474,59 +2463,67 @@ header {
   background-color: rgba(0, 0, 0, 0.6); }
 
 .main__content {
-  opacity: 0;
-  text-align: center; }
+  opacity: 1;
+  text-align: center;
+  position: relative;
+  top: 25vh; }
+@media (max-width: 47.99em) and (orientation: landscape) {
+  .main__content {
+    top: 20vh; } }
+
   .main__content h1 {
     color: #FFF;
-    font-size: 4em;
     text-shadow: -2px 2px 5px black; }
-@media (min-width: 20em) and (max-width: 33.99em) {
-  .main__content h1 {
-    font-size: 4em; } }
-
+    @media (max-width: 33.99em) {
+      .main__content h1 {
+        font-size: 3.58318em; } }
 @media (min-width: 34em) and (max-width: 47.99em) {
   .main__content h1 {
-    font-size: 6em; } }
+    font-size: 4.29982em; } }
 
 @media (min-width: 48em) and (max-width: 61.99em) {
   .main__content h1 {
-    font-size: 8em; } }
+    font-size: 8.9161em; } }
 
-@media (min-width: 62em) and (max-width: 74.99em) {
-  .main__content h1 {
-    font-size: 10em; } }
-
-    @media (min-width: 75em) {
+    @media (min-width: 62em) {
       .main__content h1 {
-        font-size: 14em; } }
+        font-size: 12.83918em; } }
   .main__content h2 {
     margin-bottom: -10px;
-    color: #FFF;
-    font-size: 1.2em; }
+    color: #FFF; }
+    @media (max-width: 33.99em) {
+      .main__content h2 {
+        font-size: 1.728em; } }
 @media (min-width: 34em) and (max-width: 47.99em) {
   .main__content h2 {
-    font-size: 1.6em; } }
+    font-size: 2.0736em; } }
 
 @media (min-width: 48em) and (max-width: 61.99em) {
   .main__content h2 {
-    font-size: 2em; } }
+    font-size: 2.48832em; } }
 
-@media (min-width: 62em) and (max-width: 74.99em) {
-  .main__content h2 {
-    font-size: 2.4em; } }
-
-    @media (min-width: 75em) {
+    @media (min-width: 62em) {
       .main__content h2 {
-        font-size: 2.8em; } }
+        font-size: 2.98598em; } }
   .main__content p {
     color: #FFF;
     font-family: "GreycliffCF-DemiBold", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1.5em;
     letter-spacing: 2px;
     text-shadow: -2px 2px 5px black; }
-    @media (min-width: 48em) {
+    @media (max-width: 33.99em) {
       .main__content p {
-        font-size: 2.5em; } }
+        font-size: 1.2em; } }
+@media (min-width: 34em) and (max-width: 47.99em) {
+  .main__content p {
+    font-size: 1.44em; } }
+
+@media (min-width: 48em) and (max-width: 61.99em) {
+  .main__content p {
+    font-size: 1.728em; } }
+
+    @media (min-width: 62em) {
+      .main__content p {
+        font-size: 2.0736em; } }
   .main__content #main__content--tagline {
     font-family: "GreycliffCF-ExtraBold", "Helvetica Neue", Helvetica, sans-serif;
     display: inline-block;
@@ -2538,10 +2535,22 @@ header {
     .main__content #main__content--tagline #main__content--word {
       color: #D0D8E0; }
   .main__content p:last-child {
-    font-size: 1.3em;
     font-family: "GreycliffCF-Light", "Helvetica Neue", Helvetica, sans-serif; }
+    @media (max-width: 33.99em) {
+      .main__content p:last-child {
+        font-size: 1.2em; } }
+@media (min-width: 34em) and (max-width: 47.99em) {
+  .main__content p:last-child {
+    font-size: 1.44em; } }
 
-/* Section: About */
+@media (min-width: 48em) and (max-width: 61.99em) {
+  .main__content p:last-child {
+    font-size: 1.728em; } }
+
+    @media (min-width: 62em) {
+      .main__content p:last-child {
+        font-size: 2.0736em; } }
+
 @media (min-width: 62em) {
   .is-table-row {
     display: table; }
@@ -2568,15 +2577,12 @@ header {
     padding-bottom: 5px;
     border-bottom: 10px solid #B68861;
     color: #333D46;
-    font-size: 6.5em;
+    font-size: 6.19174em;
     font-weight: bold;
     letter-spacing: 3px;
     margin-bottom: 4%; }
   .about-me p {
-    text-align: left; }
-    @media (min-width: 34em) {
-      .about-me p {
-        text-align: justify; } }
+    text-align: justify; }
   .about-me #about-me__first-paragraph {
     font-family: "GreycliffCF-ExtraBold", "Helvetica Neue", Helvetica, sans-serif;
     text-align: left; }
@@ -2605,13 +2611,12 @@ header {
     padding-bottom: 5px;
     border-bottom: 10px solid #333D46;
     color: #FFF;
-    font-size: 6.5em;
+    font-size: 6.19174em;
     font-weight: bold;
     letter-spacing: 3px; }
   .about-skills p {
     text-align: center; }
 
-/* Portfolio */
 #portfolio {
   padding-top: 25px;
   background-color: #333D46;
@@ -2626,7 +2631,7 @@ header {
     padding-bottom: 5px;
     border-bottom: 10px solid #B68861;
     color: #FFF;
-    font-size: 6.5em;
+    font-size: 6.19174em;
     font-weight: bold;
     letter-spacing: 3px; }
 
@@ -2679,9 +2684,8 @@ header {
   top: 15%;
   padding: 50px 0;
   color: #FFF;
-  font-size: 4em;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-family: Aerokids, "Brush Script MT", cursive;
+  font-size: 4.29982em;
   text-align: center;
   -webkit-transition: opacity 0.30s, -webkit-transform 0.30s;
   transition: opacity 0.30s, transform 0.30s;
@@ -2699,7 +2703,7 @@ header {
   background-color: #B68861;
   color: #FFF;
   font-family: "GreycliffCF-Light", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 2em;
+  font-size: 2.0736em;
   font-weight: lighter;
   letter-spacing: 3px;
   text-decoration: none;
@@ -2740,14 +2744,14 @@ header {
       font-weight: lighter; }
       @media (max-width: 33.99em) {
         #quote blockquote p {
-          font-size: 2em; } }
+          font-size: 2.0736em; } }
 @media (min-width: 34em) and (max-width: 47.99em) {
   #quote blockquote p {
-    font-size: 2.5em; } }
+    font-size: 2.48832em; } }
 
       @media (min-width: 48em) {
         #quote blockquote p {
-          font-size: 3em; } }
+          font-size: 2.98598em; } }
       #quote blockquote p img {
         margin-top: -40px; }
   #quote p {
@@ -2758,14 +2762,14 @@ header {
     font-family: Aerokids, "Brush Script MT", cursive; }
     @media (max-width: 33.99em) {
       #quote p {
-        font-size: 3.5em; } }
+        font-size: 2.98598em; } }
 @media (min-width: 34em) and (max-width: 47.99em) {
   #quote p {
-    font-size: 4em; } }
+    font-size: 3.58318em; } }
 
     @media (min-width: 48em) {
       #quote p {
-        font-size: 4.5em; } }
+        font-size: 4.29982em; } }
 
 /* Footer */
 footer {
@@ -2775,10 +2779,10 @@ footer {
   footer div > .row {
     background-color: #333D46; }
   footer p {
-    font-size: 2em; }
+    font-size: 2.0736em; }
   footer a {
     color: #333D46;
-    font-size: 2em; }
+    font-size: 2.0736em; }
 
 footer img {
   margin-top: -10px;
@@ -2792,14 +2796,20 @@ footer img {
     padding-bottom: 5px;
     border-bottom: 10px solid #B68861;
     color: #FFF;
-    font-size: 6.5em;
+    font-size: 6.19174em;
     font-weight: bold;
     letter-spacing: 3px; }
   .contact__info a:link, .contact__info a:hover, .contact__info a:visited {
     color: #FFF;
     font-family: "GreycliffCF-Medium", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1.4em;
+    font-size: 1.2em;
     text-decoration: none; }
+    @media (max-width: 459px) {
+      .contact__info a:link, .contact__info a:hover, .contact__info a:visited {
+        font-size: 1em; } }
+    @media (max-width: 349px) {
+      .contact__info a:link, .contact__info a:hover, .contact__info a:visited {
+        font-size: 0.83333em; } }
 
 .contact__social {
   margin-top: 1%; }
@@ -2816,7 +2826,7 @@ footer img {
     padding-bottom: 5px;
     border-bottom: 10px solid #333D46;
     color: #FFF;
-    font-size: 6.5em;
+    font-size: 6.19174em;
     font-weight: bold;
     letter-spacing: 3px; }
 
@@ -2829,7 +2839,7 @@ input[type=email], input[type=text] {
   border-bottom: 3px solid #333D46;
   margin: 25px auto;
   background: transparent;
-  font-size: 2em;
+  font-size: 2.0736em;
   font-weight: bold;
   letter-spacing: 2px; }
   input[type=email]:-moz-placeholder, input[type=text]:-moz-placeholder {
@@ -2902,7 +2912,7 @@ input:-webkit-autofill {
   margin: 0 auto;
   background-color: #333D46;
   color: #FFF;
-  font-size: 2em;
+  font-size: 2.0736em;
   text-align: center;
   font-weight: bold;
   letter-spacing: 3px;
@@ -2938,18 +2948,18 @@ input:-webkit-autofill {
     margin: 0; }
   .copyright p {
     color: #FFF;
-    font-size: 2em;
+    font-size: 2.0736em;
     font-weight: lighter;
     letter-spacing: 2px; }
 @media (min-width: 20em) and (max-width: 34em) {
   .copyright p {
-    font-size: 1.4em; } }
+    font-size: 1.44em; } }
 
   .copyright a {
     color: #FFF;
     margin-top: 10px;
     margin-right: 20px;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: bold;
     letter-spacing: 4px;
     text-decoration: none;
