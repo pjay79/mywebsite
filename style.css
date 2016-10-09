@@ -2639,9 +2639,6 @@ header {
   padding: 0; }
 
 #portfolio figure {
-  opacity: 0;
-  position: relative;
-  top: 50px;
   overflow: hidden;
   width: 100%;
   height: 400px;
@@ -2731,9 +2728,6 @@ header {
     #quote {
       padding: 150px 0; } }
   #quote blockquote {
-    opacity: 0;
-    position: relative;
-    top: 50px;
     padding: 0 2%;
     margin: 0 5%;
     border-left: 10px solid #FFF;
@@ -2755,9 +2749,6 @@ header {
       #quote blockquote p img {
         margin-top: -40px; }
   #quote p {
-    opacity: 0;
-    position: relative;
-    top: 50px;
     color: #333D46;
     font-family: Aerokids, "Brush Script MT", cursive; }
     @media (max-width: 33.99em) {

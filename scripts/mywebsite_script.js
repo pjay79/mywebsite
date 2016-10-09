@@ -10,14 +10,12 @@ $(document).ready(function(){
   });
   // Hover touch
   $('body').bind('touchstart', function(){});
-  // Main content animation with velocity.js
-  //var loadingSequence = [
-    // Main content
-    //{e: $('.main__content') , p: { opacity: 1, translateY: "25vh" }, o: { duration : 400, delay : 400, easing: 'ease-in-out', sequenceQueue : false }}
-  //];
-  //$.Velocity.RunSequence(loadingSequence);
   // Main content animation with gsap
-    
+  var main__animation = new TimelineMax();
+  main__animation.from($('.main__content h2'), 0.5, {opacity: 0, ease: Power1.easeIn, delay: 1})
+                 .from($('.main__content h1'), 0.5, {opacity: 0, scale: 1.5, ease: Power1.easeIn})
+                 .from($('.main__content p:first-of-type'), 0.5, {opacity: 0, ease: Power1.easeIn})
+                 .from($('.main__content p:last-child'), 0.5, {opacity: 0, ease: Power1.easeIn});
   // Sticky header
   $(window).scroll(function() {
     if ($(this).scrollTop() > 50) {
@@ -60,15 +58,22 @@ $(document).ready(function(){
   });
   // ScrollMagic scenes
   var controller = new $.ScrollMagic.Controller();
+  var scene = new $.ScrollMagic.Scene({triggerElement: "#about"});
+  var about__animation = new TimelineMax();
+  about__animation.staggerFrom($('.about-me p'), 1.5, {opacity: 0, y: "+=100px", ease: Power2.easeInOut}, 0.35)
+                  .staggerFrom($('.about-skills p'), 1.5, {opacity: 0, y: "+=100px", ease: Power2.easeInOut}, 0.35, 0);
+	scene.setTween(about__animation);
+	scene.addTo(controller);
   var scene1 = new $.ScrollMagic.Scene({triggerElement: '#portfolio'});
-  scene1.setVelocity('figure', {opacity: 1, translateY: -50}, { delay: 100, duration : 600, easing : 'ease'} );
+  var portfolio__animation = TweenMax.staggerFrom($('#portfolio figure'), 1.5, {opacity: 0, scale: 1.2, y: "+=200px", ease: Expo.easeOut}, 0.5);
+  scene1.setTween(portfolio__animation);
   scene1.addTo(controller);
   var scene2 = new $.ScrollMagic.Scene({triggerElement: '#quote'});
-  scene2.setVelocity('#quote blockquote', {opacity: 1, translateY: -50}, { duration : 600, easing : 'ease' } );
+  var quote__animation = new TimelineMax();
+  quote__animation.staggerFrom($('blockquote'), 1.5, {opacity: 0, ease: Expo.easeOut}, 0.5)
+                  .staggerFrom($('#quote p'), 1.5, {opacity: 0, y: "+=200px", ease: Back.easeOut}, 0.5, 0);
+  scene2.setTween(quote__animation);
   scene2.addTo(controller);
-  var scene3 = new $.ScrollMagic.Scene({triggerElement: '#quote'});
-  scene3.setVelocity('#quote p', {opacity: 1, translateY: -50}, { duration : 600, easing : 'ease' } );
-  scene3.addTo(controller);
   //scene.addIndicators(); // add indicators (requires plugin)
   // Social icons
   $('.main__social img').mouseover(function(){
