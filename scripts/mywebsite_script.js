@@ -11,11 +11,13 @@ $(document).ready(function(){
   // Hover touch
   $('body').bind('touchstart', function(){});
   // Main content animation with gsap
-  var main__animation = new TimelineMax();
-  main__animation.from($('.main__content h2'), 0.5, {opacity: 0, ease: Power1.easeIn, delay: 1})
+  var main__animation = new TimelineMax({paused:true});
+  main__animation.set($('.main__content'), {visibility: "visible"})
+                 .from($('.main__content h2'), 0.5, {opacity: 0, y: "-=100px", ease: Bounce.easeOut, delay: 0.5})
                  .from($('.main__content h1'), 0.5, {opacity: 0, scale: 1.5, ease: Power1.easeIn})
-                 .from($('.main__content p:first-of-type'), 0.5, {opacity: 0, ease: Power1.easeIn})
+                 .from($('.main__content p:first-of-type'), 0.5, {opacity: 0, scale: 1.2, ease: Back.easeOut})
                  .from($('.main__content p:last-child'), 0.5, {opacity: 0, ease: Power1.easeIn});
+  main__animation.play();
   // Sticky header
   $(window).scroll(function() {
     if ($(this).scrollTop() > 50) {
@@ -60,30 +62,45 @@ $(document).ready(function(){
   var controller = new $.ScrollMagic.Controller();
   var scene = new $.ScrollMagic.Scene({triggerElement: "#about"});
   var about__animation = new TimelineMax();
-  about__animation.staggerFrom($('.about-me p'), 1.5, {opacity: 0, y: "+=100px", ease: Power2.easeInOut}, 0.35)
-                  .staggerFrom($('.about-skills p'), 1.5, {opacity: 0, y: "+=100px", ease: Power2.easeInOut}, 0.35, 0);
+  about__animation.from($('.about-me h3'), 1.5, {opacity: 0, width: 0, ease: Expo.easeOut}, 0.35)
+                  .from($('.about-skills h3'), 1.5, {opacity: 0, width: 0, ease: Expo.easeOut}, 0.35)
+                  .from($('.about-skills img'), 2.5, {opacity: 0, scale: 0, y: "+=100px", ease: Expo.easeOut}, 0)
+                  .staggerFrom($('.about-me p'), 1.5, {opacity: 0, y: "+=100px", ease: Expo.easeOut}, 0.35, 0)
+                  .staggerFrom($('.about-skills p'), 1.5, {opacity: 0, y: "+=100px", ease: Expo.easeOut}, 0.35, 0);
 	scene.setTween(about__animation);
 	scene.addTo(controller);
   var scene1 = new $.ScrollMagic.Scene({triggerElement: '#portfolio'});
-  var portfolio__animation = TweenMax.staggerFrom($('#portfolio figure'), 1.5, {opacity: 0, scale: 1.2, y: "+=200px", ease: Expo.easeOut}, 0.5);
+  var portfolio__animation = new TimelineMax();
+  portfolio__animation.from($('#portfolio h3'), 1.5, {opacity: 0, width: 0, ease: Expo.easeOut}, 0.35)
+                      .staggerFrom($('#portfolio figure'), 1.5, {opacity: 0, scale: 1.4, y: "+=100px", ease: Expo.easeOut}, 0.5, 0);
   scene1.setTween(portfolio__animation);
   scene1.addTo(controller);
   var scene2 = new $.ScrollMagic.Scene({triggerElement: '#quote'});
   var quote__animation = new TimelineMax();
-  quote__animation.staggerFrom($('blockquote'), 1.5, {opacity: 0, ease: Expo.easeOut}, 0.5)
-                  .staggerFrom($('#quote p'), 1.5, {opacity: 0, y: "+=200px", ease: Back.easeOut}, 0.5, 0);
+  quote__animation.from($('blockquote'), 1, {margin: "0, -5%", ease: Expo.easeOut})
+                  .staggerFrom($('#quote p:first-of-type'), 1, {opacity: 0, y: "+=100px", ease: Expo.easeOut}, 0.35, 0);
   scene2.setTween(quote__animation);
   scene2.addTo(controller);
+  var scene3 = new $.ScrollMagic.Scene({triggerElement: '#contact'});
+  var contact__animation = new TimelineMax();
+  contact__animation.from($('.contact__info h3'), 1.5, {opacity: 0, width: 0, ease: Expo.easeOut})
+                    .from($('.contact__info img'), 1.5, {opacity: 0, scale: 0, y: "+=200px", ease: Expo.easeOut}, 0)
+                    .from($('.contact__info a'), 1.5, {opacity: 0, y: "+=200px", ease: Expo.easeOut}, 0)
+                    .from($('.contact__info p'), 1.5, {opacity: 0, y: "+=200px", ease: Expo.easeOut}, 0)
+                    .from($('.contact__form h3'), 1.5, {opacity: 0, width: 0, ease: Expo.easeOut}, 0)
+                    .from($('.contact__form form'), 1.5, {opacity: 0, y: "+=200px", ease: Expo.easeOut}, 0);
+  scene3.setTween(contact__animation);
+  scene3.addTo(controller);
   //scene.addIndicators(); // add indicators (requires plugin)
   // Social icons
   $('.main__social img').mouseover(function(){
-    $(this).velocity( { scale : 1.4, rotateZ : '360deg' }, { duration : 400, easing: 'ease-in-out' });
+    $(this).velocity( { scale : 1.4, rotateZ : '360deg' }, { duration : 400, easing: 'easeOut' });
     $(this).mouseleave(function(){
-      $(this).velocity( { scale : 1.0, rotateZ : '-360deg' }, { duration : 200, easing: 'ease-in-out' });
+      $(this).velocity( { scale : 1.0, rotateZ : '-360deg' }, { duration : 200, easing: 'easeOut' });
     });
   });
   $('.contact__social img').mouseover(function(){
-    $(this).velocity( { scale : 1.4, rotateZ : '360deg' }, { duration : 400, easing: 'ease-in-out' });
+    $(this).velocity( { scale : 1.4, rotateZ : '360deg' }, { duration : 400, easing: 'easeOut' });
     $(this).mouseleave(function(){
       $(this).velocity( { scale : 1.0, rotateZ : '-360deg' }, { duration : 200, easing: 'ease-in-out' });
     });
@@ -104,5 +121,6 @@ $(document).ready(function(){
         $('#message').val('');
         return false;
     });
+    // Beating heart
+    TweenMax.to($('.copyright p img'), 0.2, {scale: 1.2, repeat: -1, repeatDelay: 0.2, yoyo: true, ease: Power3.easeOut });
 });
-//$(document).ready(main);

@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>PJ | Web Designer & Developer | User Experience and Interface Design | Front End Development</title>
+  <title>PJ | Freelance Front-End Developer | Melbourne</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="Keywords" content="PJ, freelance, website, designer, front-end, developer">
-  <meta name="Description" content="Freelance Web Designer and Developer">
+  <meta name="Keywords" content="freelance, front-end developer, melbourne">
+  <meta name="Description" content="Freelance Front End Developer">
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <!-- Preloader
+  <div class="preloader__wrapper">
+    <h1>Loading</h1>
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </div>-->
   <!-- Main -->
   <main id="home">
     <!-- Header -->
     <header>
-      <img src="images/logo.png" alt="logo" />
+      <img src="images/logo-small.png" alt="logo" />
       <!-- Main menu -->
       <div class="main__menu">
         <span></span>
@@ -47,7 +56,7 @@
     <div class="main__content" role="banner">
       <h2>This website was . . .</h2>
       <h1>Made by PJ</h1>
-      <p id="main__content--tagline">&#9734; Designer <span id="main__content--word">&</span> Developer &#9734;</p>
+      <p id="main__content--tagline">&#9734; <span id="main__content--word">Front-End</span> Developer &#9734;</p>
       <p>Melbourne, Australia<br>Est. 2016</p>
     </div>
     <!-- Scroll down arrow -->
@@ -61,31 +70,30 @@
           <div class="col-md-6 about-me">
             <h3>Hello.</h3>
             <p id="about-me__first-paragraph">My name is Praveen.</p>
-            <p>I am a freelance web designer and developer.</p>
+            <p>I am a freelance front-end developer.</p>
             <p>
-              I create <span class="about-me__word-style">minimal</span>, <span class="about-me__word-style">modern</span>, and <span class="about-me__word-style">interactive</span> websites. I am available for <span class="about-me__word-style">freelance</span> work with <span class="about-me__word-style">small businesses</span> looking to develop an online presence, or needing a revamp of an existing website.
-              Working collaboratively with clients using <span class="about-me__word-style">in-browser wireframing</span> and <span class="about-me__word-style">prototyping</span> to complete projects rapidly and at an affordable cost.
+              I create <span class="about-me__word-style">responsive</span>, <span class="about-me__word-style">semantic</span>, <span class="about-me__word-style">accessible</span> and <span class="about-me__word-style">interactive</span> websites.
+              I work with <span class="about-me__word-style">web designers</span> and <span class="about-me__word-style">design agencies</span>.
+              I am especially interested in web animations using the <span class="about-me__word-style">Greensock Animation Platform</span>.
+              And I work hard to complete projects <span class="about-me__word-style">quickly</span> and at an <span class="about-me__word-style">affordable</span> cost.
             </p>
             <p>
-              I can also assist with <span class="about-me__word-style">domain name registration</span>, <span class="about-me__word-style">website hosting</span> and <span class="about-me__word-style">maintenance</span>, as well as business <span class="about-me__word-style">email</span> and <span class="about-me__word-style">newsletter</span> setup.
+              When I'm not coding, I am usually busy crushing my fantasy football league or playing basketball!
             </p>
           </div>
           <div class="col-md-6 about-skills">
             <h3>Skills.</h3>
-            <p>
-              <!-- <img src="images/browser.svg" alt="wireframing" /> -->
-              <img src="images/responsive-design-symbol.svg" alt="responsive" />
-              <img src="images/stats.svg" alt="seo" />
-              <img src="images/research.svg" alt="accessible" />
-              <img src="images/coding.svg" alt="coding" />
-            </p>
-            <!-- <p>Wireframing and prototyping.</p> -->
-            <p>Responsive mobile-first design.</p>
-            <p>Search engine optimisation.</p>
-            <p>Web accessibility compliance.</p>
-            <p>Front End Development:<br><br>HTML5, CSS3/Sass, Javascript/jQuery<br>Greensock Animation Platform<br>Velocity.js<br>GitHub</p>
+            <br><br><br><br><br>
+            <img src="images/html5.svg" alt="html5" />
+            <p>HTML5</p>
+            <br><br>
+            <img src="images/css3.svg" alt="css3" />
+            <p>CSS3/Sass</p>
+            <br><br>
+            <img src="images/javascript.svg" alt="javascript" />
+            <p>Javascript/jQuery</p>
+            <br><br>
           </div>
-        </div>
       </div>
     </article>
   </section>
@@ -143,7 +151,7 @@
           <img src="images/right-quote.svg" alt="right-quote-mark" />
         </p>
       </blockquote>
-      <p>- Steve Jobs.</p>
+      <p>Steve Jobs.</p>
     </section>
     <!-- Footer -->
     <footer id="contact">
@@ -168,12 +176,21 @@
             <div class="col-md-6 contact__form">
               <h3>Message.</h3>
               <form action="mail.php" method="post" autocomplete="off">
+                <!--[if lte IE 10]>
+                <label for="name">Name:</label>
+                <![endif]-->
                 <div class="form-group">
                   <input type="text" class="form-control" id="name" name="name" placeholder="Name" autocomplete="off" required>
                 </div>
+                <!--[if lte IE 10]>
+                <label for="email">Email:</label>
+                <![endif]-->
                 <div class="form-group">
                   <input type="email" class="form-control" id="email" name="email" placeholder="Email" autocomplete="off" required>
                 </div>
+                <!--[if lte IE 10]>
+                <label for="message">Message:</label>
+                <![endif]-->
                 <div class="form-group">
                   <textarea class="form-control" id="message" name="message" placeholder="Enter a message..." rows="6" autocomplete="off" required></textarea>
                 </div>
@@ -197,6 +214,7 @@
         <script src="bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
         <script src="bower_components/scrollmagic/scrollmagic/minified/plugins/jquery.ScrollMagic.min.js"></script>
         <script src="bower_components/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+        <script src="bower_components/scrollmagic/scrollmagic/minified/plugins/animation.velocity.min.js"></script>
         <script src="scripts/min/mywebsite_script-min.js"></script>
       </body>
       </html>

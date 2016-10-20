@@ -2184,11 +2184,7 @@ outline: 1px dotted #ff0000;
 @font-face {
   font-family: 'Aerokids';
   src: url("fonts/Aerokids.eot");
-  src: url("fonts/Aerokids.eot") format("embedded-opentype"), url("fonts/Aerokids.woff2") format("woff2"), url("fonts/Aerokids.woff") format("woff"), url("fonts/Aerokids.ttf") format("truetype"), url("fonts/Aerokids.svg#Aerokids") format("svg"); }
-@font-face {
-  font-family: 'AerokidsSwash';
-  src: url("fonts/AerokidsSwash.eot");
-  src: url("fonts/AerokidsSwash.eot") format("embedded-opentype"), url("fonts/AerokidsSwash.woff2") format("woff2"), url("fonts/AerokidsSwash.woff") format("woff"), url("fonts/AerokidsSwash.ttf") format("truetype"), url("fonts/AerokidsSwash.svg#AerokidsSwash") format("svg"); }
+  src: url("fonts/Aerokids.eot") format("embedded-opentype"), url("fonts/Aerokids.svg#Aerokids") format("svg"), url("fonts/Aerokids.woff2") format("woff2"), url("fonts/Aerokids.woff") format("woff"), url("fonts/Aerokids.ttf") format("truetype"); }
 @font-face {
   font-family: 'GreycliffCF-Light';
   src: url("fonts/GreycliffCF-Light.eot");
@@ -2205,6 +2201,9 @@ outline: 1px dotted #ff0000;
   font-family: 'GreycliffCF-ExtraBold';
   src: url("fonts/GreycliffCF-ExtraBold.eot");
   src: url("fonts/GreycliffCF-ExtraBold.eot") format("embedded-opentype"), url("fonts/GreycliffCF-ExtraBold.woff2") format("woff2"), url("fonts/GreycliffCF-ExtraBold.woff") format("woff"), url("fonts/GreycliffCF-ExtraBold.ttf") format("truetype"); }
+html, body {
+  overflow-x: hidden; }
+
 body {
   font-size: 100%;
   background-color: #333D46; }
@@ -2229,6 +2228,56 @@ p {
 .container {
   width: 100%; }
 
+.preloader__wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: #333D46; }
+  .preloader__wrapper h1 {
+    position: relative;
+    top: 38vh;
+    color: #FFF;
+    text-align: center; }
+
+.spinner {
+  margin: 40vh auto 0;
+  width: 70px;
+  text-align: center; }
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #FFF;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both; }
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s; }
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s; }
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0); }
+  40% {
+    -webkit-transform: scale(1); } }
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
 main {
   background: url('images/hero@1x.jpg?1474689169') no-repeat center center;
   -webkit-background-size: cover;
@@ -2379,9 +2428,9 @@ header {
       .main__contact a {
         font-family: "GreycliffCF-DemiBold", "Helvetica Neue", Helvetica, sans-serif;
         color: #FFF;
-        font-size: 1.44em;
+        font-size: 1em;
         position: absolute;
-        bottom: 0.5vh; }
+        bottom: 0.3vh; }
         .main__contact a:hover {
           text-decoration: none; }
       .main__contact img {
@@ -2397,7 +2446,7 @@ header {
       bottom: 2vh;
       right: 2vw; }
       .main__social img {
-        margin: 0 1vh; } }
+        margin: 0 1.5vh; } }
 
 #scrolldown {
   position: relative;
@@ -2463,7 +2512,7 @@ header {
   background-color: rgba(0, 0, 0, 0.6); }
 
 .main__content {
-  opacity: 1;
+  visibility: hidden;
   text-align: center;
   position: relative;
   top: 25vh; }
@@ -2476,10 +2525,10 @@ header {
     text-shadow: -2px 2px 5px black; }
     @media (max-width: 33.99em) {
       .main__content h1 {
-        font-size: 3.58318em; } }
+        font-size: 6.19174em; } }
 @media (min-width: 34em) and (max-width: 47.99em) {
   .main__content h1 {
-    font-size: 4.29982em; } }
+    font-size: 7.43008em; } }
 
 @media (min-width: 48em) and (max-width: 61.99em) {
   .main__content h1 {
@@ -2603,9 +2652,7 @@ header {
       padding: 75px 10px 100px 10px; } }
   .about-skills img {
     display: inline-block;
-    text-align: center;
-    margin-top: 4%;
-    margin-right: 4%; }
+    margin: 0 auto; }
   .about-skills h3 {
     display: inline-block;
     padding-bottom: 5px;
@@ -2820,6 +2867,10 @@ footer img {
     font-size: 6.19174em;
     font-weight: bold;
     letter-spacing: 3px; }
+
+label {
+  color: #333D46;
+  font-size: 1em; }
 
 input[type=email], input[type=text] {
   box-shadow: none;

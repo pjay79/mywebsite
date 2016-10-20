@@ -5,19 +5,10 @@ outline: 1px dotted #ff0000;
   font-family: 'Aerokids';
   src: url('fonts/Aerokids.eot');
   src: url('fonts/Aerokids.eot') format('embedded-opentype'),
+  url('fonts/Aerokids.svg#Aerokids') format('svg'),
   url('fonts/Aerokids.woff2') format('woff2'),
   url('fonts/Aerokids.woff') format('woff'),
-  url('fonts/Aerokids.ttf') format('truetype'),
-  url('fonts/Aerokids.svg#Aerokids') format('svg');
-}
-@font-face {
-  font-family: 'AerokidsSwash';
-  src: url('fonts/AerokidsSwash.eot');
-  src: url('fonts/AerokidsSwash.eot') format('embedded-opentype'),
-  url('fonts/AerokidsSwash.woff2') format('woff2'),
-  url('fonts/AerokidsSwash.woff') format('woff'),
-  url('fonts/AerokidsSwash.ttf') format('truetype'),
-  url('fonts/AerokidsSwash.svg#AerokidsSwash') format('svg');
+  url('fonts/Aerokids.ttf') format('truetype');
 }
 @font-face {
   font-family: 'GreycliffCF-Light';
@@ -51,6 +42,9 @@ outline: 1px dotted #ff0000;
   url('fonts/GreycliffCF-ExtraBold.woff') format('woff'),
   url('fonts/GreycliffCF-ExtraBold.ttf') format('truetype');
 }
+html, body {
+overflow-x: hidden;
+}
 body {
   font-size: 100%;
   background-color: $color1;
@@ -74,6 +68,60 @@ p {
 }
 .container {
   width: 100%;
+}
+// Preloader
+.preloader__wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: $color1;
+  h1 {
+    position: relative;
+    top: 38vh;
+    color: $white;
+    text-align: center;
+  }
+}
+// Preloader spinner
+.spinner {
+  margin: 40vh auto 0;
+  width: 70px;
+  text-align: center;
+}
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #FFF;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
 }
 // Main
 main {
@@ -220,9 +268,9 @@ header {
     a {
       font-family: "GreycliffCF-DemiBold", "Helvetica Neue", Helvetica, sans-serif;
       color: $white;
-      font-size: ms(2);
+      font-size: ms(0);
       position: absolute;
-      bottom: 0.5vh;
+      bottom: 0.3vh;
       &:hover {
         text-decoration: none;
       }
@@ -241,7 +289,7 @@ header {
     bottom: 2vh;
     right: 2vw;
     img {
-      margin: 0 1vh;
+      margin: 0 1.5vh;
     }
   }
 }
@@ -313,7 +361,8 @@ header {
   background-color: rgba($black, 0.6);
 }
 .main__content {
-  opacity: 1;
+  //opacity: 1;
+  visibility: hidden;
   text-align: center;
   position: relative;
   top: 25vh;
@@ -323,10 +372,10 @@ header {
   h1 {
     color: $white;
     @include media('<phone') {
-      font-size: ms(7);
+      font-size: ms(10);
     }
     @include media('>=phone', '<tablet') {
-      font-size: ms(8);
+      font-size: ms(11);
     }
     @include media('>=tablet', '<desktop') {
       font-size: ms(12);
@@ -452,9 +501,7 @@ header {
   color: $white;
   img {
     display: inline-block;
-    text-align: center;
-    margin-top: 4%;
-    margin-right: 4%;
+    margin: 0 auto;
   }
   h3 {
     @include section__header($color1, $white);
@@ -664,6 +711,10 @@ footer img {
   }
 }
 // Footer form
+label {
+  color: $color1;
+  font-size: ms(0);
+}
 input[type=email], input[type=text] {
   box-shadow: none;
   width: 75%;
