@@ -712,8 +712,16 @@ footer img {
 }
 // Footer form
 label {
-  color: $color1;
-  font-size: ms(0);
+  display: block;
+  width: 75%;
+  top: 0;
+  left: 0;
+  margin: 5px auto;
+  color: $white;
+  font-size: ms(4);
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: left;
 }
 input[type=email], input[type=text] {
   box-shadow: none;
@@ -722,14 +730,17 @@ input[type=email], input[type=text] {
   border: 0;
   border-radius: 0;
   border-bottom: 3px solid $color1;
-  margin: 25px auto;
+  margin: 5px auto;
   background: transparent;
   font-size: ms(4);
-  font-weight: bold;
+  font-weight: lighter;
+  font-style: italic;
   letter-spacing: 2px;
   @include input-placeholder {
     color: $color1;
+    font-size: ms(-1);
     font-weight: lighter;
+    font-style: italic;
     letter-spacing: 2px;
   }
 }
@@ -744,6 +755,7 @@ input[type=email]:focus, input[type=text]:focus {
   border-bottom: 3px solid $white;
   background-color: $color2 !important;
   color: $color1;
+  font-weight: bold;
 }
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px $color2 inset;
@@ -755,9 +767,14 @@ input:-webkit-autofill {
   margin: 50px auto;
   background: url(images/squairy_light.png) repeat;
   background-color: $color2;
+  font-weight: lighter;
+  font-style: italic;
+  letter-spacing: 2px;
   @include input-placeholder {
     color: $color1;
+    font-size: ms(1);
     font-weight: lighter;
+    font-style: italic;
     letter-spacing: 2px;
   }
   &:hover {

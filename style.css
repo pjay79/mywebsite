@@ -2869,8 +2869,16 @@ footer img {
     letter-spacing: 3px; }
 
 label {
-  color: #333D46;
-  font-size: 1em; }
+  display: block;
+  width: 75%;
+  top: 0;
+  left: 0;
+  margin: 5px auto;
+  color: #FFF;
+  font-size: 2.0736em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: left; }
 
 input[type=email], input[type=text] {
   box-shadow: none;
@@ -2879,26 +2887,35 @@ input[type=email], input[type=text] {
   border: 0;
   border-radius: 0;
   border-bottom: 3px solid #333D46;
-  margin: 25px auto;
+  margin: 5px auto;
   background: transparent;
   font-size: 2.0736em;
-  font-weight: bold;
+  font-weight: lighter;
+  font-style: italic;
   letter-spacing: 2px; }
   input[type=email]:-moz-placeholder, input[type=text]:-moz-placeholder {
     color: #333D46;
+    font-size: 0.83333em;
     font-weight: lighter;
+    font-style: italic;
     letter-spacing: 2px; }
   input[type=email]::-moz-placeholder, input[type=text]::-moz-placeholder {
     color: #333D46;
+    font-size: 0.83333em;
     font-weight: lighter;
+    font-style: italic;
     letter-spacing: 2px; }
   input[type=email]:-ms-input-placeholder, input[type=text]:-ms-input-placeholder {
     color: #333D46;
+    font-size: 0.83333em;
     font-weight: lighter;
+    font-style: italic;
     letter-spacing: 2px; }
   input[type=email]::-webkit-input-placeholder, input[type=text]::-webkit-input-placeholder {
     color: #333D46;
+    font-size: 0.83333em;
     font-weight: lighter;
+    font-style: italic;
     letter-spacing: 2px; }
 
 input[type=email]:hover, input[type=text]:hover {
@@ -2911,7 +2928,8 @@ input[type=email]:focus, input[type=text]:focus {
   box-shadow: none;
   border-bottom: 3px solid #FFF;
   background-color: #D0D8E0 !important;
-  color: #333D46; }
+  color: #333D46;
+  font-weight: bold; }
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #D0D8E0 inset; }
@@ -2922,22 +2940,33 @@ input:-webkit-autofill {
   border-radius: 0;
   margin: 50px auto;
   background: url(images/squairy_light.png) repeat;
-  background-color: #D0D8E0; }
+  background-color: #D0D8E0;
+  font-weight: lighter;
+  font-style: italic;
+  letter-spacing: 2px; }
   #message:-moz-placeholder {
     color: #333D46;
+    font-size: 1.2em;
     font-weight: lighter;
+    font-style: italic;
     letter-spacing: 2px; }
   #message::-moz-placeholder {
     color: #333D46;
+    font-size: 1.2em;
     font-weight: lighter;
+    font-style: italic;
     letter-spacing: 2px; }
   #message:-ms-input-placeholder {
     color: #333D46;
+    font-size: 1.2em;
     font-weight: lighter;
+    font-style: italic;
     letter-spacing: 2px; }
   #message::-webkit-input-placeholder {
     color: #333D46;
+    font-size: 1.2em;
     font-weight: lighter;
+    font-style: italic;
     letter-spacing: 2px; }
   #message:hover {
     border: 3px solid #FFF; }

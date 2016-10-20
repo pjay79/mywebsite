@@ -176,21 +176,14 @@
             <div class="col-md-6 contact__form">
               <h3>Message.</h3>
               <form action="mail.php" method="post" autocomplete="off">
-                <!--[if lte IE 10]>
-                <label for="name">Name:</label>
-                <![endif]-->
                 <div class="form-group">
-                  <input type="text" class="form-control" id="name" name="name" placeholder="Name" autocomplete="off" required>
+                  <label for="name">Name:</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Bob Smith" autocomplete="off" required>
                 </div>
-                <!--[if lte IE 10]>
-                <label for="email">Email:</label>
-                <![endif]-->
                 <div class="form-group">
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Email" autocomplete="off" required>
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="bob.smith@gmail.com" autocomplete="off" required>
                 </div>
-                <!--[if lte IE 10]>
-                <label for="message">Message:</label>
-                <![endif]-->
                 <div class="form-group">
                   <textarea class="form-control" id="message" name="message" placeholder="Enter a message..." rows="6" autocomplete="off" required></textarea>
                 </div>
