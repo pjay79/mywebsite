@@ -220,9 +220,7 @@ header {
 }
 // Main menu overlay nav
 .main__menu--overlay nav {
-  opacity: 1;
   position: relative;
-  top: -50vh;
   padding: 0;
   margin: 0;
   font-family: "GreycliffCF-DemiBold", "Helvetica Neue", Helvetica, sans-serif;
@@ -253,10 +251,6 @@ header {
       }
     }
   }
-}
-.open {
-  opacity: 1;
-  visibility: visible;
 }
 .main__contact {
   visibility: hidden;
@@ -737,6 +731,7 @@ input[type=email], input[type=text] {
   font-style: italic;
   letter-spacing: 2px;
   @include input-placeholder {
+    padding-left: 4px;
     color: $color1;
     font-size: ms(-1);
     font-weight: lighter;

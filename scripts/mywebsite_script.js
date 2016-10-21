@@ -28,15 +28,16 @@ $(document).ready(function(){
     }
   });
   // Main menu overlay
+  var overlay = new TimelineMax({paused:true});
+  overlay.to($('.main__menu--overlay'), 0.25, { autoAlpha:1 })
+         .fromTo($('nav'), 0.5, { autoAlpha:0, top: "-50%", left: "50%", x: "-50%", y:"-50%"}, { autoAlpha:1, top: "50%", left: "50%", x: "-50%", y:"-50%", ease: Power4.easeOut});
   $('.main__menu').click(function() {
     if (!$(this).hasClass('active')) {
       $(this).addClass('active');
-      $('.main__menu--overlay').addClass('open');
-      $('nav').velocity({opacity: 1, translateY: "75vh"}, { duration : 400, easing : "ease" });
+      overlay.play();
     } else {
       $(this).removeClass('active');
-      $('nav').velocity({opacity: 0, translateY: "-75vh"}, { duration : 400, easing: "ease" });
-      $('.main__menu--overlay').removeClass('open');
+      overlay.reverse();
     }
   });
   // Main menu overlay - close on clicking link
@@ -46,7 +47,7 @@ $(document).ready(function(){
                 'box-shadow': 'none',
                 '-moz-box-shadow' : 'none',
                 '-webkit-box-shadow' : 'none' });
-    $('nav').velocity({opacity: 0, translateY: "-75vh"}, { duration : 400, easing: "ease" });
+    overlay.reverse();
     $('.main__menu--overlay').removeClass('open');
   });
   // Scroll arrow
@@ -88,23 +89,29 @@ $(document).ready(function(){
                     .from($('.contact__info a'), 1.5, {opacity: 0, y: "+=200px", ease: Expo.easeOut}, 0)
                     .from($('.contact__info p'), 1.5, {opacity: 0, y: "+=200px", ease: Expo.easeOut}, 0)
                     .from($('.contact__form h3'), 1.5, {opacity: 0, width: 0, ease: Expo.easeOut}, 0)
-                    .from($('.contact__form form'), 1.5, {opacity: 0, y: "+=200px", ease: Expo.easeOut}, 0);
+                    .staggerFrom($('.contact__form div'), 1.5, {opacity: 0, y: "+=200px", ease: Expo.easeOut}, 0.25, 0);
   scene3.setTween(contact__animation);
   scene3.addTo(controller);
   //scene.addIndicators(); // add indicators (requires plugin)
   // Social icons
-  $('.main__social img').mouseover(function(){
-    $(this).velocity( { scale : 1.4, rotateZ : '360deg' }, { duration : 400, easing: 'easeOut' });
-    $(this).mouseleave(function(){
-      $(this).velocity( { scale : 1.0, rotateZ : '-360deg' }, { duration : 200, easing: 'easeOut' });
-    });
-  });
-  $('.contact__social img').mouseover(function(){
-    $(this).velocity( { scale : 1.4, rotateZ : '360deg' }, { duration : 400, easing: 'easeOut' });
-    $(this).mouseleave(function(){
-      $(this).velocity( { scale : 1.0, rotateZ : '-360deg' }, { duration : 200, easing: 'ease-in-out' });
-    });
-  });
+  var icons1 = $('.main__social img');
+  icons1.hover(
+     function() {
+        TweenMax.to($(this), 1, {scale:1.3, rotation: 360, ease: Expo.easeOut});
+     },
+     function() {
+        TweenMax.to($(this), 1, {scale:1, rotation: -360, ease: Bounce.easeOut});
+     }
+  );
+  var icons2 = $('.contact__social img');
+  icons2.hover(
+     function() {
+        TweenLite.to($(this), 1, {scale:1.3, rotation: 360, ease: Expo.easeOut});
+     },
+     function() {
+        TweenLite.to($(this), 1, {scale:1, rotation: -360, ease: Bounce.easeOut});
+     }
+  );
   // Form submission
   $('form').submit(function() {
         $('#confirmation').css("opacity", 1);

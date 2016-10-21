@@ -2382,9 +2382,7 @@ header {
   transition: all 0.35s ease; }
 
 .main__menu--overlay nav {
-  opacity: 1;
   position: relative;
-  top: -50vh;
   padding: 0;
   margin: 0;
   font-family: "GreycliffCF-DemiBold", "Helvetica Neue", Helvetica, sans-serif; }
@@ -2412,10 +2410,6 @@ header {
         @media (max-width: 47.99em) {
           .main__menu--overlay nav ul li a {
             font-size: 2.48832em; } }
-
-.open {
-  opacity: 1;
-  visibility: visible; }
 
 .main__contact {
   visibility: hidden; }
@@ -2894,24 +2888,28 @@ input[type=email], input[type=text] {
   font-style: italic;
   letter-spacing: 2px; }
   input[type=email]:-moz-placeholder, input[type=text]:-moz-placeholder {
+    padding-left: 4px;
     color: #333D46;
     font-size: 0.83333em;
     font-weight: lighter;
     font-style: italic;
     letter-spacing: 2px; }
   input[type=email]::-moz-placeholder, input[type=text]::-moz-placeholder {
+    padding-left: 4px;
     color: #333D46;
     font-size: 0.83333em;
     font-weight: lighter;
     font-style: italic;
     letter-spacing: 2px; }
   input[type=email]:-ms-input-placeholder, input[type=text]:-ms-input-placeholder {
+    padding-left: 4px;
     color: #333D46;
     font-size: 0.83333em;
     font-weight: lighter;
     font-style: italic;
     letter-spacing: 2px; }
   input[type=email]::-webkit-input-placeholder, input[type=text]::-webkit-input-placeholder {
+    padding-left: 4px;
     color: #333D46;
     font-size: 0.83333em;
     font-weight: lighter;
