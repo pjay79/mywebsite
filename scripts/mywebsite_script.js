@@ -29,8 +29,8 @@ $(document).ready(function(){
   });
   // Main menu overlay
   var overlay = new TimelineMax({paused:true});
-  overlay.to($('.main__menu--overlay'), 0.25, { autoAlpha:1 })
-         .fromTo($('nav'), 0.5, { autoAlpha:0, top: "-50%", left: "50%", x: "-50%", y:"-50%"}, { autoAlpha:1, top: "50%", left: "50%", x: "-50%", y:"-50%", ease: Power4.easeOut});
+      overlay.to($('.main__menu--overlay'), 0.25, { autoAlpha:1 })
+             .fromTo($('nav'), 0.25, { autoAlpha:0, top: "-50%", left: "50%", x: "-50%", y:"-50%"}, { autoAlpha:1, top: "50%", left: "50%", x: "-50%", y:"-50%", ease: Power4.easeOut});
   $('.main__menu').click(function() {
     if (!$(this).hasClass('active')) {
       $(this).addClass('active');
@@ -48,14 +48,13 @@ $(document).ready(function(){
                 '-moz-box-shadow' : 'none',
                 '-webkit-box-shadow' : 'none' });
     overlay.reverse();
-    $('.main__menu--overlay').removeClass('open');
   });
   // Scroll arrow
-  $('#scrolldown').velocity({ translateY: '5px' },{ duration: 800, loop: true });
+  TweenMax.to($('#scrolldown'), 1.5, {y: 10, repeat: -1, yoyo: true, ease: Power4.easeInOut});
   $('#scrolldown').click(function() {
     $('#about').velocity('scroll', { duration : 800 });
   });
-  $('#scrollup').velocity({ translateY: '5px' },{ duration: 800, loop: true });
+  TweenMax.to($('#scrollup'), 1.5, {y: -10, repeat: -1, yoyo: true, ease: Power4.easeInOut});
   $('#scrollup').click(function() {
     $('#home').velocity('scroll', { duration : 800 });
   });
@@ -72,7 +71,7 @@ $(document).ready(function(){
 	scene.addTo(controller);
   var scene1 = new $.ScrollMagic.Scene({triggerElement: '#portfolio'});
   var portfolio__animation = new TimelineMax();
-  portfolio__animation.from($('#portfolio h3'), 1.5, {opacity: 0, width: 0, ease: Expo.easeOut}, 0.35)
+  portfolio__animation.from($('#portfolio h3'), 2.5, {opacity: 0, width: 0, ease: Expo.easeOut}, 0.35)
                       .staggerFrom($('#portfolio figure'), 1.5, {opacity: 0, scale: 1.4, y: "+=100px", ease: Expo.easeOut}, 0.5, 0);
   scene1.setTween(portfolio__animation);
   scene1.addTo(controller);
@@ -114,8 +113,9 @@ $(document).ready(function(){
   );
   // Form submission
   $('form').submit(function() {
-        $('#confirmation').css("opacity", 1);
-        $('#confirmation').velocity({opacity: 0}, { delay : 800, duration : 400, easing: "ease" });
+        var message__confirmation = new TimelineMax();
+            message__confirmation.to($('#confirmation'), 0.5, {opacity: 1, ease: Expo.easeOut})
+                                 .to($('#confirmation'), 0.5, {autoAlpha: 0, ease: Expo.easeOut}, +0.5);
         event.preventDefault();
         var formData = $('form').serialize();
         $.ajax({
