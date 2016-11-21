@@ -30,32 +30,30 @@ $(document).ready(function(){
   // Main menu overlay
   var overlay = new TimelineMax({paused:true});
       overlay.to($('.main__menu--overlay'), 0.25, { autoAlpha:1 })
-             .fromTo($('nav'), 0.25, { autoAlpha:0, top: "-50%", left: "50%", x: "-50%", y:"-50%"}, { autoAlpha:1, top: "50%", left: "50%", x: "-50%", y:"-50%", ease: Power4.easeOut});
+             .staggerFrom($('nav ul li a'), 0.25, { autoAlpha:0, scale: 1.5, cycle: {x: [-25, 25]}, ease: Expo.easeOut}, 0.25);
   $('.main__menu').click(function() {
     if (!$(this).hasClass('active')) {
       $(this).addClass('active');
-      overlay.play();
+      overlay.timeScale(1).play();
     } else {
       $(this).removeClass('active');
-      overlay.reverse();
+      overlay.timeScale(5).reverse();
     }
   });
   // Main menu overlay - close on clicking link
   $('nav li a').click(function() {
     $('.main__menu').removeClass('active');
-    $('header').css({
-                'box-shadow': 'none',
-                '-moz-box-shadow' : 'none',
-                '-webkit-box-shadow' : 'none' });
-    overlay.reverse();
+    overlay.timeScale(5).reverse();
   });
   // Scroll arrow
   TweenMax.to($('#scrolldown'), 1.5, {y: 10, repeat: -1, yoyo: true, ease: Power4.easeInOut});
   $('#scrolldown').click(function() {
-    $('#about').velocity('scroll', { duration : 800 });
+    $('#about').velocity('scroll', {duration : 800});
   });
   TweenMax.to($('#scrollup'), 1.5, {y: -10, repeat: -1, yoyo: true, ease: Power4.easeInOut});
   $('#scrollup').click(function() {
+    //TweenLite.to($(window), 1, {scrollTo:{y:"#home", offsetY:0}});
+    //$('html, body').animate({scrollTop: 0}, 800);
     $('#home').velocity('scroll', { duration : 800 });
   });
   // ScrollMagic scenes

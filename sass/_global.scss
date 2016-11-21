@@ -167,6 +167,10 @@ header {
 // Main menu overlay nav
 .main__menu--overlay nav {
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   padding: 0;
   margin: 0;
   font-family: "GreycliffCF-DemiBold", "Helvetica Neue", Helvetica, sans-serif;
@@ -773,7 +777,7 @@ input:-webkit-autofill {
   p {
     color: $white;
     font-size: ms(4);
-    @include media('>=small-phone', '<=phone') {
+    @include media('<=phone') {
       font-size: ms(2);
     }
     font-weight: lighter;

@@ -1,19 +1,21 @@
-// Media Query breakpoints
-// 20em : 320px / 34em : 544px / 48em : 768px / 62em : 992px / 75em : 1200px
-$breakpoints: (
-  'small-phone': 20em,
-  'phone': 34em,
-  'tablet': 48em,
-  'desktop': 62em,
-  'big-desktop': 75em
-) !default;
 // Colors
 $color1: #333D46; //#333D46 Dark gray
 $color2: #D0D8E0; //#D0D8E0 Light gray
 $color3: #B68861; //#B68861 Brown
 $white: #FFF; // White
 $black: #000; // Black
-// Modular scale variables
+
+// Include Media breakpoints
+// 20em : 320px / 34em : 544px / 48em : 768px / 62em : 992px / 75em : 1200px
+//$breakpoints: (
+  //'small-phone': 20em,
+  //'phone': 34em,
+  //'tablet': 48em,
+  //'desktop': 62em,
+  //'big-desktop': 75em
+//) !default;
+
+// Modular Scale variables
 //$ms-base:  1em      !default;
 //$ms-ratio: $minor-third  !default;
 //$ms-range: null     !default;

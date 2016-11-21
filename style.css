@@ -2333,6 +2333,10 @@ header {
 
 .main__menu--overlay nav {
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   padding: 0;
   margin: 0;
   font-family: "GreycliffCF-DemiBold", "Helvetica Neue", Helvetica, sans-serif; }
