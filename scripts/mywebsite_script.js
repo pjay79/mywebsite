@@ -1,4 +1,3 @@
-$(document).ready(function(){
   // Set 100% viewport width/height to div's
   var fullscreen = function(){
     $('main').css({width: $(window).width(), height: $(window).height()});
@@ -11,13 +10,15 @@ $(document).ready(function(){
   // Hover touch
   $('body').bind('touchstart', function(){});
   // Main content animation with gsap
-  var main__animation = new TimelineMax({paused:true});
+  $(window).on("load", function() {
+  var main__animation = new TimelineMax({paused:true, delay: 0.5});
   main__animation.set($('.main__content'), {visibility: "visible"})
-                 .from($('.main__content h2'), 0.5, {opacity: 0, y: "-=100px", ease: Bounce.easeOut, delay: 0.5})
-                 .from($('.main__content h1'), 0.5, {opacity: 0, scale: 1.5, ease: Power1.easeIn})
-                 .from($('.main__content p:first-of-type'), 0.5, {opacity: 0, scale: 1.2, ease: Back.easeOut})
-                 .from($('.main__content p:last-child'), 0.5, {opacity: 0, ease: Power1.easeIn});
+                 .from($('.main__content h2'), 0.5, {autoAlpha: 0, y: "-=100px", ease: Bounce.easeOut})
+                 .from($('.main__content h1'), 0.25, {autoAlpha: 0, ease: Power2.easeOut})
+                 .from($('.main__content p:first-of-type'), 0.5, {autoAlpha: 0, scale: 1.2, ease: Back.easeOut})
+                 .from($('.main__content p:last-child'), 0.5, {autoAlpha: 0, ease: Back.easeOut});
   main__animation.play();
+  });
   // Sticky header
   $(window).scroll(function() {
     if ($(this).scrollTop() > 50) {
@@ -128,4 +129,3 @@ $(document).ready(function(){
     });
     // Beating heart
     TweenMax.to($('.copyright p img'), 0.2, {scale: 1.2, repeat: -1, repeatDelay: 0.2, yoyo: true, ease: Power3.easeOut });
-});
