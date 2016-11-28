@@ -14,9 +14,12 @@
   });
   // Hover touch
   $('body').bind('touchstart', function(){});
+  // Preloader spinner
+  TweenMax.to($('.preloader__wrapper img'), 2, {rotationY: 360, repeat: -1, yoyo: true, ease: Power4.easeInOut});
   // Main content animation with gsap
   $(window).on("load", function() {
-  var main__animation = new TimelineMax({paused:true, delay: 0.5});
+  $('.preloader__wrapper').fadeOut('slow');
+  var main__animation = new TimelineMax({paused:true, delay: 0.25});
   main__animation.set($('.main__content'), {visibility: "visible"})
                  .from($('.main__content h2'), 0.5, {autoAlpha: 0, y: "-=100px", ease: Bounce.easeOut})
                  .from($('.main__content h1'), 0.25, {autoAlpha: 0, x: "-=100px", ease: Power2.easeOut})
