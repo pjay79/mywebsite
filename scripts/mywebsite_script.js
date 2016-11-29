@@ -23,8 +23,8 @@
   main__animation.set($('.main__content'), {visibility: "visible"})
                  .from($('.main__content h2'), 0.5, {autoAlpha: 0, y: "-=100px", ease: Bounce.easeOut})
                  .from($('.main__content h1'), 0.25, {autoAlpha: 0, x: "-=100px", ease: Power2.easeOut})
-                 .from($('.main__content p:first-of-type'), 0.5, {autoAlpha: 0, scale: 1.2, ease: Back.easeOut})
-                 .from($('.main__content p:last-child'), 0.5, {autoAlpha: 0, ease: Back.easeOut});
+                 .from($('.main__content p:first-of-type'), 0.5, {autoAlpha: 0, ease: Power2.easeOut})
+                 .from($('.main__content p:last-child'), 0.5, {autoAlpha: 0, ease: Power2.easeOut});
   main__animation.play();
   });
   // Sticky header
