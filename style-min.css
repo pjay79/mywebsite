@@ -2584,7 +2584,7 @@ header img {
 
 .about-me h3 {
   display: inline-block;
-  padding-bottom: 5px;
+  padding: 0 0 5px 0;
   border-bottom: 10px solid #B68861;
   color: #333D46;
   font-size: 6.19174em;
@@ -2623,7 +2623,7 @@ header img {
 
 .about-skills h3 {
   display: inline-block;
-  padding-bottom: 5px;
+  padding: 0 0 5px 0;
   border-bottom: 10px solid #333D46;
   color: #FFF;
   font-size: 6.19174em;
@@ -2646,7 +2646,7 @@ header img {
   padding-top: 20px;
   margin-bottom: 50px;
   display: inline-block;
-  padding-bottom: 5px;
+  padding: 0 0 5px 0;
   border-bottom: 10px solid #B68861;
   color: #FFF;
   font-size: 6.19174em;
@@ -2815,7 +2815,7 @@ footer img {
 .contact__info h3 {
   margin-bottom: 50px;
   display: inline-block;
-  padding-bottom: 5px;
+  padding: 0 0 5px 0;
   border-bottom: 10px solid #B68861;
   color: #FFF;
   font-size: 6.19174em;
@@ -2850,7 +2850,7 @@ footer img {
 .contact__form h3 {
   margin-bottom: 25px;
   display: inline-block;
-  padding-bottom: 5px;
+  padding: 0 0 5px 0;
   border-bottom: 10px solid #333D46;
   color: #FFF;
   font-size: 6.19174em;

@@ -9,7 +9,7 @@
 // Section headers
 @mixin section__header($border__color, $font__color) {
   display: inline-block;
-  padding-bottom: 5px;
+  padding: 0 0 5px 0;
   border-bottom: 10px solid $border__color;
   color: $font__color;
   font-size: ms(10);

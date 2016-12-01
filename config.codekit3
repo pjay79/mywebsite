@@ -4390,6 +4390,16 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/style-min.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/style-min-min.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/style.css": {
 		"aP": 0,
 		"bl": 0,
