@@ -2631,12 +2631,9 @@ header {
     text-align: center; }
 
 #portfolio {
-  padding-top: 25px;
+  padding-top: 50px;
   background-color: #333D46;
   text-align: center; }
-  @media (min-width: 34em) {
-    #portfolio {
-      padding-top: 50px; } }
   #portfolio h3 {
     padding-top: 20px;
     margin-bottom: 50px;

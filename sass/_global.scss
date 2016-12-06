@@ -475,10 +475,7 @@ header {
 }
 // Portfolio
 #portfolio {
-  padding-top: 25px;
-  @include media('>=phone') {
-    padding-top: 50px;
-  }
+  padding-top: 50px;
   background-color: $color1;
   text-align: center;
   h3 {
