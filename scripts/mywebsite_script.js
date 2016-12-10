@@ -9,7 +9,7 @@
   };
   fullscreen();
   // Run the function again in case of window resize
-  $(window).resize(function() {
+  $(window).on('resize', function() {
     fullscreen();
   });
   // Hover touch
@@ -17,7 +17,7 @@
   // Preloader spinner
   TweenMax.to($('.preloader__wrapper img'), 2, {rotationY: 360, repeat: -1, yoyo: true, ease: Power4.easeInOut});
   // Main content animation with gsap
-  $(window).on("load", function() {
+  $(window).on('load', function() {
   $('.preloader__wrapper').fadeOut('slow');
   var main__animation = new TimelineMax({paused:true, delay: 0.25});
   main__animation.set($('.main__content'), {visibility: "visible"})
@@ -28,7 +28,7 @@
   main__animation.play();
   });
   // Sticky header
-  $(window).scroll(function() {
+  $(window).on('scroll', function() {
     if ($(this).scrollTop() > 50) {
       $('header').addClass('sticky');
     }
@@ -40,7 +40,7 @@
   var overlay = new TimelineMax({paused:true});
       overlay.to($('.main__menu--overlay'), 0.25, { autoAlpha:1 })
              .staggerFrom($('nav ul li a'), 0.25, { autoAlpha:0, scale: 1.5, cycle: {x: [-25, 25]}, ease: Expo.easeOut}, 0.25);
-  $('.main__menu').click(function() {
+  $('.main__menu').on('click', function() {
     if (!$(this).hasClass('active')) {
       $(this).addClass('active');
       overlay.timeScale(1).play();
@@ -50,19 +50,17 @@
     }
   });
   // Main menu overlay - close on clicking link
-  $('nav li a').click(function() {
+  $('nav li a').on('click', function() {
     $('.main__menu').removeClass('active');
     overlay.timeScale(5).reverse();
   });
   // Scroll arrow
   TweenMax.to($('#scrolldown'), 1.5, {y: 10, repeat: -1, yoyo: true, ease: Power4.easeInOut});
-  $('#scrolldown').click(function() {
-    $('#about').velocity('scroll', {duration : 800});
+    $('#scrolldown').on('click', function() {
+      $('#about').velocity('scroll', {duration : 800});
   });
   TweenMax.to($('#scrollup'), 1.5, {y: -10, repeat: -1, yoyo: true, ease: Power4.easeInOut});
-  $('#scrollup').click(function() {
-    //TweenLite.to($(window), 1, {scrollTo:{y:"#home", offsetY:0}});
-    //$('html, body').animate({scrollTop: 0}, 800);
+    $('#scrollup').on('click', function() {
     $('#home').velocity('scroll', { duration : 800 });
   });
   // ScrollMagic scenes
@@ -119,7 +117,7 @@
      }
   );
   // Form submission
-  $('form').submit(function() {
+  $('form').on('submit', function() {
         var message__confirmation = new TimelineMax();
             message__confirmation.to($('#confirmation'), 0.5, {autoAlpha: 1, ease: Expo.easeOut})
                                  .to($('#confirmation'), 0.5, {autoAlpha: 0, ease: Expo.easeOut}, +0.5);
