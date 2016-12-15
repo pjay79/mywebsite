@@ -67,8 +67,8 @@
   var controller = new $.ScrollMagic.Controller();
   var scene = new $.ScrollMagic.Scene({triggerElement: "#about"});
   var about__animation = new TimelineMax();
-  about__animation.from($('.about-me h3'), 1.5, {autoAlpha: 0, width: 0, ease: Expo.easeOut}, 0.35)
-                  .from($('.about-skills h3'), 1.5, {autoAlpha: 0, width: 0, ease: Expo.easeOut}, 0.35)
+  about__animation.from($('.about-me h3'), 1.5, {autoAlpha: 0, y: "+=50px", ease: Expo.easeOut}, 0.35)
+                  .from($('.about-skills h3'), 1.5, {autoAlpha: 0, y: "+=50px", ease: Expo.easeOut}, 0.35)
                   .from($('.about-skills img'), 2.5, {autoAlpha: 0, scale: 0, y: "+=100px", ease: Expo.easeOut}, 0)
                   .staggerFrom($('.about-me p'), 1.5, {autoAlpha: 0, y: "+=100px", ease: Expo.easeOut}, 0.35, 0)
                   .staggerFrom($('.about-skills p'), 1.5, {autoAlpha: 0, y: "+=100px", ease: Expo.easeOut}, 0.35, 0);
@@ -76,7 +76,7 @@
 	scene.addTo(controller);
   var scene1 = new $.ScrollMagic.Scene({triggerElement: '#portfolio'});
   var portfolio__animation = new TimelineMax();
-  portfolio__animation.from($('#portfolio h3'), 2.5, {autoAlpha: 0, width: 0, ease: Expo.easeOut}, 0.35)
+  portfolio__animation.from($('#portfolio h3'), 2.5, {autoAlpha: 0, y: "+=50px", ease: Expo.easeOut}, 0.35)
                       .staggerFrom($('#portfolio figure'), 1.5, {autoAlpha: 0, scale: 1.4, y: "+=100px", ease: Expo.easeOut}, 0.5, 0);
   scene1.setTween(portfolio__animation);
   scene1.addTo(controller);
@@ -88,11 +88,11 @@
   scene2.addTo(controller);
   var scene3 = new $.ScrollMagic.Scene({triggerElement: '#contact'});
   var contact__animation = new TimelineMax();
-  contact__animation.from($('.contact__info h3'), 1.5, {autoAlpha: 0, width: 0, ease: Expo.easeOut})
+  contact__animation.from($('.contact__info h3'), 1.5, {autoAlpha: 0, y: "+=50px", ease: Expo.easeOut})
                     .from($('.contact__info img'), 1.5, {autoAlpha: 0, scale: 0, y: "+=200px", ease: Expo.easeOut}, 0)
                     .from($('.contact__info a'), 1.5, {autoAlpha: 0, y: "+=200px", ease: Expo.easeOut}, 0)
                     .from($('.contact__info p'), 1.5, {autoAlpha: 0, y: "+=200px", ease: Expo.easeOut}, 0)
-                    .from($('.contact__form h3'), 1.5, {autoAlpha: 0, width: 0, ease: Expo.easeOut}, 0)
+                    .from($('.contact__form h3'), 1.5, {autoAlpha: 0, y: "+=50px", ease: Expo.easeOut}, 0)
                     .staggerFrom($('.contact__form div'), 1.5, {autoAlpha: 0, y: "+=200px", ease: Expo.easeOut}, 0.25, 0);
   scene3.setTween(contact__animation);
   scene3.addTo(controller);
