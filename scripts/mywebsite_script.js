@@ -21,7 +21,7 @@
   $('.preloader__wrapper').fadeOut('slow');
   var main__animation = new TimelineMax({paused:true, delay: 0.25});
   main__animation.set($('.main__content'), {visibility: "visible"})
-                 .from($('.main__content h2'), 0.5, {autoAlpha: 0, y: "-=100px", ease: Bounce.easeOut})
+                 //.from($('.main__content h2'), 0.5, {autoAlpha: 0, y: "-=100px", ease: Bounce.easeOut})
                  .from($('.main__content h1'), 0.25, {autoAlpha: 0, x: "-=100px", ease: Power2.easeOut})
                  .from($('.main__content p:first-of-type'), 0.5, {autoAlpha: 0, ease: Power2.easeOut})
                  .from($('.main__content p:last-child'), 0.5, {autoAlpha: 0, ease: Power2.easeOut});
