@@ -1468,7 +1468,7 @@
 	"\/bower_components\/gsap\/src\/minified\/TweenMax.min.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/bower_components\/gsap\/src\/minified\/TweenMax.min.js",
 		"oF": 0,
 		"sC": 1,
@@ -1951,7 +1951,7 @@
 	"\/bower_components\/jquery\/dist\/jquery.min.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/bower_components\/jquery\/dist\/jquery.min.js",
 		"oF": 0,
 		"sC": 1,
@@ -3277,7 +3277,7 @@
 	"\/bower_components\/scrollmagic\/scrollmagic\/minified\/plugins\/animation.gsap.min.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/bower_components\/scrollmagic\/scrollmagic\/minified\/plugins\/animation.gsap.min.js",
 		"oF": 0,
 		"sC": 1,
@@ -3304,7 +3304,7 @@
 	"\/bower_components\/scrollmagic\/scrollmagic\/minified\/plugins\/jquery.ScrollMagic.min.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/bower_components\/scrollmagic\/scrollmagic\/minified\/plugins\/jquery.ScrollMagic.min.js",
 		"oF": 0,
 		"sC": 1,
@@ -3313,7 +3313,7 @@
 	"\/bower_components\/scrollmagic\/scrollmagic\/minified\/ScrollMagic.min.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/bower_components\/scrollmagic\/scrollmagic\/minified\/ScrollMagic.min.js",
 		"oF": 0,
 		"sC": 1,
@@ -3471,7 +3471,7 @@
 	"\/bower_components\/velocity\/velocity.min.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/bower_components\/velocity\/velocity.min.js",
 		"oF": 0,
 		"sC": 1,
