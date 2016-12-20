@@ -1,6 +1,6 @@
 {
   "name": "include-media",
-  "version": "1.4.8",
+  "version": "1.4.9",
   "homepage": "https://github.com/eduardoboucas/import-media",
   "authors": [
     "Eduardo Boucas <mail@eduardoboucas.com>"
@@ -29,14 +29,13 @@
     "test",
     "tests"
   ],
-  "_release": "1.4.8",
+  "_release": "1.4.9",
   "_resolution": {
     "type": "version",
-    "tag": "v1.4.8",
-    "commit": "b76b71aabf9f4251d899d2b74ad41d995d45ef4c"
+    "tag": "v1.4.9",
+    "commit": "0347e4058a7c4f877b043e6ac22a351b8203148c"
   },
   "_source": "https://github.com/eduardoboucas/include-media.git",
   "_target": "^1.4.8",
-  "_originalSource": "include-media",
-  "_direct": true
+  "_originalSource": "include-media"
 }

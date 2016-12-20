@@ -33,8 +33,9 @@ Examples can be found [here](http://include-media.com/#features).
 - [include-media-export](https://github.com/eduardoboucas/include-media-export) - Reference **include-media** breakpoints in JavaScript.
 - [include-media-columns](https://github.com/eduardoboucas/include-media-columns) - Generate column classes using the [BEMIT naming convention](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/), automatically referencing **include-media** breakpoints.
 - [include-media-spread](https://github.com/jackmcpickle/include-media-spread) - Calculates the difference between property values and distributes them through your **include-media** breakpoints.
-- [flex_e_ble](https://github.com/jackmcpickle/flex_e_ble) - Uses your **include-media** breakpoints to create your own flexible class naming structure on top of a `flex` based grid with `inline-block` fallback for >= ie8 compatibility
-- [include-media-grid](https://github.com/tszarzynski/include-media-grid) - An **include-media** plugin for generating grid classes based on the flex display
+- [flex_e_ble](https://github.com/jackmcpickle/flex_e_ble) - Uses your **include-media** breakpoints to create your own flexible class naming structure on top of a `flex` based grid with `inline-block` fallback for IE8+ compatibility.
+- [include-media-grid](https://github.com/tszarzynski/include-media-grid) - An **include-media** plugin for generating grid classes based on the flex display.
+- [im-to-em](https://gist.github.com/eduardoboucas/84144cd85cbd2ad4db1ca8b902585ca0) - A tiny function to convert **include-media** breakpoints from `px` to `em`.
 
 ## Learn more
 
@@ -45,6 +46,10 @@ Examples can be found [here](http://include-media.com/#features).
 - [Generating Alternative Stylesheets for Browsers Without @media](http://davidwalsh.name/generating-alternative-stylesheets-browsers-media) (David Walsh blog)
 - [Create Simple Inline Media Queries with include-media](http://webdevstudios.com/2015/05/18/create-simple-inline-media-queries-include-media/) (WebDevStudios)
 - [Breakpoints and Tweakpoints in Sass](http://www.sitepoint.com/breakpoints-tweakpoints-sass/) (SitePoint)
+
+## Related projects
+
+- [include-media-or](https://github.com/Nirazul/include-media-or) - A fork of **include-media** with support for complex queries with logical disjunctions (maintained by [Nirazul](https://github.com/Nirazul)).
 
 ## The authors
 
