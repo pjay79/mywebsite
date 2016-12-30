@@ -2,7 +2,7 @@
 
 // @codekit-prepend "../bower_components/jquery/dist/jquery.min.js";
 // @codekit-prepend "../bower_components/gsap/src/minified/TweenMax.min.js";
-// @codekit-prepend "../bower_components/velocity/velocity.min.js";
+// @codekit-prepend "../bower_components/gsap/src/minified/plugins/ScrollToPlugin.min.js";
 // @codekit-prepend "../bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js";
 // @codekit-prepend "../bower_components/scrollmagic/scrollmagic/minified/plugins/jquery.ScrollMagic.min.js";
 // @codekit-prepend "../bower_components/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js";
@@ -78,29 +78,14 @@ $('nav li a').on('click', function() {
   $('.main__menu').removeClass('active');
   menuOverlay.timeScale(6).reverse();
 });
-/* Main menu overlay - open/close hamburger
-$('.main__menu').on('click', function() {
-  if (!$(this).hasClass('active')) {
-    $(this).addClass('active');
-    overlay.timeScale(1).play();
-  } else {
-    $(this).removeClass('active');
-    overlay.timeScale(5).reverse();
-  }
-});
-// Main menu overlay - close on clicking link
-$('nav li a').on('click', function() {
-  $('.main__menu').removeClass('active');
-  overlay.timeScale(5).reverse();
-}); */
 // Scroll arrow
-TweenMax.to($('#scrolldown'), 1.5, {y: 10, repeat: -1, yoyo: true, ease: Power4.easeInOut});
+TweenMax.to($('#scrolldown'), 2, {y: "-5px", repeat: -1, yoyo: true, ease: Power0.easeNone});
   $('#scrolldown').on('click', function() {
-    $('#about').velocity('scroll', {duration : 800});
-});
-TweenMax.to($('#scrollup'), 1.5, {y: -10, repeat: -1, yoyo: true, ease: Power4.easeInOut});
+    TweenLite.to($(window), 1.5, {scrollTo:"#about", ease:Power4.easeOut});
+  });
+TweenMax.to($('#scrollup'), 2, {y: "5px", repeat: -1, yoyo: true, ease: Power0.easeNone});
   $('#scrollup').on('click', function() {
-  $('#home').velocity('scroll', { duration : 800 });
+    TweenLite.to($(window), 2, {scrollTo:"#home", ease:Power4.easeInOut});
 });
 // ScrollMagic scenes
 var controller = new $.ScrollMagic.Controller();
