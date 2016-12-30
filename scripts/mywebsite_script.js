@@ -44,10 +44,36 @@ main__animation.set($('.main__content'), {visibility: "visible"})
                .from($('.main__content p:last-child'), 0.5, {autoAlpha: 0, ease: Power2.easeOut});
 main__animation.play();
 });
-// Main menu overlay
-var overlay = new TimelineMax({paused:true});
+// Hamburger menu bars
+var spanTop = $('.top');
+var spanMiddle = $('.middle');
+var spanBottom = $('.bottom');
+// Hamburger menu bars animation with gsap
+var menu = new TimelineMax();
+    menu.to(spanMiddle, 0.5, {autoAlpha:0, ease: Power2.easeOut})
+        .to(spanTop, 0.5, {y: 0, ease: Power2.easeOut}, 0)
+        .to(spanTop, 1, {rotation: 135, ease: Bounce.easeOut}, 1)
+        .to(spanBottom, 0.5, {y: 0, ease: Power2.easeOut}, 0)
+        .to(spanBottom, 1, {rotation: -135, ease: Bounce.easeOut}, 1);
+// Overlay animation with gsap
+var overlay = new TimelineMax();
     overlay.to($('.main__menu--overlay'), 0.25, { autoAlpha:1 })
            .staggerFrom($('nav ul li a'), 0.25, { autoAlpha:0, scale: 1.5, cycle: {x: [-25, 25]}, ease: Expo.easeOut}, 0.25);
+// Add hamburger and overlay animation to one timeline
+var menuOverlay = new TimelineMax();
+    menuOverlay.add(menu, 0)
+               .add(overlay, 0);
+// Toggle overlay menu
+$('.main__menu').on('click', function() {
+  if (!$(this).hasClass('active')) {
+    $(this).addClass('active');
+    menuOverlay.play();
+  } else {
+    $(this).removeClass('active');
+    menuOverlay.reverse();
+  }
+});
+/* Main menu overlay - open/close hamburger
 $('.main__menu').on('click', function() {
   if (!$(this).hasClass('active')) {
     $(this).addClass('active');
@@ -61,7 +87,7 @@ $('.main__menu').on('click', function() {
 $('nav li a').on('click', function() {
   $('.main__menu').removeClass('active');
   overlay.timeScale(5).reverse();
-});
+}); */
 // Scroll arrow
 TweenMax.to($('#scrolldown'), 1.5, {y: 10, repeat: -1, yoyo: true, ease: Power4.easeInOut});
   $('#scrolldown').on('click', function() {

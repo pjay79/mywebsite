@@ -1,6 +1,6 @@
 /* {
 outline: 1px dotted #ff0000;
-} */ 
+} */
 @font-face {
   font-family: 'Aerokids';
   src: url('fonts/Aerokids.eot');
@@ -124,49 +124,32 @@ header {
 .main__menu {
   position: relative;
   float: right;
-  width: 50px;
+  width: 35px;
   height: 50px;
   margin-top: 20px;
   margin-right: 20px;
   background-color: transparent;
   cursor: pointer;
 }
-.main__menu span,
-.main__menu span:before,
-.main__menu span:after {
+.main__menu span.top,
+.main__menu span.middle,
+.main__menu span.bottom {
   position: absolute;
   top: 50%;
-  left: 15%;
   display: block;
-  content: '';
   height: 2px;
   width: 35px;
   border-radius: 1px;
   background: $white;
   cursor: pointer;
-  -webkit-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
 }
-.main__menu span:before {
-  top: -10px;
+.main__menu span.top {
+  transform: translateY(-10px);
   left: 0;
 }
-.main__menu span:after {
-  top: 10px;
+.main__menu span.bottom {
+  transform: translateY(10px);
   left: 0;
-}
-.main__menu.active span {
-  background-color: transparent;
-}
-.main__menu.active span:before,
-.main__menu.active span:after {
-  top: 0;
-}
-.main__menu.active span:before {
-  transform: rotate(135deg);
-}
-.main__menu.active span:after {
-  transform: rotate(-135deg);
 }
 // Main menu overlay
 .main__menu--overlay {
