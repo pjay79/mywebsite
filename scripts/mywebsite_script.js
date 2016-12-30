@@ -58,7 +58,7 @@ var menu = new TimelineMax();
 // Overlay animation with gsap
 var overlay = new TimelineMax();
     overlay.to($('.main__menu--overlay'), 0.25, { autoAlpha:1 })
-           .staggerFrom($('nav ul li a'), 0.25, { autoAlpha:0, scale: 1.5, cycle: {x: [-25, 25]}, ease: Expo.easeOut}, 0.25, 0.5);
+           .staggerFrom($('nav ul li a'), 0.25, { autoAlpha:0, scale: 1.5, cycle: {x: [-25, 25]}, ease: Expo.easeOut}, 0.25, 0.75);
 // Add hamburger and overlay animation to one timeline
 var menuOverlay = new TimelineMax({paused: true});
     menuOverlay.add(menu, 0)
@@ -70,13 +70,13 @@ $('.main__menu').on('click', function() {
     menuOverlay.play();
   } else {
     $(this).removeClass('active');
-    menuOverlay.reverse();
+    menuOverlay.timeScale(5).reverse();
   }
 });
 // Main menu overlay - close on clicking link
 $('nav li a').on('click', function() {
   $('.main__menu').removeClass('active');
-  menuOverlay.timeScale(5).reverse();
+  menuOverlay.timeScale(7).reverse();
 });
 /* Main menu overlay - open/close hamburger
 $('.main__menu').on('click', function() {
