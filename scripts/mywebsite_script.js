@@ -50,7 +50,7 @@ var spanMiddle = $('.middle');
 var spanBottom = $('.bottom');
 // Hamburger menu bars animation with gsap
 var menu = new TimelineMax();
-    menu.to(spanMiddle, 0.5, {autoAlpha:0, ease: Power2.easeOut})
+    menu.to(spanMiddle, 0.5, {scale:0, ease: Power2.easeOut})
         .to(spanTop, 0.5, {y: 0, ease: Power2.easeOut}, 0)
         .to(spanTop, 1, {rotation: 135, ease: Bounce.easeOut}, 1)
         .to(spanBottom, 0.5, {y: 0, ease: Power2.easeOut}, 0)
@@ -67,16 +67,16 @@ var menuOverlay = new TimelineMax({paused: true});
 $('.main__menu').on('click', function() {
   if (!$(this).hasClass('active')) {
     $(this).addClass('active');
-    menuOverlay.play();
+    menuOverlay.timeScale(1).play();
   } else {
     $(this).removeClass('active');
-    menuOverlay.timeScale(5).reverse();
+    menuOverlay.timeScale(2).reverse();
   }
 });
 // Main menu overlay - close on clicking link
 $('nav li a').on('click', function() {
   $('.main__menu').removeClass('active');
-  menuOverlay.timeScale(7).reverse();
+  menuOverlay.timeScale(6).reverse();
 });
 /* Main menu overlay - open/close hamburger
 $('.main__menu').on('click', function() {
