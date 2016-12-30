@@ -1,3 +1,5 @@
+(function() {
+
 // @codekit-prepend "../bower_components/jquery/dist/jquery.min.js";
 // @codekit-prepend "../bower_components/gsap/src/minified/TweenMax.min.js";
 // @codekit-prepend "../bower_components/velocity/velocity.min.js";
@@ -21,19 +23,6 @@ $(window).on('resize', function() {
 });
 // Hover touch
 $('body').bind('touchstart', function(){});
-// Preloader spinner
-TweenMax.to($('.preloader__wrapper img'), 2, {rotationY: 360, repeat: -1, yoyo: true, ease: Power4.easeInOut});
-// Main content animation with gsap
-$(window).on('load', function() {
-$('.preloader__wrapper').fadeOut('slow');
-var main__animation = new TimelineMax({paused:true, delay: 0.25});
-main__animation.set($('.main__content'), {visibility: "visible"})
-               //.from($('.main__content h2'), 0.5, {autoAlpha: 0, y: "-=100px", ease: Bounce.easeOut})
-               .from($('.main__content h1'), 0.25, {autoAlpha: 0, x: "-=100px", ease: Power2.easeOut})
-               .from($('.main__content p:first-of-type'), 0.5, {autoAlpha: 0, ease: Power2.easeOut})
-               .from($('.main__content p:last-child'), 0.5, {autoAlpha: 0, ease: Power2.easeOut});
-main__animation.play();
-});
 // Sticky header
 $(window).on('scroll', function() {
   if ($(this).scrollTop() > 50) {
@@ -42,6 +31,18 @@ $(window).on('scroll', function() {
   else {
     $('header').removeClass('sticky');
   }
+});
+// Preloader spinner
+TweenMax.to($('.preloader__wrapper img'), 2, {rotationY: 360, repeat: -1, yoyo: true, ease: Power4.easeInOut});
+// Main content animation with gsap
+$(window).on('load', function() {
+$('.preloader__wrapper').fadeOut('slow');
+var main__animation = new TimelineMax({paused:true, delay: 0.25});
+main__animation.set($('.main__content'), {visibility: "visible"})
+               .from($('.main__content h1'), 0.25, {autoAlpha: 0, x: "-=100px", ease: Power2.easeOut})
+               .from($('.main__content p:first-of-type'), 0.5, {autoAlpha: 0, ease: Power2.easeOut})
+               .from($('.main__content p:last-child'), 0.5, {autoAlpha: 0, ease: Power2.easeOut});
+main__animation.play();
 });
 // Main menu overlay
 var overlay = new TimelineMax({paused:true});
@@ -142,3 +143,5 @@ $('form').on('submit', function() {
   });
   // Beating heart
   TweenMax.to($('.copyright p img'), 0.2, {scale: 1.2, repeat: -1, repeatDelay: 0.2, yoyo: true, ease: Power3.easeOut });
+
+}());
