@@ -1359,7 +1359,7 @@
 	"\/bower_components\/gsap\/src\/minified\/plugins\/CSSPlugin.min.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/bower_components\/gsap\/src\/minified\/plugins\/CSSPlugin.min.js",
 		"oF": 0,
 		"sC": 1,
@@ -4020,14 +4020,6 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
-		},
-	"\/images\/logo-small.png": {
-		"ft": 32768,
-		"iS": 2765,
-		"oA": 0,
-		"oAP": "\/images\/logo-small.png",
-		"oF": 0,
-		"opt": 0
 		},
 	"\/images\/logo.png": {
 		"ft": 32768,
