@@ -3,15 +3,14 @@
 // @codekit-prepend "../bower_components/jquery/dist/jquery.min.js";
 // @codekit-prepend "../bower_components/gsap/src/minified/TweenMax.min.js";
 // @codekit-prepend "../bower_components/gsap/src/minified/plugins/ScrollToPlugin.min.js";
-// @codekit-prepend "../bower_components/gsap/src/minified/plugins/CSSPlugin.min.js";
 // @codekit-prepend "../bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js";
 // @codekit-prepend "../bower_components/scrollmagic/scrollmagic/minified/plugins/jquery.ScrollMagic.min.js";
 // @codekit-prepend "../bower_components/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js";
 
 // Force scroll to top on refresh + force cache reload
 $(window).on('beforeunload', function(){
-$(window).scrollTop(0);
-$(window).location.reload(true);
+  $(window).scrollTop(0);
+  $(window).location.reload(true);
 });
 // Set 100% viewport width/height to div's
 var fullscreen = function(){
@@ -51,7 +50,7 @@ var spanMiddle = $('.middle');
 var spanBottom = $('.bottom');
 // Hamburger menu bars animation with gsap
 var menu = new TimelineMax();
-    menu.to(spanMiddle, 1, {scale:0, ease: Power2.easeOut})
+    menu.to(spanMiddle, 1, {scale:0, force3D: true, ease: Power2.easeOut})
         .to(spanTop, 1, {y: 0, ease: Power2.easeOut}, 0)
         .to(spanTop, 1, {rotation: 135, ease: Bounce.easeOut}, 1)
         .to(spanBottom, 1, {y: 0, ease: Power2.easeOut}, 0)
@@ -121,7 +120,6 @@ contact__animation.from($('.contact__info h3'), 1.5, {autoAlpha: 0, y: "+=50px",
                   .staggerFrom($('.contact__form div'), 1.5, {autoAlpha: 0, y: "+=200px", ease: Expo.easeOut}, 0.25, 0);
 scene3.setTween(contact__animation);
 scene3.addTo(controller);
-//scene.addIndicators(); // add indicators (requires plugin)
 // Social icons
 var icons1 = $('.main__social img');
 icons1.hover(
